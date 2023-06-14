@@ -86,3 +86,11 @@ Tiene serivicios generales que pueden ser usados por los componentes o caulquier
     * types/express **npm install @types/express**
 
 * Crear un tsconfig por defecto con el comando **npx tsc --init**, y luego activamos la opción de **outDir** dentro del archivo y definimos la carpeta que contiene el archivo main (index.ts o app.ts)
+
+* Para correr el proyecto desde el main se hace uso del comando **npx ts-node src/app.ts**.
+
+* Para la migraciones se debe instalar la dependecia del ORM llamado **knex**, donde haremos uso del comando **npm install knex knex-cli pg --save-dev**
+
+* Para leer variables de entorno instalamos la libreria de dotenv **npm install dotenv** 
+
+* POSTGRES_URI=postgresql://<usuario_db>:<password_db>@<host_db>:<port_db>/<database>

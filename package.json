@@ -29,6 +29,10 @@
     "typescript": "^5.1.3"
   },
   "devDependencies": {
+    "dotenv": "^16.1.4",
+    "knex": "^2.4.2",
+    "knex-cli": "^1.0.2",
+    "pg": "^8.11.0",
     "ts-node": "^10.9.1"
   }
 }
