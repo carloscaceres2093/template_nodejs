@@ -58,3 +58,49 @@ Folder principal del aplicativo el cual tiene la gran mayoria la lógica de los 
 * ### **app.js**
     En este archivo se realiza la inicialización del servicio.
 
+## Pasos de configuración del proyecto:
+
+1. ejecutamos el comando
+```
+npm init
+```
+ y nos pedirá los siguientes atributos:
+    * name: nombre del proyecto.
+    * version: Version del proyecto.
+    * Descripción: Descripción breve del proyecto.
+    * Entry point: El archivo principal (main) del aplicativo.
+    * test command: Si  uno tiene tests anidados, acá se especifica el comando para ejecutarlos.
+    * git repository: la ruta del repositorio en el que se encuentra el código.
+    * keywords: Palabras claves del proyecto.
+    * author: Autor y propietario del proyecto.
+    * licence: Especifica una licencia sobre la que se quiere distribuir el proyecto.
+
+2. Instalar typescript con el comando
+```
+npm install typescript
+```
+3. Instalar dependencias tales como:
+    * express: 
+        ```
+        npm install express
+        ```
+    * ts-node:
+        ```
+        npm install ts-node --save-dev
+        ```
+    * types/express
+        ```
+        npm install @types/express
+        ```
+4. Creamos un archivo tsconfig por default:
+    ```
+    npx tsc --init
+    ```
+    y luego activamos la opción de **outDir** dentro del archivo y definimos la carpeta que contiene el archivo main (index.ts o app.ts)
+
+5. para correr el proyecto desde el amin se hace con el uso del comando:
+```
+npx ts-node .\src\app.ts 
+```
+
+6. Luego instalamos 
