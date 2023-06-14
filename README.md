@@ -61,3 +61,28 @@ En este archivo se realiza la inicialización del servicio.
 
 ### utils (opcional)
 Tiene serivicios generales que pueden ser usados por los componentes o caulquier servicio dentro del aplicativo, es importante recalcar que son procesos muy generales y que no deben resolver particularidades del servicio.
+
+
+## Configuración Projecto
+---
+* El primer paso es crear el *package.json*, a partir del comando **npm init**
+
+    * **name**: Nombre del proyecto.
+    * **version**: Versión del proyecto
+    * **descripton**: Descripción breve del proyecto
+    * entry point: El archivo principal (main) del aplicativo.
+    * **test command**: Si uno tiene test unitarios, acá se especifíca el comando para ejecutarlos.
+    * **git repository**:  la ruta del repositorio en el que se encuentra el código.
+    * **keywords**: Palabras claves del proyecto.
+    * **author**: Autor y propietario del proyecto.
+    * **license**: Especifica una liciencia sobre la que se quiere distribuir el proyecto.
+
+ 
+* Instalar typescript **npm install typescript**
+* Instalar dependencias tales como:
+
+    * express **npm install express**
+    * ts-node **npm install ts-node --save-dev**
+    * types/express **npm install @types/express**
+
+* Crear un tsconfig por defecto con el comando **npx tsc --init**, y luego activamos la opción de **outDir** dentro del archivo y definimos la carpeta que contiene el archivo main (index.ts o app.ts)
