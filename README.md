@@ -58,12 +58,12 @@ Folder principal del aplicativo el cual tiene la gran mayoria la lógica de los 
 * ### **app.js**
     En este archivo se realiza la inicialización del servicio.
 
-## Pasos de configuración del proyecto:
+## **Pasos de configuración del proyecto:**
 
 1. ejecutamos el comando
-```
-npm init
-```
+    ```
+    npm init
+    ```
  y nos pedirá los siguientes atributos:
     * name: nombre del proyecto.
     * version: Version del proyecto.
@@ -76,9 +76,9 @@ npm init
     * licence: Especifica una licencia sobre la que se quiere distribuir el proyecto.
 
 2. Instalar typescript con el comando
-```
-npm install typescript
-```
+    ```
+    npm install typescript
+    ```
 3. Instalar dependencias tales como:
     * express: 
         ```
@@ -99,8 +99,108 @@ npm install typescript
     y luego activamos la opción de **outDir** dentro del archivo y definimos la carpeta que contiene el archivo main (index.ts o app.ts)
 
 5. para correr el proyecto desde el amin se hace con el uso del comando:
-```
-npx ts-node .\src\app.ts 
-```
+    ```
+    npx ts-node .\src\app.ts 
+    ```
 
-6. Luego instalamos 
+6. Para la migraciones se debe instalar la dependecia del ORM llamado **knex**, donde haremos uso del comando **npm install knex knex-cli pg --save-dev** 
+
+7. Para leer variables de entorno instalamos la libreria de dotenv **npm install dotenv** 
+
+8. configuramos la variable de entorno:
+    ``` 
+    POSTGRES_URI=postgresql://<usuario_db>:<password_db>@<host_db>:<port_db>/<database>
+    ```
+9. Creamos el archivo **knexfile.ts** y lo configuramos de la siguiente manera:
+    ```
+    import dotenv  from 'dotenv'
+
+    dotenv.config()
+
+    console.log(process.env.POSTGRES_URI)
+    module.exports = {
+        development: {
+            client: 'pg',
+            connection: process.env.POSTGRES_URI,
+            migrations:{
+                directory:'./src/db/migrations',
+                tableName: 'knex_migrations',
+            }
+        }
+    }
+    ```
+10. Creamos el archivo de la migración dentro de la carpeta /db/migrations con el siguiente nombramiento:
+    ```
+    AAAAMMDDHHMMSS_create_<nombreTabla>_table.ts
+    ```
+    donde:
+    ```
+    AAAA -> Año 
+    MM -> Mes numero
+    DD -> Dia numero
+    HH -> Hora
+    MM -> Minuto
+    SS -> Segundo
+    ```
+    y dentro crearemos dos funciones asincronicas ***up*** para subir la migración
+    y otra ***down*** para hacer rollback:
+    ```
+    import { Knex } from 'knex'
+
+    export async function up(knex:Knex): Promise<void> {
+        await knex.raw(
+            `
+            CREATE TABLE IF NOT EXISTS doctores (
+                id_doctor bigserial,
+                nombre VARCHAR, 
+                apellido VARCHAR, 
+                especialidad VARCHAR,
+                consultorio VARCHAR,
+                correo VARCHAR,
+                created_at timestamptz,
+                updated_at timestamptz,
+                PRIMARY key(id_doctor)
+            );
+            
+            CREATE TABLE IF NOT EXISTS pacientes (
+                id_paciente bigserial,
+                nombre VARCHAR, 
+                apellido VARCHAR, 
+                identificacion VARCHAR UNIQUE,
+                telefono INT,
+                created_at timestamptz,
+                updated_at timestamptz,
+                PRIMARY key(id_paciente)
+            );
+            
+            CREATE TABLE IF NOT EXISTS citas (
+                id_cita bigserial,
+                horario VARCHAR,
+                especialidad VARCHAR,
+                id_doctor BIGINT,
+                identificacion_paciente VARCHAR,
+                created_at timestamptz,
+                updated_at timestamptz,
+                PRIMARY key(id_cita),
+                CONSTRAINT fk_doctores
+                FOREIGN KEY (id_doctor)
+                REFERENCES doctores(id_doctor),
+                CONSTRAINT fk_pacientes
+                FOREIGN KEY (identificacion_paciente)
+                REFERENCES pacientes(identificacion)
+            );
+            `
+        )
+    }
+
+    export async function down(knex: Knex): Promise<void> {
+        await knex.raw(
+            `
+            DROP TABLE doctores;
+            DROP TABLE pacientes;
+            DROP TABLE citas;
+            `
+        )
+    }
+  
+    ```
