@@ -63,7 +63,7 @@ En este archivo se realiza la inicialización del servicio.
 Tiene serivicios generales que pueden ser usados por los componentes o caulquier servicio dentro del aplicativo, es importante recalcar que son procesos muy generales y que no deben resolver particularidades del servicio.
 
 
-## Configuración Projecto
+## Configuración Proyecto
 ---
 * El primer paso es crear el *package.json*, a partir del comando **npm init**
 
