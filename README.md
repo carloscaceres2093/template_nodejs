@@ -64,16 +64,17 @@ Folder principal del aplicativo el cual tiene la gran mayoria la lógica de los 
     ```
     npm init
     ```
- y nos pedirá los siguientes atributos:
-    * name: nombre del proyecto.
-    * version: Version del proyecto.
-    * Descripción: Descripción breve del proyecto.
-    * Entry point: El archivo principal (main) del aplicativo.
-    * test command: Si  uno tiene tests anidados, acá se especifica el comando para ejecutarlos.
-    * git repository: la ruta del repositorio en el que se encuentra el código.
-    * keywords: Palabras claves del proyecto.
-    * author: Autor y propietario del proyecto.
-    * licence: Especifica una licencia sobre la que se quiere distribuir el proyecto.
+    y nos pedirá los siguientes atributos:
+
+        * name: nombre del proyecto.
+        * version: Version del proyecto.
+        * Descripción: Descripción breve del proyecto.
+        * Entry point: El archivo principal (main) del aplicativo.
+        * test command: Si  uno tiene tests anidados, acá se     especifica el comando para ejecutarlos.
+        * git repository: la ruta del repositorio en el que se encuentra el código.
+        * keywords: Palabras claves del proyecto.
+        * author: Autor y propietario del proyecto.
+        * licence: Especifica una licencia sobre la que se quiere distribuir el proyecto.
 
 2. Instalar typescript con el comando
     ```
@@ -107,7 +108,7 @@ Folder principal del aplicativo el cual tiene la gran mayoria la lógica de los 
 
 7. Para leer variables de entorno instalamos la libreria de dotenv **npm install dotenv** 
 
-8. configuramos la variable de entorno:
+8. configuramos la variable de entorno en un archivo .env:
     ``` 
     POSTGRES_URI=postgresql://<usuario_db>:<password_db>@<host_db>:<port_db>/<database>
     ```
@@ -203,4 +204,8 @@ Folder principal del aplicativo el cual tiene la gran mayoria la lógica de los 
         )
     }
   
+    ```
+11. ejecutamos la migración con el siguiente comando:
+    ```
+    npx knex migrate:latest --knexfile db/knexfile.ts
     ```
