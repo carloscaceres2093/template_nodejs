@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express'
-//import logger from './utils/logger'
+import logger from './utils/logger'
 import routes from './api/routes'
 
 const app = express()
@@ -12,6 +12,6 @@ app.use(express.json())
 app.use('/api/v1', routes)
 
 app.listen(port, () => {
-    //logger.info(`Server is listening on port ${port}`)
+    logger.info(`Server is listening on port ${port}`)
 }
 )
