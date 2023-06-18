@@ -8,10 +8,14 @@ export interface DoctorService {
 export class DoctorServiceImpl implements DoctorService {
 
     getAllDoctors(): Doctor[] {
-        throw new Error("Method not implemented.");
+        const doctores = [
+            { id_doctor: 1, nombre: 'John', apellido: 'Doe', especialidad: 'Pediatría', consultorio: 101, correo: 'john.doe@123.4', createdAt: new Date() },
+            { id_doctor: 1, nombre: 'Jose', apellido: 'Rodrigez', especialidad: 'Medicina General', consultorio: 102, createdAt: new Date() },
+        ]
+        return doctores
     }
     createDoctor(): Doctor {
-        throw new Error("Method not implemented.");
+        return { id_doctor: 1, nombre: 'Jose', apellido: 'Rodrigez', especialidad: 'Medicina General', consultorio: 102, createdAt: new Date() }
     }
 
 }

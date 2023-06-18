@@ -3,8 +3,8 @@ export interface Doctor {
     nombre: string,
     apellido: string,
     especialidad: string,
-    consultorio: string,
-    correo: string,
-    created_at: string,
-    updated_at: string
+    consultorio: number,
+    correo?: string,
+    createdAt?: Date
+    updatedAt?: Date
 } 
