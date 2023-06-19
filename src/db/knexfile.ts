@@ -13,18 +13,3 @@ module.exports = {
         }
     }
 }
-// module.exports = {
-//     development: {
-//         client: 'postgresql',
-//         connection: {
-//             host:'localhost',
-//             user: 'postgres',
-//             password: process.env.PWS,
-//             dabase: 'gestion_citas',
-//             port:5433,
-//         },
-//         migrations:{
-//             directory:'./db/migrations'
-//         }
-//     }
-// }
