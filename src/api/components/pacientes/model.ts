@@ -4,6 +4,13 @@ export interface Patient {
     apellido: string
     identificacion: string
     telefono: number
-    createdAt: Date
-    updatedAt: Date
+    createdAt?: Date
+    updatedAt?: Date
+}
+
+export interface PatientReq {
+    nombre: string
+    apellido: string
+    identificacion: string
+    telefono: number
 }
