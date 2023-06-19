@@ -1,3 +1,4 @@
+import logger from "../../../utils/logger"
 import { Doctor } from "./model"
 import { DoctorService, DoctorServiceImpl } from "./service"
 import { Request, Response } from "express"
@@ -19,9 +20,17 @@ export class DoctorControllerImpl implements DoctorController {
         const doctors: Doctor[] = this.doctorService.getAllDoctors()
         res.json(doctors)
     }
-    createDoctor(req: Request, res: Response): void {
-        const createDoctor: Doctor = this.doctorService.createDoctor()
-        res.json(createDoctor)
+    async createDoctor(req: Request, res: Response): Promise<void> {
+        const doctorReq = req.body
+        try {
+            const createDoctor: Doctor = await this.doctorService.createDoctor(doctorReq)
+            res.status(201).json(createDoctor)
+        } catch (error) {
+            logger.error(error)
+            res.status(400).json({
+                message: "Error creando doctor."
+            })
+        }
     }
 
 }

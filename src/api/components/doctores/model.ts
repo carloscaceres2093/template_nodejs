@@ -7,4 +7,12 @@ export interface Doctor {
     correo?: string,
     createdAt?: Date
     updatedAt?: Date
+}
+
+export interface DoctorReq {
+    nombre: string,
+    apellido: string,
+    especialidad: string,
+    consultorio: number,
+    correo?: string
 } 
