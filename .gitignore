@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # node modules
 node_modules/
 
@@ -6,3 +7,10 @@ node_modules/
 
 # logs
 /logs
+=======
+# Node modules
+node_modules/
+
+# Env variables
+.env
+>>>>>>> develop

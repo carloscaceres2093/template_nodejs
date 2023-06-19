@@ -1,4 +1,5 @@
 import express, { Router } from 'express'
+import logger from '../../../utils/logger'
 import { DoctorController, DoctorControllerImpl } from './controller'
 import { DoctorServiceImpl } from './service'
 
