@@ -7,7 +7,7 @@ export class DoctorRepository {
             const [createDoctor] = await db('doctores').insert(doctor).returning('*')
             return createDoctor
         } catch (error) {
-            throw new Error(`Error creating doctor: ${doctor}`)
+            throw new Error(`Error creating doctor: ${JSON.stringify(doctor)}`)
         }
     }
 
