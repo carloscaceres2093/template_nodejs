@@ -16,11 +16,18 @@ export class DoctorControllerImpl implements DoctorController {
         this.doctorService = doctorService
     }
 
-    getAllDoctors(req: Request, res: Response): void {
-        const doctors: Doctor[] = this.doctorService.getAllDoctors()
-        res.json(doctors)
+    public async getAllDoctors(req: Request, res: Response): Promise<void> {
+        try {
+            const doctors = await this.doctorService.getAllDoctors()
+            res.json(doctors)
+        } catch (error) {
+            logger.error(error)
+            res.status(400).json({
+                message: "Error consultando doctor."
+            })
+        }
     }
-    async createDoctor(req: Request, res: Response): Promise<void> {
+    public async createDoctor(req: Request, res: Response): Promise<void> {
         const doctorReq = req.body
         try {
             const createDoctor: Doctor = await this.doctorService.createDoctor(doctorReq)
@@ -32,5 +39,4 @@ export class DoctorControllerImpl implements DoctorController {
             })
         }
     }
-
 }

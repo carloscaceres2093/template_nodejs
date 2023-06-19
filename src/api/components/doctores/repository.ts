@@ -10,4 +10,12 @@ export class DoctorRepository {
             throw new Error(`Error creating doctor: ${doctor}`)
         }
     }
+
+    public async getAllDoctors(): Promise<Doctor[]> {
+        try {
+            return db.select('*').from('doctores')
+        } catch (error) {
+            throw new Error(`Error consulting doctor`)
+        }
+    }
 }
