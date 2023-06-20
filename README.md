@@ -94,3 +94,10 @@ Tiene serivicios generales que pueden ser usados por los componentes o caulquier
 * Para leer variables de entorno instalamos la libreria de dotenv **npm install dotenv** 
 
 * POSTGRES_URI=postgresql://<usuario_db>:<password_db>@<host_db>:<port_db>/<database>
+
+
+Tareas 16/06/2023
+
+* Validar que los campos del request sean los del modelo DoctorReq, y si no vienen completos decir cual falta, y sin vienen de más, no tomarlos
+* Hacer que el created_at y el updated_at se asignen de forma automática cuando se inserta un dato.
+* Completar los create y select de citas y pacientes
