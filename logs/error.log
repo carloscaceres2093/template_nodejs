@@ -6,3 +6,4 @@
 2023-06-19T23:43:12.392Z-error: message: el campo identificacion es obligatorio
 2023-06-19T23:43:14.514Z-error: message: el campo identificacion es obligatorio
 2023-06-19T23:43:14.656Z-error: message: el campo identificacion es obligatorio
+2023-06-20T00:12:14.618Z-error: Error creating doctor: {"horario":"9:00 am","id_doctor":1,"identificacion_paciente":"213","especialidad":"Cardiología"}

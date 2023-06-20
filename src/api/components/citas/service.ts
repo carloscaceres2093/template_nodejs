@@ -1,16 +1,22 @@
-import { Appointment } from "./model"
+import { Appointment, AppointmentReq } from "./model"
+import { AppointmentRepository } from "./repository"
 
 export interface AppointmentService {
-    createAppointment(): Appointment | null 
-    getAllAppointments(): Appointment[]
+    createAppointment(appointmentReq: AppointmentReq): Promise<Appointment>
+    getAllAppointments(): Promise<Appointment[]>
 }
 
 export class AppointmentServiceImpl implements AppointmentService {
-    
-    public createAppointment(): Appointment | null {
-        return null
+    private appointmentRepository: AppointmentRepository
+
+    constructor() {
+        this.appointmentRepository = new AppointmentRepository
     }
-    public getAllAppointments(): Appointment[] {
-        return []
+
+    public async createAppointment(appointmentReq: AppointmentReq): Promise<Appointment> {
+        return this.appointmentRepository.createDoctor(appointmentReq)
+    }
+    public async getAllAppointments(): Promise<Appointment[]> {
+        return this.appointmentRepository.getAllappointments()
     }
 }
