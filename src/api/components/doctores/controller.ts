@@ -22,7 +22,7 @@ export class DoctorControllerImpl implements DoctorController {
             
         } catch (error) {
             logger.error(error)
-            res.status(400).json({message: "Error getting all doctors"})
+            res.json({message: "Error getting all doctors"})
         }
     }
     public  createDoctor (req: Request, res: Response): void {
