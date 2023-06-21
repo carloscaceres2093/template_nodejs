@@ -1,21 +1,24 @@
-import { Doctor } from "./model"
+import { Doctor, DoctorReq } from "./model"
+import { DoctorRepository } from "./repository"
 
 export interface DoctorService {
-    getAllDoctors(): Doctor[]
-    createDoctor(): Doctor
+    getAllDoctors(): Promise<Doctor[]>
+    createDoctor(doctorReq: DoctorReq): Promise<Doctor>
 }
 
 export class DoctorServiceImpl implements DoctorService {
-    
-    public getAllDoctors(): Doctor[] {
-        const doctores = [
-            {id_doctor: 1, nombre: 'John', apellido: 'Doe', especialidad: 'Pediatría', consultorio: 101, correo: 'john.doe@123.4', createdAt: new Date()},
-            {id_doctor: 1, nombre: 'Jose', apellido: 'Rodrigez', especialidad: 'Medicina General', consultorio:102,  createdAt: new Date()},
-        ]
-        return doctores
+    private doctorRepository: DoctorRepository
+
+    constructor(doctorRepository: DoctorRepository){
+        this.doctorRepository = doctorRepository
+    }
+
+    public getAllDoctors(): Promise<Doctor[]> {
+        const doctors: Promise<Doctor[]> =  this.doctorRepository.getAllDoctors()
+        return doctors
     }
     
-    public createDoctor(): Doctor {
-        return {id_doctor: 1, nombre: 'Jose', apellido: 'Rodrigez', especialidad: 'Medicina General', consultorio:102,  createdAt: new Date()}
+    public   createDoctor(doctorReq: DoctorReq): Promise<Doctor> {
+        return this.doctorRepository.createDoctor(doctorReq)
     }
 }
