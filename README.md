@@ -209,3 +209,24 @@ Folder principal del aplicativo el cual tiene la gran mayoria la lógica de los 
     ```
     npx knex migrate:latest --knexfile db/knexfile.ts
     ```
+
+12. para hacer los test unitarios debemos instalar libreria llamada chai:
+    ```
+    npm install --save-dev chai chai-http chai-spies @types/chai @types/chai-http @types/chai-spies
+    ```
+13. para la ejecución de los test se debe hacer la ejecución de la librería jest:
+
+    ```
+    npm i --save-dev @types/jest
+    ```
+14. para ejecutar los test se debe ejecutar el siguiente comando:
+    ```
+    npx jest --verbose true
+    ```
+    ***Nota:*** En las pruebas unitarias se pide un coverage que es la cobertura de las pruebas en el código.
+    Las pruebas unitarias se desarrollan en:
+    * Controller
+    * Service  
+    ya que son los modulos que contienen la lógica de nuestro servicio.
+
+    Generalmente se pide un coverage del 90% si el servicio es critico para los usuarios. Si no entonces se pide un coverage del 50% - 70% 

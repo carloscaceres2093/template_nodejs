@@ -9,7 +9,7 @@ export interface DoctorService {
 export class DoctorServiceImpl implements DoctorService {
     private doctorRepository: DoctorRepository
 
-    constructor() {
+    constructor(doctorRepository: DoctorRepository) {
         this.doctorRepository = new DoctorRepository
     }
     getAllDoctors(): Promise<Doctor[]> {

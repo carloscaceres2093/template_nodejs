@@ -49,3 +49,46 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-06-20T00:12:14.608Z-info: message: todos los campos obligatorios existen
 2023-06-20T00:12:14.618Z-error: Error creating doctor: {"horario":"9:00 am","id_doctor":1,"identificacion_paciente":"213","especialidad":"Cardiología"}
 2023-06-20T00:12:18.793Z-info: message: todos los campos obligatorios existen
+2023-06-21T01:14:44.172Z-error: Internal Server Error
+2023-06-21T01:14:58.677Z-error: Internal Server Error
+2023-06-21T01:17:46.348Z-error: Internal Server Error
+2023-06-21T01:17:57.997Z-error: Internal Server Error
+2023-06-21T01:18:26.455Z-error: Internal Server Error
+2023-06-21T02:10:27.870Z-error: Internal Server Error
+2023-06-21T02:14:19.430Z-error: Internal Server Error
+2023-06-21T02:15:50.022Z-error: Internal Server Error
+2023-06-21T02:26:41.298Z-error: Internal Server Error
+2023-06-21T02:27:31.491Z-error: Internal Server Error
+2023-06-21T02:27:31.496Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:33:25.806Z-error: Internal Server Error
+2023-06-21T02:33:25.808Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:33:25.810Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:33:25.810Z-error: Internal Server Error
+2023-06-21T02:34:25.555Z-error: Internal Server Error
+2023-06-21T02:34:25.558Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:34:25.560Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:34:25.560Z-error: Internal Server Error
+2023-06-21T02:34:52.729Z-error: Internal Server Error
+2023-06-21T02:34:52.732Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:34:52.735Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:34:52.735Z-error: Internal Server Error
+2023-06-21T02:42:28.591Z-error: Internal Server Error
+2023-06-21T02:42:28.595Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:42:28.597Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:42:28.597Z-error: Internal Server Error
+2023-06-21T02:44:20.247Z-error: Internal Server Error
+2023-06-21T02:44:20.251Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:44:20.252Z-info: message: todos los campos obligatorios existen
+2023-06-21T02:44:20.252Z-error: Internal Server Error
+2023-06-21T03:01:18.481Z-error: Internal Server Error
+2023-06-21T03:01:18.485Z-info: message: todos los campos obligatorios existen
+2023-06-21T03:01:18.486Z-info: message: todos los campos obligatorios existen
+2023-06-21T03:01:18.487Z-error: Internal Server Error
+2023-06-21T03:02:57.369Z-error: Internal Server Error
+2023-06-21T03:02:57.372Z-info: message: todos los campos obligatorios existen
+2023-06-21T03:02:57.374Z-info: message: todos los campos obligatorios existen
+2023-06-21T03:02:57.374Z-error: Internal Server Error
+2023-06-21T03:05:24.303Z-error: Internal Server Error
+2023-06-21T03:05:24.306Z-info: message: todos los campos obligatorios existen
+2023-06-21T03:05:24.308Z-info: message: todos los campos obligatorios existen
+2023-06-21T03:05:24.308Z-error: Internal Server Error

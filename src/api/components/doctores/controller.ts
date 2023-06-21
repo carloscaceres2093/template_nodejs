@@ -3,7 +3,6 @@ import logger from "../../../utils/logger"
 import { Doctor, DoctorReq } from "./model"
 import { DoctorService, DoctorServiceImpl } from "./service"
 import { Request, Response } from "express"
-import { log } from "winston"
 
 export interface DoctorController {
     getAllDoctors(req: Request, res: Response): void
@@ -76,7 +75,7 @@ export class DoctorControllerImpl implements DoctorController {
     public async getAllDoctors(req: Request, res: Response): Promise<void> {
         try {
             const doctors = await this.doctorService.getAllDoctors()
-            res.json(doctors)
+            res.status(200).json(doctors)
         } catch (error) {
             logger.error(error)
             res.status(400).json({
