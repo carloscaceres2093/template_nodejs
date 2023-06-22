@@ -2,11 +2,13 @@ import { Doctor } from './model'
 import { Request, Response } from 'express'
 import { DoctorService } from './service'
 import logger from '../../../utils/logger'
+import { DoctorCreationError, DoctorGetAllError, RecordNotFoundError } from '../../../config/customErrors'
 
 
 export interface DoctorController {
     getAllDoctors(req: Request, res: Response): void
-    createDoctor(req: Request, res: Response): void    
+    createDoctor(req: Request, res: Response): void  
+    getDoctorById(req: Request, res: Response): void    
 }
 
 export class DoctorControllerImpl implements DoctorController {
@@ -32,10 +34,38 @@ export class DoctorControllerImpl implements DoctorController {
                 res.status(201).json(doctor)
             },
             (error) =>{
-                console.log(error)
-                res.status(400).json({message: "Error creating doctor"})
+                logger.error(error)
+                if (error instanceof DoctorCreationError){
+                    res.status(400).json({
+                        error_name: error.name,
+                        message: "Failed Creating a doctor"
+                    })
+                } else {
+                    res.status(400).json({
+                        message: "Internal Server Error"
+                    })
+                }
             }
         )
 
+    }
+
+    public async getDoctorById (req: Request, res: Response): Promise<void> {
+        try{
+            const id = parseInt(req.params.id)
+            const doctor =  await this.doctorService.getDoctorById(id)
+            if (doctor) {
+                res.status(200).json(doctor)
+            } else {
+                throw new RecordNotFoundError()
+            }
+        } catch (error) {
+            logger.error(error)
+            if (error instanceof RecordNotFoundError){
+                res.status(400).json({error: error.message})
+            } else {
+                res.status(400).json({error: "Failed to retrieve doctor"})
+            }
+        }
     }
 }
