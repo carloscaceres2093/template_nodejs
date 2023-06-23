@@ -5,15 +5,13 @@ export interface Doctor {
     especialidad: string
     consultorio: number
     correo?: string
-    createdAt: Date
+    createdAt?: Date
 }
 
-export interface DoctorReq {
-    id_doctor: number
-    nombre: string
-    apellido: string
-    especialidad: string
-    consultorio: number
-    correo?: string
-    createdAt: Date
-}
+    export interface DoctorReq {
+        nombre: string
+        apellido: string
+        especialidad: string
+        consultorio: number
+        correo?: string
+    }

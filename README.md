@@ -94,3 +94,23 @@ Tiene serivicios generales que pueden ser usados por los componentes o caulquier
 * Para leer variables de entorno instalamos la libreria de dotenv **npm install dotenv** 
 
 * POSTGRES_URI=postgresql://<usuario_db>:<password_db>@<host_db>:<port_db>/<database>
+
+
+Tareas 16/06/2023
+
+* Validar que los campos del request sean los del modelo DoctorReq, y si no vienen completos decir cual falta, y sin vienen de más, no tomarlos
+* Hacer que el created_at y el updated_at se asignen de forma automática cuando se inserta un dato.
+* Completar los create y select de citas y pacientes
+
+
+## Test unitarios
+
+Para configurar y crear los test unitarios, debemos instalar un librería llamada chai de la siguiente forma:
+
+**npm install --save-dev  chai chai-http chai-spies @types/chai @types/chai-http @types/chai-spies**
+
+Para la ejecución de los test se debe hacer la instalación de la librería jest:
+
+**npm install --save-dev jest ts-jest @types/jest**
+
+Para ejecutar los test se debe ejecutar el comando  **npx jest**
