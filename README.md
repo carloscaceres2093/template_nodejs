@@ -119,3 +119,8 @@ Para ejecutar los test se debe ejecutar el comando  **npx jest**
 Tareas 20/06/2023
 
 * Completar los test tanto para el service como para el controller de los componentes de pacientes y citas
+
+Tarea Entregar taller 6
+
+* Cambiar los errores específicos por errores genéricos que se puedan adecuar.
+* Validación que la respuesta del doctor en creación de cita en el serivice sea diferente de null, sino retornar que el doctor no exisite

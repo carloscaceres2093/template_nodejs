@@ -162,3 +162,27 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-06-22T02:57:38.625Z-error: Internal Server Error
 2023-06-22T02:57:38.628Z-error: Record has not found yet
 2023-06-22T02:57:38.629Z-error: Internal Server Error
+2023-06-23T00:57:57.637Z-info: Server is listening on port 8087
+2023-06-23T00:58:31.388Z-info: Server is listening on port 8087
+2023-06-23T00:59:18.508Z-error: Failed to update doctor from service
+2023-06-23T00:59:18.509Z-error: Failed to update doctor
+2023-06-23T01:00:02.129Z-info: Server is listening on port 8087
+2023-06-23T01:00:05.291Z-error: Failed to update doctor from service
+2023-06-23T01:00:05.291Z-error: Failed to update doctor
+2023-06-23T01:09:07.950Z-info: Server is listening on port 8087
+2023-06-23T01:10:00.884Z-info: Server is listening on port 8087
+2023-06-23T01:29:26.385Z-info: Server is listening on port 8087
+2023-06-23T01:30:48.500Z-info: Server is listening on port 8087
+2023-06-23T01:30:52.709Z-error: Failed get patient by id in repository
+2023-06-23T01:30:52.709Z-error: Record has not found yet
+2023-06-23T01:32:58.841Z-error: Record has not found yet
+2023-06-23T01:35:37.612Z-info: Server is listening on port 8087
+2023-06-23T01:35:39.741Z-error: Failed get patient by id in repository
+2023-06-23T01:35:39.741Z-error: Record has not found yet
+2023-06-23T01:38:30.134Z-info: Server is listening on port 8087
+2023-06-23T01:38:36.213Z-error: Failed get patient by id in repository
+2023-06-23T01:38:36.213Z-error: Record has not found yet
+2023-06-23T01:41:38.754Z-info: Server is listening on port 8087
+2023-06-23T01:41:49.636Z-error: Id must be a number
+2023-06-23T02:38:41.747Z-info: Server is listening on port 8087
+2023-06-23T02:51:24.466Z-info: Server is listening on port 8087

@@ -2,13 +2,15 @@ import { Doctor } from './model'
 import { Request, Response } from 'express'
 import { DoctorService } from './service'
 import logger from '../../../utils/logger'
-import { DoctorCreationError, DoctorGetAllError, RecordNotFoundError } from '../../../config/customErrors'
+import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdateError, RecordNotFoundError } from '../../../config/customErrors'
 
 
 export interface DoctorController {
     getAllDoctors(req: Request, res: Response): void
     createDoctor(req: Request, res: Response): void  
-    getDoctorById(req: Request, res: Response): void    
+    getDoctorById(req: Request, res: Response): void 
+    updateDoctor(req: Request, res: Response): void   
+    deleteDoctor(req: Request, res: Response): void  
 }
 
 export class DoctorControllerImpl implements DoctorController {
@@ -65,6 +67,44 @@ export class DoctorControllerImpl implements DoctorController {
                 res.status(400).json({error: error.message})
             } else {
                 res.status(400).json({error: "Failed to retrieve doctor"})
+            }
+        }
+    }
+
+    public async updateDoctor (req: Request, res: Response): Promise<void> {
+        try{
+            const id = parseInt(req.params.id)
+            const doctorReq = req.body
+            const doctor =  await this.doctorService.updateDoctor(id, doctorReq)
+            if (doctor) {
+                res.status(200).json(doctor)
+            } else {
+                throw new DoctorUpdateError()
+            }
+        } catch (error) {
+            logger.error(error)
+            if (error instanceof RecordNotFoundError){
+                res.status(400).json({error: error.message})
+            } else  if (error instanceof DoctorUpdateError){
+                res.status(400).json({error: error.message})
+            } else {
+                res.status(400).json({error: "Failed to update doctor"})
+            }
+        }
+    }
+
+    public async deleteDoctor (req: Request, res: Response): Promise<void> {
+        try{
+            const id = parseInt(req.params.id)
+            await this.doctorService.deleteDoctor(id)
+            
+            res.status(200).json({message: `Doctor was deleted successfully`})
+        } catch (error) {
+            logger.error(error)
+            if (error instanceof DoctorDeleteError){
+                res.status(400).json({error: error.message})
+            } else {
+                res.status(400).json({error: "Failed to delete doctor"})
             }
         }
     }

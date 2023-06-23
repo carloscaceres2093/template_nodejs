@@ -83,3 +83,15 @@
 2023-06-22T02:57:38.625Z-error: Internal Server Error
 2023-06-22T02:57:38.628Z-error: Record has not found yet
 2023-06-22T02:57:38.629Z-error: Internal Server Error
+2023-06-23T00:59:18.508Z-error: Failed to update doctor from service
+2023-06-23T00:59:18.509Z-error: Failed to update doctor
+2023-06-23T01:00:05.291Z-error: Failed to update doctor from service
+2023-06-23T01:00:05.291Z-error: Failed to update doctor
+2023-06-23T01:30:52.709Z-error: Failed get patient by id in repository
+2023-06-23T01:30:52.709Z-error: Record has not found yet
+2023-06-23T01:32:58.841Z-error: Record has not found yet
+2023-06-23T01:35:39.741Z-error: Failed get patient by id in repository
+2023-06-23T01:35:39.741Z-error: Record has not found yet
+2023-06-23T01:38:36.213Z-error: Failed get patient by id in repository
+2023-06-23T01:38:36.213Z-error: Record has not found yet
+2023-06-23T01:41:49.636Z-error: Id must be a number
