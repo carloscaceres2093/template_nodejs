@@ -186,3 +186,28 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-06-23T01:41:49.636Z-error: Id must be a number
 2023-06-23T02:38:41.747Z-info: Server is listening on port 8087
 2023-06-23T02:51:24.466Z-info: Server is listening on port 8087
+2023-06-24T02:22:47.039Z-info: Server is listening on port 8087
+2023-06-24T02:23:11.934Z-info: Server is listening on port 8087
+2023-06-24T02:23:13.727Z-error: Failed get appointment by id in repository
+2023-06-24T02:23:13.727Z-error: Failed to get appointment from service
+2023-06-24T02:23:13.728Z-error: Record has not found yet
+2023-06-24T02:23:41.122Z-info: Server is listening on port 8087
+2023-06-24T02:24:51.874Z-info: Server is listening on port 8087
+2023-06-24T02:25:08.106Z-info: Server is listening on port 8087
+2023-06-24T02:25:37.075Z-info: Server is listening on port 8087
+2023-06-24T02:25:58.398Z-info: Server is listening on port 8087
+2023-06-24T02:26:18.234Z-info: Server is listening on port 8087
+2023-06-24T02:26:33.590Z-info: Server is listening on port 8087
+2023-06-24T02:27:04.052Z-info: Server is listening on port 8087
+2023-06-24T02:28:06.570Z-info: Server is listening on port 8087
+2023-06-24T02:28:08.476Z-error: database "gestion_citas1" does not exist
+2023-06-24T02:28:51.489Z-info: Server is listening on port 8087
+2023-06-24T02:28:53.679Z-error: database "gestion_citas1" does not exist
+2023-06-24T02:28:53.679Z-error: Failed getting all appointments from service
+2023-06-24T02:30:49.304Z-info: Server is listening on port 8087
+2023-06-24T02:30:50.112Z-error: database "gestion_citas1" does not exist
+2023-06-24T02:30:50.112Z-error: Failed getting all appointments from service aca
+2023-06-24T02:40:04.003Z-info: Server is listening on port 8087
+2023-06-24T02:40:42.052Z-info: Server is listening on port 8087
+2023-06-24T02:40:46.437Z-error: Failed to create doctor dubt: error: database "gestion_citas1" does not exist
+2023-06-24T02:40:59.263Z-info: Server is listening on port 8087

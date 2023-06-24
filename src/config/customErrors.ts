@@ -40,11 +40,20 @@ class RecordNotFoundError extends Error {
     }
 }
 
+
+class GetAllError extends Error {
+    constructor(message: string, componentName?: string){
+        super(message)
+        this.name = `${componentName}GetAllError`
+    }
+}
+
 export {
     DoctorGetAllError,
     DoctorCreationError,
     RecordNotFoundError,
     DoctorUpdateError,
     DoctorDeleteError,
-    PatientGetAllError
+    PatientGetAllError,
+    GetAllError
 }

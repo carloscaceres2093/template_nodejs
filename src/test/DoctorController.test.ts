@@ -14,8 +14,9 @@ describe('DoctorController', () => {
         doctorSerivce = {
             getAllDoctors: jest.fn(),
             createDoctor: jest.fn(),
-            getDoctorById: jest.fn()
-
+            getDoctorById: jest.fn(),
+            updateDoctor: jest.fn(),
+            deleteDoctor: jest.fn()
         }
 
         doctorController = new DoctorControllerImpl(doctorSerivce)

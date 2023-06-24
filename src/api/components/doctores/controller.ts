@@ -3,6 +3,7 @@ import { Request, Response } from 'express'
 import { DoctorService } from './service'
 import logger from '../../../utils/logger'
 import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdateError, RecordNotFoundError } from '../../../config/customErrors'
+import { createDoctorSchema } from './validations/doctor.validations'
 
 
 export interface DoctorController {
@@ -29,26 +30,32 @@ export class DoctorControllerImpl implements DoctorController {
         }
     }
     public  createDoctor (req: Request, res: Response): void {
-        const doctorReq = req.body
-        this.doctorService.createDoctor(doctorReq)
-        .then(
-            (doctor) =>{
-                res.status(201).json(doctor)
-            },
-            (error) =>{
-                logger.error(error)
-                if (error instanceof DoctorCreationError){
-                    res.status(400).json({
-                        error_name: error.name,
-                        message: "Failed Creating a doctor"
-                    })
-                } else {
-                    res.status(400).json({
-                        message: "Internal Server Error"
-                    })
+    
+        const {error, value } = createDoctorSchema.validate(req.body)
+
+        if (error){
+            res.status(400).json({message: error.details[0].message})
+        } else{
+            this.doctorService.createDoctor(value)
+            .then(
+                (doctor) =>{
+                    res.status(201).json(doctor)
+                },
+                (error) =>{
+                    logger.error(error)
+                    if (error instanceof DoctorCreationError){
+                        res.status(400).json({
+                            error_name: error.name,
+                            message: "Failed Creating a doctor"
+                        })
+                    } else {
+                        res.status(400).json({
+                            message: "Internal Server Error"
+                        })
+                    }
                 }
-            }
-        )
+            )
+        }
 
     }
 
