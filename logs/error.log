@@ -7,9 +7,82 @@
 2023-06-20T02:11:05.205Z-error: Dabase Error
 2023-06-20T02:12:03.094Z-error: Dabase Error
 2023-06-20T02:19:20.075Z-error: Dabase Error
-2023-06-23T01:24:16.995Z-error: connect ECONNREFUSED ::1:5433
-2023-06-23T01:25:01.688Z-error: connect ECONNREFUSED ::1:5433
-2023-06-23T01:25:24.529Z-error: connect ECONNREFUSED ::1:5433
-2023-06-23T01:26:15.287Z-error: connect ECONNREFUSED ::1:5433
-2023-06-23T01:28:26.567Z-error: connect ECONNREFUSED ::1:5433
-2023-06-23T01:28:32.471Z-error: connect ECONNREFUSED ::1:5433
+2023-06-22T01:03:03.256Z-error: Unexpected token } in JSON at position 94
+2023-06-22T01:05:32.138Z-error: Unexpected token } in JSON at position 94
+2023-06-22T01:06:00.575Z-error: Unexpected token ' in JSON at position 16
+2023-06-22T01:11:32.027Z-error: database "gestion_cita1" does not exist
+2023-06-22T01:14:29.015Z-error: database "gestion_cita1" does not exist
+2023-06-22T01:15:09.123Z-error: database "gestion_cita1" does not exist
+2023-06-22T01:15:09.123Z-error: Error creating doctor: error: database "gestion_cita1" does not exist
+2023-06-22T01:15:22.358Z-error: database "gestion_cita1" does not exist
+2023-06-22T01:15:22.358Z-error: Error creating doctor: error: database "gestion_cita1" does not exist
+2023-06-22T01:16:29.269Z-error: Error creating doctor: error: database "gestion_cita1" does not exist
+2023-06-22T01:18:02.786Z-error: Internal Server Error
+2023-06-22T01:19:08.626Z-error: Internal Server Error
+2023-06-22T01:19:16.801Z-error: Internal Server Error
+2023-06-22T01:19:47.999Z-error: Internal Server Error
+2023-06-22T01:20:33.396Z-error: Internal Server Error
+2023-06-22T01:22:44.205Z-error: Internal Server Error
+2023-06-22T01:24:40.933Z-error: Internal Server Error
+2023-06-22T01:32:55.481Z-error: Failed to create doctor
+2023-06-22T01:33:51.958Z-error: Failed to create doctor
+2023-06-22T01:34:09.975Z-error: Failed to create doctor
+2023-06-22T01:36:05.413Z-error: Failed to create doctor repository
+2023-06-22T01:36:55.931Z-error: Failed to create doctor dubt: error: database "gestion_cita1" does not exist
+2023-06-22T01:39:07.486Z-error: Failed to create doctor dubt: error: database "gestion_cita1" does not exist
+2023-06-22T01:45:03.544Z-error: Failed to create doctor dubt: error: database "gestion_cita1" does not exist
+2023-06-22T01:45:26.417Z-error: Failed to create doctor dubt: error: database "gestion_cita1" does not exist
+2023-06-22T01:48:06.008Z-error: Failed to create doctor dubt: error: database "gestion_cita1" does not exist
+2023-06-22T02:28:21.280Z-error: Record has not found yet
+2023-06-22T02:30:36.460Z-error: Record has not found yet
+2023-06-22T02:31:34.848Z-error: Record has not found yet
+2023-06-22T02:32:01.334Z-error: Record has not found yet
+2023-06-22T02:32:35.323Z-error: Record has not found yet
+2023-06-22T02:34:41.157Z-error: Failed get doctor by id in repository
+2023-06-22T02:34:41.157Z-error: Record has not found yet
+2023-06-22T02:35:16.091Z-error: Record has not found yet
+2023-06-22T02:36:03.877Z-error: Failed get doctor by id in repository
+2023-06-22T02:36:03.878Z-error: Record has not found yet
+2023-06-22T02:42:19.366Z-error: Internal Server Error
+2023-06-22T02:42:55.239Z-error: Internal Server Error
+2023-06-22T02:43:11.640Z-error: Internal Server Error
+2023-06-22T02:45:05.590Z-error: Internal Server Error
+2023-06-22T02:45:05.594Z-error: Record has not found yet
+2023-06-22T02:45:38.105Z-error: Internal Server Error
+2023-06-22T02:45:38.110Z-error: Record has not found yet
+2023-06-22T02:46:06.303Z-error: Internal Server Error
+2023-06-22T02:46:06.307Z-error: Record has not found yet
+2023-06-22T02:46:22.396Z-error: Internal Server Error
+2023-06-22T02:46:22.400Z-error: Record has not found yet
+2023-06-22T02:46:29.887Z-error: Internal Server Error
+2023-06-22T02:46:29.891Z-error: Record has not found yet
+2023-06-22T02:48:14.326Z-error: Internal Server Error
+2023-06-22T02:48:14.330Z-error: Record has not found yet
+2023-06-22T02:48:14.331Z-error: Internal Server Error
+2023-06-22T02:48:37.967Z-error: Internal Server Error
+2023-06-22T02:48:37.970Z-error: Record has not found yet
+2023-06-22T02:48:37.971Z-error: Internal Server Error
+2023-06-22T02:51:42.196Z-error: Internal Server Error
+2023-06-22T02:51:42.201Z-error: Record has not found yet
+2023-06-22T02:51:42.202Z-error: Internal Server Error
+2023-06-22T02:51:49.412Z-error: Internal Server Error
+2023-06-22T02:51:49.417Z-error: Record has not found yet
+2023-06-22T02:51:49.419Z-error: Internal Server Error
+2023-06-22T02:53:04.812Z-error: Internal Server Error
+2023-06-22T02:53:04.816Z-error: Record has not found yet
+2023-06-22T02:53:04.817Z-error: Internal Server Error
+2023-06-22T02:53:27.789Z-error: Internal Server Error
+2023-06-22T02:53:27.793Z-error: Record has not found yet
+2023-06-22T02:53:27.794Z-error: Internal Server Error
+2023-06-22T02:53:40.236Z-error: Internal Server Error
+2023-06-22T02:53:40.241Z-error: Record has not found yet
+2023-06-22T02:53:40.241Z-error: Internal Server Error
+2023-06-22T02:56:15.271Z-error: Internal Server Error
+2023-06-22T02:56:15.280Z-error: Record has not found yet
+2023-06-22T02:56:15.281Z-error: Internal Server Error
+2023-06-22T02:57:38.625Z-error: Internal Server Error
+2023-06-22T02:57:38.628Z-error: Record has not found yet
+2023-06-22T02:57:38.629Z-error: Internal Server Error
+2023-06-23T02:09:54.093Z-error: Internal Server Error
+2023-06-23T02:09:54.101Z-error: Record has not found yet
+2023-06-23T02:09:54.102Z-error: Internal Server Error

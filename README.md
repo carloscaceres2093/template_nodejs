@@ -114,3 +114,8 @@ Para la ejecución de los test se debe hacer la instalación de la librería jes
 **npm install --save-dev jest ts-jest @types/jest**
 
 Para ejecutar los test se debe ejecutar el comando  **npx jest**
+
+
+Tareas 20/06/2023
+
+* Completar los test tanto para el service como para el controller de los componentes de pacientes y citas

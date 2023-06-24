@@ -7,10 +7,10 @@ export const db = knex({
     client: 'pg',
     connection: {
         host: 'localhost',
-        port: 5433,
+        port: 5432,
         database: 'gestion_citas',
         user: 'postgres',
-        password: 'changeme',
+        password: 'Jadmec06',
     },
 })
 
