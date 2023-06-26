@@ -85,6 +85,8 @@ Tiene serivicios generales que pueden ser usados por los componentes o caulquier
     * ts-node **npm install ts-node --save-dev**
     * types/express **npm install @types/express**
 
+* Para desintallar se corre le comando **npm uninstall <package>**
+
 * Crear un tsconfig por defecto con el comando **npx tsc --init**, y luego activamos la opción de **outDir** dentro del archivo y definimos la carpeta que contiene el archivo main (index.ts o app.ts)
 
 * Para correr el proyecto desde el main se hace uso del comando **npx ts-node src/app.ts**.
@@ -119,3 +121,13 @@ Para ejecutar los test se debe ejecutar el comando  **npx jest**
 Tareas 20/06/2023
 
 * Completar los test tanto para el service como para el controller de los componentes de pacientes y citas
+
+
+Tarea Entregar taller 6
+
+* Cambiar los errores específicos por errores genéricos que se puedan adecuar.
+* Validación que la respuesta del doctor en creación de cita en el serivice sea diferente de null, si no retornar que el doctor no exisite, es decir, si el doctor no existe en la creación de la cita
+    decir que el doctor no fue encontrado.
+* Cambiar el customErrors de config a utils
+* Completar por lo menos los test de citas o pacientes
+* Terminar el crud de citas y pacientes

@@ -86,3 +86,5 @@
 2023-06-23T02:09:54.093Z-error: Internal Server Error
 2023-06-23T02:09:54.101Z-error: Record has not found yet
 2023-06-23T02:09:54.102Z-error: Internal Server Error
+2023-06-25T17:20:01.324Z-error: Failed to create doctor dubt: error: insert into "doctores" ("apellido", "consultorio", "correo", "especialidad", "nombre") values ($1, $2, $3, $4, $5) returning * - llave duplicada viola restricción de unicidad «doctores_pkey»
+2023-06-25T17:20:34.350Z-error: Failed to create doctor dubt: error: insert into "doctores" ("apellido", "consultorio", "correo", "especialidad", "nombre") values ($1, $2, $3, $4, $5) returning * - llave duplicada viola restricción de unicidad «doctores_pkey»

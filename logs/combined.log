@@ -172,3 +172,7 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-06-24T23:42:20.453Z-info: 2
 2023-06-24T23:43:31.550Z-info: 2
 2023-06-24T23:43:40.053Z-info: 2
+2023-06-24T23:48:30.685Z-info: Server is listening on port 8087
+2023-06-25T17:16:38.871Z-info: Server is listening on port 8087
+2023-06-25T17:20:01.324Z-error: Failed to create doctor dubt: error: insert into "doctores" ("apellido", "consultorio", "correo", "especialidad", "nombre") values ($1, $2, $3, $4, $5) returning * - llave duplicada viola restricción de unicidad «doctores_pkey»
+2023-06-25T17:20:34.350Z-error: Failed to create doctor dubt: error: insert into "doctores" ("apellido", "consultorio", "correo", "especialidad", "nombre") values ($1, $2, $3, $4, $5) returning * - llave duplicada viola restricción de unicidad «doctores_pkey»
