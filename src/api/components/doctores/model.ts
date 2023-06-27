@@ -14,4 +14,6 @@ export interface DoctorReq {
     especialidad: string
     consultorio: number
     correo?: string
+    created_at?: Date
+    updated_at?: Date
 }

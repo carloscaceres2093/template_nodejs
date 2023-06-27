@@ -6,6 +6,8 @@ import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdate
 export class DoctorRepository {
     public async createDoctor(doctor: DoctorReq): Promise<Doctor> {
         try {
+            doctor.created_at = new Date()
+            doctor.updated_at = new Date()
             const [createdDoctor] =  await db('doctores').insert(doctor).returning('*') // select * from doctores where id_doctor=?
             return createdDoctor
         } catch (error) {

@@ -104,3 +104,6 @@
 2023-06-24T02:30:50.112Z-error: database "gestion_citas1" does not exist
 2023-06-24T02:30:50.112Z-error: Failed getting all appointments from service aca
 2023-06-24T02:40:46.437Z-error: Failed to create doctor dubt: error: database "gestion_citas1" does not exist
+2023-06-27T02:23:43.678Z-error: Failed get doctor by id in repository
+2023-06-27T02:23:43.679Z-error: Record has not found yet
+2023-06-27T04:01:35.120Z-error: Failed to create doctor dubt: error: insert into "doctores" ("apellido", "consultorio", "createdAt", "especialidad", "nombre") values ($1, $2, $3, $4, $5) returning * - column "createdAt" of relation "doctores" does not exist
