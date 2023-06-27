@@ -10,7 +10,7 @@ export class DoctorServiceImpl implements DoctorService {
     private doctorRepository: DoctorRepository
 
     constructor(doctorRepository: DoctorRepository) {
-        this.doctorRepository = new DoctorRepository
+        this.doctorRepository = doctorRepository
     }
     getAllDoctors(): Promise<Doctor[]> {
         const doctores: Promise<Doctor[]> = this.doctorRepository.getAllDoctors()
