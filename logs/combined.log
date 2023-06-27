@@ -53,3 +53,161 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-06-20T02:11:05.205Z-error: Dabase Error
 2023-06-20T02:12:03.094Z-error: Dabase Error
 2023-06-20T02:19:20.075Z-error: Dabase Error
+2023-06-22T01:00:25.075Z-info: Server is listening on port 8087
+2023-06-22T01:02:27.896Z-info: Server is listening on port 8087
+2023-06-22T01:03:00.766Z-info: Server is listening on port 8087
+2023-06-22T01:03:03.256Z-error: Unexpected token } in JSON at position 94
+2023-06-22T01:05:29.536Z-info: Server is listening on port 8087
+2023-06-22T01:05:32.138Z-error: Unexpected token } in JSON at position 94
+2023-06-22T01:06:00.575Z-error: Unexpected token ' in JSON at position 16
+2023-06-22T01:09:19.291Z-info: Server is listening on port 8087
+2023-06-22T01:11:29.508Z-info: Server is listening on port 8087
+2023-06-22T01:11:32.027Z-error: database "gestion_cita1" does not exist
+2023-06-22T01:14:26.367Z-info: Server is listening on port 8087
+2023-06-22T01:14:29.015Z-error: database "gestion_cita1" does not exist
+2023-06-22T01:15:06.616Z-info: Server is listening on port 8087
+2023-06-22T01:15:09.123Z-error: database "gestion_cita1" does not exist
+2023-06-22T01:15:09.123Z-error: Error creating doctor: error: database "gestion_cita1" does not exist
+2023-06-22T01:15:22.358Z-error: database "gestion_cita1" does not exist
+2023-06-22T01:15:22.358Z-error: Error creating doctor: error: database "gestion_cita1" does not exist
+2023-06-22T01:16:26.423Z-info: Server is listening on port 8087
+2023-06-22T01:16:29.269Z-error: Error creating doctor: error: database "gestion_cita1" does not exist
+2023-06-22T01:18:02.786Z-error: Internal Server Error
+2023-06-22T01:19:08.626Z-error: Internal Server Error
+2023-06-22T01:19:16.801Z-error: Internal Server Error
+2023-06-22T01:19:47.999Z-error: Internal Server Error
+2023-06-22T01:20:33.396Z-error: Internal Server Error
+2023-06-22T01:22:44.205Z-error: Internal Server Error
+2023-06-22T01:24:40.933Z-error: Internal Server Error
+2023-06-22T01:32:52.638Z-info: Server is listening on port 8087
+2023-06-22T01:32:55.481Z-error: Failed to create doctor
+2023-06-22T01:33:50.824Z-info: Server is listening on port 8087
+2023-06-22T01:33:51.958Z-error: Failed to create doctor
+2023-06-22T01:34:08.046Z-info: Server is listening on port 8087
+2023-06-22T01:34:09.975Z-error: Failed to create doctor
+2023-06-22T01:36:00.010Z-info: Server is listening on port 8087
+2023-06-22T01:36:05.413Z-error: Failed to create doctor repository
+2023-06-22T01:36:53.626Z-info: Server is listening on port 8087
+2023-06-22T01:36:55.931Z-error: Failed to create doctor dubt: error: database "gestion_cita1" does not exist
+2023-06-22T01:39:07.486Z-error: Failed to create doctor dubt: error: database "gestion_cita1" does not exist
+2023-06-22T01:44:54.065Z-info: Server is listening on port 8087
+2023-06-22T01:45:03.544Z-error: Failed to create doctor dubt: error: database "gestion_cita1" does not exist
+2023-06-22T01:45:21.601Z-info: Server is listening on port 8087
+2023-06-22T01:45:26.417Z-error: Failed to create doctor dubt: error: database "gestion_cita1" does not exist
+2023-06-22T01:48:04.542Z-info: Server is listening on port 8087
+2023-06-22T01:48:06.008Z-error: Failed to create doctor dubt: error: database "gestion_cita1" does not exist
+2023-06-22T02:28:09.676Z-info: Server is listening on port 8087
+2023-06-22T02:28:21.280Z-error: Record has not found yet
+2023-06-22T02:30:25.713Z-info: Server is listening on port 8087
+2023-06-22T02:30:36.460Z-error: Record has not found yet
+2023-06-22T02:31:30.978Z-info: Server is listening on port 8087
+2023-06-22T02:31:34.828Z-info: 1
+2023-06-22T02:31:34.848Z-error: Record has not found yet
+2023-06-22T02:32:01.018Z-info: Server is listening on port 8087
+2023-06-22T02:32:01.317Z-info: 1
+2023-06-22T02:32:01.334Z-error: Record has not found yet
+2023-06-22T02:32:32.769Z-info: Server is listening on port 8087
+2023-06-22T02:32:35.302Z-info: 1
+2023-06-22T02:32:35.323Z-error: Record has not found yet
+2023-06-22T02:34:39.706Z-info: Server is listening on port 8087
+2023-06-22T02:34:41.140Z-info: 1
+2023-06-22T02:34:41.157Z-error: Failed get doctor by id in repository
+2023-06-22T02:34:41.157Z-error: Record has not found yet
+2023-06-22T02:35:13.681Z-info: Server is listening on port 8087
+2023-06-22T02:35:16.072Z-info: 1
+2023-06-22T02:35:16.091Z-error: Record has not found yet
+2023-06-22T02:36:03.449Z-info: Server is listening on port 8087
+2023-06-22T02:36:03.830Z-info: 1
+2023-06-22T02:36:03.877Z-error: Failed get doctor by id in repository
+2023-06-22T02:36:03.878Z-error: Record has not found yet
+2023-06-22T02:37:09.643Z-info: Server is listening on port 8087
+2023-06-22T02:37:11.652Z-info: 1
+2023-06-22T02:42:19.366Z-error: Internal Server Error
+2023-06-22T02:42:55.239Z-error: Internal Server Error
+2023-06-22T02:43:11.640Z-error: Internal Server Error
+2023-06-22T02:45:05.590Z-error: Internal Server Error
+2023-06-22T02:45:05.594Z-error: Record has not found yet
+2023-06-22T02:45:38.105Z-error: Internal Server Error
+2023-06-22T02:45:38.110Z-error: Record has not found yet
+2023-06-22T02:46:06.303Z-error: Internal Server Error
+2023-06-22T02:46:06.307Z-error: Record has not found yet
+2023-06-22T02:46:22.396Z-error: Internal Server Error
+2023-06-22T02:46:22.400Z-error: Record has not found yet
+2023-06-22T02:46:29.887Z-error: Internal Server Error
+2023-06-22T02:46:29.891Z-error: Record has not found yet
+2023-06-22T02:48:14.326Z-error: Internal Server Error
+2023-06-22T02:48:14.330Z-error: Record has not found yet
+2023-06-22T02:48:14.331Z-error: Internal Server Error
+2023-06-22T02:48:37.967Z-error: Internal Server Error
+2023-06-22T02:48:37.970Z-error: Record has not found yet
+2023-06-22T02:48:37.971Z-error: Internal Server Error
+2023-06-22T02:51:42.196Z-error: Internal Server Error
+2023-06-22T02:51:42.201Z-error: Record has not found yet
+2023-06-22T02:51:42.202Z-error: Internal Server Error
+2023-06-22T02:51:49.412Z-error: Internal Server Error
+2023-06-22T02:51:49.417Z-error: Record has not found yet
+2023-06-22T02:51:49.419Z-error: Internal Server Error
+2023-06-22T02:53:04.812Z-error: Internal Server Error
+2023-06-22T02:53:04.816Z-error: Record has not found yet
+2023-06-22T02:53:04.817Z-error: Internal Server Error
+2023-06-22T02:53:27.789Z-error: Internal Server Error
+2023-06-22T02:53:27.793Z-error: Record has not found yet
+2023-06-22T02:53:27.794Z-error: Internal Server Error
+2023-06-22T02:53:40.236Z-error: Internal Server Error
+2023-06-22T02:53:40.241Z-error: Record has not found yet
+2023-06-22T02:53:40.241Z-error: Internal Server Error
+2023-06-22T02:56:15.271Z-error: Internal Server Error
+2023-06-22T02:56:15.280Z-error: Record has not found yet
+2023-06-22T02:56:15.281Z-error: Internal Server Error
+2023-06-22T02:57:38.625Z-error: Internal Server Error
+2023-06-22T02:57:38.628Z-error: Record has not found yet
+2023-06-22T02:57:38.629Z-error: Internal Server Error
+2023-06-23T00:57:57.637Z-info: Server is listening on port 8087
+2023-06-23T00:58:31.388Z-info: Server is listening on port 8087
+2023-06-23T00:59:18.508Z-error: Failed to update doctor from service
+2023-06-23T00:59:18.509Z-error: Failed to update doctor
+2023-06-23T01:00:02.129Z-info: Server is listening on port 8087
+2023-06-23T01:00:05.291Z-error: Failed to update doctor from service
+2023-06-23T01:00:05.291Z-error: Failed to update doctor
+2023-06-23T01:09:07.950Z-info: Server is listening on port 8087
+2023-06-23T01:10:00.884Z-info: Server is listening on port 8087
+2023-06-23T01:29:26.385Z-info: Server is listening on port 8087
+2023-06-23T01:30:48.500Z-info: Server is listening on port 8087
+2023-06-23T01:30:52.709Z-error: Failed get patient by id in repository
+2023-06-23T01:30:52.709Z-error: Record has not found yet
+2023-06-23T01:32:58.841Z-error: Record has not found yet
+2023-06-23T01:35:37.612Z-info: Server is listening on port 8087
+2023-06-23T01:35:39.741Z-error: Failed get patient by id in repository
+2023-06-23T01:35:39.741Z-error: Record has not found yet
+2023-06-23T01:38:30.134Z-info: Server is listening on port 8087
+2023-06-23T01:38:36.213Z-error: Failed get patient by id in repository
+2023-06-23T01:38:36.213Z-error: Record has not found yet
+2023-06-23T01:41:38.754Z-info: Server is listening on port 8087
+2023-06-23T01:41:49.636Z-error: Id must be a number
+2023-06-23T02:38:41.747Z-info: Server is listening on port 8087
+2023-06-23T02:51:24.466Z-info: Server is listening on port 8087
+2023-06-24T02:22:47.039Z-info: Server is listening on port 8087
+2023-06-24T02:23:11.934Z-info: Server is listening on port 8087
+2023-06-24T02:23:13.727Z-error: Failed get appointment by id in repository
+2023-06-24T02:23:13.727Z-error: Failed to get appointment from service
+2023-06-24T02:23:13.728Z-error: Record has not found yet
+2023-06-24T02:23:41.122Z-info: Server is listening on port 8087
+2023-06-24T02:24:51.874Z-info: Server is listening on port 8087
+2023-06-24T02:25:08.106Z-info: Server is listening on port 8087
+2023-06-24T02:25:37.075Z-info: Server is listening on port 8087
+2023-06-24T02:25:58.398Z-info: Server is listening on port 8087
+2023-06-24T02:26:18.234Z-info: Server is listening on port 8087
+2023-06-24T02:26:33.590Z-info: Server is listening on port 8087
+2023-06-24T02:27:04.052Z-info: Server is listening on port 8087
+2023-06-24T02:28:06.570Z-info: Server is listening on port 8087
+2023-06-24T02:28:08.476Z-error: database "gestion_citas1" does not exist
+2023-06-24T02:28:51.489Z-info: Server is listening on port 8087
+2023-06-24T02:28:53.679Z-error: database "gestion_citas1" does not exist
+2023-06-24T02:28:53.679Z-error: Failed getting all appointments from service
+2023-06-24T02:30:49.304Z-info: Server is listening on port 8087
+2023-06-24T02:30:50.112Z-error: database "gestion_citas1" does not exist
+2023-06-24T02:30:50.112Z-error: Failed getting all appointments from service aca
+2023-06-24T02:40:04.003Z-info: Server is listening on port 8087
+2023-06-24T02:40:42.052Z-info: Server is listening on port 8087
+2023-06-24T02:40:46.437Z-error: Failed to create doctor dubt: error: database "gestion_citas1" does not exist
+2023-06-24T02:40:59.263Z-info: Server is listening on port 8087
