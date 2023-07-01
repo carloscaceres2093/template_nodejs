@@ -28,8 +28,8 @@ describe('DoctorController', () => {
         it('should get all doctors', async () => {
             // Mock Process
             const doctors: Doctor[] = [
-                { id_doctor: 1, nombre: 'Carlos', apellido: 'Caceres', especialidad: 'Medicina General', consultorio: 100 },
-                { id_doctor: 2, nombre: 'Alveiro', apellido: 'Tarsisio', especialidad: 'Ortopedia', consultorio: 101 },
+                { id_doctor: 1, nombre: 'Jonathan', apellido: 'Vanegas', especialidad: 'Medicina General', consultorio: 100 },
+                { id_doctor: 2, nombre: 'James', apellido: 'Vanegas', especialidad: 'Psicología', consultorio: 102 },
             ];
 
             (doctorSerivce.getAllDoctors as jest.Mock).mockResolvedValue(doctors)
@@ -58,10 +58,10 @@ describe('DoctorController', () => {
     describe('createDoctor', () => {
         it('should create a new doctor and return info', async () => {
             // Mock Process
-            const doctorRes: Doctor = { id_doctor: 1, nombre: 'Carlos', apellido: 'Caceres', especialidad: 'Medicina General', consultorio: 100 }
+            const doctorRes: Doctor = { id_doctor: 1, nombre: 'Jonathan', apellido: 'Vanegas', especialidad: 'Medicina General', consultorio: 100 }
             const doctorReq: DoctorReq = {
-                nombre: 'Carlos',
-                apellido: 'Caceres',
+                nombre: 'Jonathan',
+                apellido: 'Vanegas',
                 especialidad: 'Medicina General',
                 consultorio: 100
             };
@@ -93,7 +93,7 @@ describe('DoctorController', () => {
     describe('getDoctorById', () => {
         it('should get doctor by id', async () => {
             // Mock Process
-            const doctorRes: Doctor = { id_doctor: 1, nombre: 'Carlos', apellido: 'Caceres', especialidad: 'Medicina General', consultorio: 100 };
+            const doctorRes: Doctor = { id_doctor: 1, nombre: 'Jonathan', apellido: 'Vanegas', especialidad: 'Medicina General', consultorio: 100 };
             (mockReq.params) = { id: "1" };
             (doctorSerivce.getDoctorById as jest.Mock).mockResolvedValue(doctorRes)
 

@@ -176,3 +176,36 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-06-25T17:16:38.871Z-info: Server is listening on port 8087
 2023-06-25T17:20:01.324Z-error: Failed to create doctor dubt: error: insert into "doctores" ("apellido", "consultorio", "correo", "especialidad", "nombre") values ($1, $2, $3, $4, $5) returning * - llave duplicada viola restricción de unicidad «doctores_pkey»
 2023-06-25T17:20:34.350Z-error: Failed to create doctor dubt: error: insert into "doctores" ("apellido", "consultorio", "correo", "especialidad", "nombre") values ($1, $2, $3, $4, $5) returning * - llave duplicada viola restricción de unicidad «doctores_pkey»
+2023-06-26T01:48:48.743Z-error: Record has not found yet
+2023-06-26T01:48:48.749Z-error: Internal Server Error
+2023-06-26T01:49:41.201Z-info: Server is listening on port 8087
+2023-06-26T01:58:29.561Z-error: Failed to delete doctor from service
+2023-06-26T01:58:29.562Z-error: Failed to delete doctor
+2023-06-26T02:01:41.301Z-error: Failed to update doctor from service
+2023-06-26T02:01:41.302Z-error: Failed to update doctor
+2023-06-26T02:07:07.992Z-error: Record has not found yet
+2023-06-26T02:07:07.999Z-error: Internal Server Error
+2023-06-26T02:08:40.765Z-error: Record has not found yet
+2023-06-26T02:08:40.770Z-error: Internal Server Error
+2023-06-26T02:09:53.814Z-error: Record has not found yet
+2023-06-26T02:09:53.823Z-error: Internal Server Error
+2023-06-26T02:18:16.033Z-error: Record has not found yet
+2023-06-26T02:18:16.040Z-error: Internal Server Error
+2023-06-26T02:19:11.661Z-error: Record has not found yet
+2023-06-26T02:19:11.667Z-error: Internal Server Error
+2023-06-26T02:24:06.098Z-error: Record has not found yet
+2023-06-26T02:24:06.107Z-error: Internal Server Error
+2023-06-26T02:24:40.036Z-error: Record has not found yet
+2023-06-26T02:24:40.044Z-error: Internal Server Error
+2023-06-26T02:28:26.922Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:28:34.257Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:28:39.511Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:28:39.999Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:28:48.612Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:29:09.067Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:29:26.388Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:29:27.831Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:29:58.905Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:30:18.614Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:30:37.618Z-error: Unexpected token " in JSON at position 0
+2023-06-26T02:30:48.940Z-error: Unexpected token " in JSON at position 0

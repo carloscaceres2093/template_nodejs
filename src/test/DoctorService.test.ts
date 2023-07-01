@@ -23,7 +23,7 @@ describe('DoctorService', () => {
         it('should get all doctors from service', async () => {
             // Mock Process
             const doctors: Doctor[] = [
-                {id_doctor: 1, nombre: 'Carlos', apellido: 'Caceres', especialidad: 'Medicina General', consultorio:100},
+                {id_doctor: 1, nombre: 'Jonathan', apellido: 'Vanegas', especialidad: 'Medicina General', consultorio:100},
             ];
 
             (doctorRepository.getAllDoctors as jest.Mock).mockResolvedValue(doctors)
@@ -51,8 +51,8 @@ describe('DoctorService', () => {
     describe('createDoctor', () => {
         it('should create a new doctor and return it from  service', async () => {
             // Mock Process
-            const doctorRes: Doctor = {id_doctor: 1, nombre: 'Carlos', apellido: 'Caceres', especialidad: 'Medicina General', consultorio:100}
-            const doctorReq: DoctorReq = {nombre: 'Carlos', apellido: 'Caceres', especialidad: 'Medicina General', consultorio:100};
+            const doctorRes: Doctor = {id_doctor: 1, nombre: 'Jonathan', apellido: 'Vanegas', especialidad: 'Medicina General', consultorio:100}
+            const doctorReq: DoctorReq = {nombre: 'Jonathan', apellido: 'Vanegas', especialidad: 'Medicina General', consultorio:100};
 
             (doctorRepository.createDoctor as jest.Mock).mockResolvedValue(doctorRes)
 
@@ -65,7 +65,7 @@ describe('DoctorService', () => {
         })
         it('should throw and error if doctor creation fails', async () => {
             // Mock Process
-            const doctorReq: DoctorReq = {nombre: 'Carlos', apellido: 'Caceres', especialidad: 'Medicina General', consultorio:100};
+            const doctorReq: DoctorReq = {nombre: 'Jonathan', apellido: 'Vanegas', especialidad: 'Medicina General', consultorio:100};
             const error1 = new Error('Failed to create doctor');
             (doctorRepository.createDoctor as jest.Mock).mockRejectedValue(error1)
 
@@ -77,7 +77,7 @@ describe('DoctorService', () => {
     describe('getDoctorById', () => {
         it('should get  doctor by id from service', async () => {
             // Mock Process
-            const doctor: Doctor = {id_doctor: 1, nombre: 'Carlos', apellido: 'Caceres', especialidad: 'Medicina General', consultorio:100}
+            const doctor: Doctor = {id_doctor: 1, nombre: 'Jonathan', apellido: 'Vanegas', especialidad: 'Medicina General', consultorio:100}
             const doctorId = 1;
 
             (doctorRepository.getDoctorById as jest.Mock).mockResolvedValue(doctor)
