@@ -130,4 +130,4 @@ Tarea Entregar taller 6
     decir que el doctor no fue encontrado.
 * Cambiar el customErrors de config a utils
 * Completar por lo menos los test de citas o pacientes
-* Terminar el crud de citas y pacientes
+* Terminar el crud de citas y pacientes# backendTs
