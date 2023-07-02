@@ -2,12 +2,13 @@ import { Appointment, AppointmentReq } from './model'
 import { Request, Response } from 'express'
 import { AppointmentService } from './service'
 import logger from '../../../utils/logger'
-import { isEmpty } from "class-validator"
+import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdateError, RecordNotFoundError } from '../../../config/customErrors'
 
 
 export interface AppointmentController {
-    createAppointment(req: Request, res: Response): Promise<void>
-    getAllAppointments(req: Request, res: Response): Promise<void>
+    getAllAppointment(req: Request, res: Response): void
+    createAppointment(req: Request, res: Response): void
+    getAppointmentById(req: Request, res: Response): void
 }
 
 export class AppointmentControllerImpl implements AppointmentController {
@@ -16,75 +17,61 @@ export class AppointmentControllerImpl implements AppointmentController {
     constructor(appointmentService: AppointmentService) {
         this.appointmentService = appointmentService
     }
-
-    private validarObjeto(objeto: any, res: Response): objeto is AppointmentReq {
-
-        if (isEmpty(objeto.identificacion_paciente)) {
-            const msg = `message: el campo identificacion_paciente es obligatorio`
-            logger.error(msg)
-            res.status(400).json({ msg })
-            return false;
-        } else if (isEmpty(objeto.especialidad)) {
-            const msg = `message: el campo especialidad es obligatorio`
-            logger.error(msg)
-            res.status(400).json({ msg })
-            return false;
-        } else if (isEmpty(objeto.horario)) {
-            const msg = `message: el campo horario es obligatorio`
-            logger.error(msg)
-            res.status(400).json({ msg })
-            return false;
-        } else if (isEmpty(objeto.id_doctor)) {
-            const msg = `message: el campo id_doctor es obligatorio`
-            logger.error(msg)
-            res.status(400).json({ msg })
-            return false;
-        } else {
-            logger.info(`message: todos los campos obligatorios existen`)
-            return true
-        }
-    }
-
-    private limpiarObjeto(appointmentReq: AppointmentReq): Object {
-        const keys: Array<keyof AppointmentReq> = Object.keys(appointmentReq) as Array<keyof AppointmentReq>;
-        const llavesInterfaz: Array<keyof AppointmentReq> = ['horario', 'id_doctor', 'identificacion_paciente', 'especialidad'];
-
-        for (const key of keys) {
-            if (!llavesInterfaz.includes(key)) {
-                appointmentReq = {
-                    horario: appointmentReq.horario,
-                    id_doctor: appointmentReq.id_doctor,
-                    identificacion_paciente: appointmentReq.identificacion_paciente,
-                    especialidad: appointmentReq.especialidad
-                }
-            }
-        }
-        return appointmentReq
-    }
-
-    public async createAppointment(req: Request, res: Response): Promise<void> {
-        const appointmentReq = this.limpiarObjeto(req.body)
-        if (this.validarObjeto(appointmentReq, res)) {
-            try {
-                const createdAppointment: Appointment = await this.appointmentService.createAppointment(appointmentReq)
-                res.status(201).json(createdAppointment)
-            } catch (error) {
-                logger.error(error)
-                res.status(400).json({
-                    message: "Error creando cita."
-                })
-            }
-        }
-    }
-    public async getAllAppointments(req: Request, res: Response): Promise<void> {
+    public async getAllAppointment(req: Request, res: Response): Promise<void> {
         try {
-            const appointments = await this.appointmentService.getAllAppointments()
-            res.json(appointments)
+            const patients = await this.appointmentService.getAllAppointments()
+
+            res.status(200).json(patients)
+
         } catch (error) {
             logger.error(error)
-            res.status(400).json({
-                message: "Error consultando citas."
-            })
+            res.status(400).json({ message: "Error getting all appointments" })
+        }
+    }
+    public createAppointment(req: Request, res: Response): void {
+        const appointmentReq = req.body
+        this.appointmentService.createAppointment(appointmentReq)
+            .then(
+                (appointment) => {
+                    res.status(201).json(appointment)
+                },
+                (error) => {
+                    logger.error(error)
+                    if (error instanceof DoctorCreationError) {
+                        res.status(400).json({
+                            error_name: error.name,
+                            message: "Failed Creating appointment"
+                        })
+                    } else {
+                        res.status(400).json({
+                            message: "Internal Server Error"
+                        })
+                    }
+                }
+            )
+
+    }
+
+    public async getAppointmentById(req: Request, res: Response): Promise<void> {
+        try {
+
+            const id = parseInt(req.params.id)
+            if (isNaN(id)) {
+                throw new Error("Id must be a number")
+            }
+            const appointment = await this.appointmentService.getAppointmentById(id)
+            if (appointment) {
+                res.status(200).json(appointment)
+            } else {
+                throw new RecordNotFoundError()
+            }
+        } catch (error) {
+            logger.error(error)
+            if (error instanceof RecordNotFoundError) {
+                res.status(400).json({ error: error.message })
+            } else {
+                res.status(400).json({ error: "Failed to retrieve patient" })
+            }
         }
     }
 

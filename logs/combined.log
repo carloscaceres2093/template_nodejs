@@ -97,3 +97,12 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-06-21T03:08:52.327Z-info: message: todos los campos obligatorios existen
 2023-06-21T03:08:52.327Z-error: Internal Server Error
 2023-07-02T19:29:43.918Z-info: Server is listening on port 8087
+2023-07-02T20:11:25.847Z-info: Server is listening on port 8087
+2023-07-02T20:13:35.337Z-error: Id must be a number
+2023-07-02T20:13:48.724Z-error: select * from "citas1" - relation "citas1" does not exist
+2023-07-02T20:13:48.725Z-error: Failed getting all appointments from service
+2023-07-02T20:13:53.562Z-error: select * from "citas1" - relation "citas1" does not exist
+2023-07-02T20:13:53.563Z-error: Failed getting all appointments from service
+2023-07-02T20:13:57.126Z-error: select * from "citas1" - relation "citas1" does not exist
+2023-07-02T20:13:57.127Z-error: Failed getting all appointments from service
+2023-07-02T20:14:43.596Z-info: Server is listening on port 8087

@@ -1,15 +1,19 @@
 import  { Router} from 'express'
-import logger from '../../../utils/logger'
 import { PatientController, PatientControllerImpl } from './controller'
+import { PatientRepository } from './repository'
 import { PatientServiceImpl } from './service'
 
 
 const router = Router()
-const patientService = new PatientServiceImpl()
-const patientController: PatientController = new PatientControllerImpl(patientService)
+const repository = new PatientRepository()
+const service = new PatientServiceImpl(repository)
+const controller: PatientController = new PatientControllerImpl(service)
 
 
-router.get('',  patientController.getPatient.bind(patientController))
-router.post('/create',  patientController.createPatient.bind(patientController))
+router.get('',  controller.getAllPatient.bind(controller))
+router.post('/create',  controller.createPatient.bind(controller))
+router.get('/:id',  controller.getPatientById.bind(controller))
+
+
 
 export default router

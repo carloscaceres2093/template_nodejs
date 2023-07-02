@@ -174,6 +174,8 @@ Folder principal del aplicativo el cual tiene la gran mayoria la lógica de los 
                 PRIMARY key(id_paciente)
             );
             
+* Para desintallar se corre le comando **npm uninstall <package>**
+
             CREATE TABLE IF NOT EXISTS citas (
                 id_cita bigserial,
                 horario VARCHAR,
@@ -230,3 +232,38 @@ Folder principal del aplicativo el cual tiene la gran mayoria la lógica de los 
     ya que son los modulos que contienen la lógica de nuestro servicio.
 
     Generalmente se pide un coverage del 90% si el servicio es critico para los usuarios. Si no entonces se pide un coverage del 50% - 70% 
+
+
+Tareas 16/06/2023
+
+* Validar que los campos del request sean los del modelo DoctorReq, y si no vienen completos decir cual falta, y sin vienen de más, no tomarlos
+* Hacer que el created_at y el updated_at se asignen de forma automática cuando se inserta un dato.
+* Completar los create y select de citas y pacientes
+
+
+## Test unitarios
+
+Para configurar y crear los test unitarios, debemos instalar un librería llamada chai de la siguiente forma:
+
+**npm install --save-dev  chai chai-http chai-spies @types/chai @types/chai-http @types/chai-spies**
+
+Para la ejecución de los test se debe hacer la instalación de la librería jest:
+
+**npm install --save-dev jest ts-jest @types/jest**
+
+Para ejecutar los test se debe ejecutar el comando  **npx jest**
+
+
+Tareas 20/06/2023
+
+* Completar los test tanto para el service como para el controller de los componentes de pacientes y citas
+
+
+Tarea Entregar taller 6
+
+* Cambiar los errores específicos por errores genéricos que se puedan adecuar.
+* Validación que la respuesta del doctor en creación de cita en el serivice sea diferente de null, si no retornar que el doctor no exisite, es decir, si el doctor no existe en la creación de la cita
+    decir que el doctor no fue encontrado.
+* Cambiar el customErrors de config a utils
+* Completar por lo menos los test de citas o pacientes
+* Terminar el crud de citas y pacientes

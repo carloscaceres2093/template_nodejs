@@ -2,12 +2,13 @@ import { Patient, PatientReq } from './model'
 import { Request, Response } from 'express'
 import { PatientService } from './service'
 import logger from '../../../utils/logger'
-import { isEmpty } from "class-validator"
+import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdateError, RecordNotFoundError } from '../../../config/customErrors'
 
 
 export interface PatientController {
-    getPatient(req: Request, res: Response): Promise<void>
-    createPatient(req: Request, res: Response): Promise<void>
+    getAllPatient(req: Request, res: Response): void
+    createPatient(req: Request, res: Response): void
+    getPatientById(req: Request, res: Response): void
 }
 
 export class PatientControllerImpl implements PatientController {
@@ -16,92 +17,59 @@ export class PatientControllerImpl implements PatientController {
     constructor(patientService: PatientService) {
         this.patientService = patientService
     }
+    public async getAllPatient(req: Request, res: Response): Promise<void> {
+        try {
+            const patients = await this.patientService.getAllPatients()
+            res.status(200).json(patients)
 
-    private validarObjeto(objeto: any, res: Response): objeto is PatientReq {
-
-        if (isEmpty(objeto.nombre)) {
-            const msg = `message: el campo nombre es obligatorio`
-            logger.error(msg)
-            res.status(400).json({ msg })
-            return false;
-        } else if (isEmpty(objeto.apellido)) {
-            const msg = `message: el campo apellido es obligatorio`
-            logger.error(msg)
-            res.status(400).json({ msg })
-            return false;
-        } else if (isEmpty(objeto.identificacion)) {
-            const msg = `message: el campo identificacion es obligatorio`
-            logger.error(msg)
-            res.status(400).json({ msg })
-            return false;
-        } else if (isEmpty(objeto.telefono)) {
-            const msg = `message: el campo telefono es obligatorio`
-            logger.error(msg)
-            res.status(400).json({ msg })
-            return false;
-        } else {
-            logger.info(`message: todos los campos obligatorios existen`)
-            return true
+        } catch (error) {
+            res.status(400).json({ message: "Error getting all patients" })
         }
     }
-
-    private limpiarObjeto(patientReq: PatientReq): Object {
-        const keys: Array<keyof PatientReq> = Object.keys(patientReq) as Array<keyof PatientReq>;
-        const llavesInterfaz: Array<keyof PatientReq> = ['nombre', 'apellido', 'identificacion', 'telefono'];
-
-        for (const key of keys) {
-            if (!llavesInterfaz.includes(key)) {
-                patientReq = {
-                    nombre: patientReq.nombre,
-                    apellido: patientReq.apellido,
-                    identificacion: patientReq.identificacion,
-                    telefono: patientReq.telefono
+    public createPatient(req: Request, res: Response): void {
+        const patientReq = req.body
+        this.patientService.createPatient(patientReq)
+            .then(
+                (patient) => {
+                    res.status(201).json(patient)
+                },
+                (error) => {
+                    logger.error(error)
+                    if (error instanceof DoctorCreationError) {
+                        res.status(400).json({
+                            error_name: error.name,
+                            message: "Failed Creating a patient"
+                        })
+                    } else {
+                        res.status(400).json({
+                            message: "Internal Server Error"
+                        })
+                    }
                 }
-            }
-        }
-        return patientReq
+            )
+
     }
 
-    public async getPatient(req: Request, res: Response): Promise<void> {
-        let patientReq = req.body
-        const keys: Array<keyof PatientReq> = Object.keys(patientReq) as Array<keyof PatientReq>;
-        const llavesInterfaz: Array<keyof PatientReq> = ['identificacion'];
+    public async getPatientById(req: Request, res: Response): Promise<void> {
+        try {
+            const id = parseInt(req.params.id)
+            if (isNaN(id)) {
+                throw new Error("Id must be a number")
+            }
+            const patient = await this.patientService.getPatientById(id)
+            if (patient) {
+                res.status(200).json(patient)
+            } else {
+                throw new RecordNotFoundError()
+            }
+        } catch (error) {
+            logger.error(error)
+            if (error instanceof RecordNotFoundError) {
+                res.status(400).json({ error: error.message })
+            } else {
+                res.status(400).json({ error: "Failed to retrieve patient" })
+            }
+        }
+    }
 
-        for (const key of keys) {
-            if (!llavesInterfaz.includes(key)) {
-                patientReq = {
-                    identificacion: patientReq.identificacion
-                }
-            }
-        }
-        if (isEmpty(patientReq.identificacion)) {
-            const msg = `message: el campo identificacion es obligatorio`
-            logger.error(msg)
-            res.status(400).json({ msg })
-        } else {
-            try {
-                const patient = await this.patientService.getPatient(patientReq.identificacion)
-                res.json(patient)
-            } catch (error) {
-                logger.error(error)
-                res.status(400).json({
-                    message: "Error consultando paciente."
-                })
-            }
-        }
-    }
-    public async createPatient(req: Request, res: Response): Promise<void> {
-        const patientReq = this.limpiarObjeto(req.body)
-        if (this.validarObjeto(patientReq, res)) {
-            try {
-                const createPatient: Patient = await this.patientService.createPatient(patientReq)
-                res.status(201).json(createPatient)
-            } catch (error) {
-                logger.error(error)
-                res.status(400).json({
-                    message: "Error creando paciente."
-                })
-            }
-        }
-    }
 }

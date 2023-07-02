@@ -1,21 +1,33 @@
-import { db } from '../../../config/database'
-import { Patient, PatientReq } from './model'
+import { db } from "../../../config/database"
+import { Patient, PatientReq, } from "./model"
+import logger from '../../../utils/logger'
+import { DoctorCreationError, PatientGetAllError, RecordNotFoundError } from "../../../config/customErrors"
 
 export class PatientRepository {
     public async createPatient(patient: PatientReq): Promise<Patient> {
         try {
-            const [createPatient] = await db('pacientes').insert(patient).returning('*')
-            return createPatient
+            const [createdPatient] = await db('pacientes').insert(patient).returning('*')
+            return createdPatient
         } catch (error) {
-            throw new Error(`Error creating patient: ${JSON.stringify(patient)}`)
+            throw new DoctorCreationError(`Failed to create patient dubt: ${error}`)
         }
     }
 
-    public async getPatient(identificacion_paciente: string): Promise<Patient> {
+    public async getAllPatients(): Promise<Patient[]> {
         try {
-            return db.select('*').where('identificacion', identificacion_paciente).from('pacientes')
+            return db.select('*').from('pacientes')
         } catch (error) {
-            throw new Error(`Error consulting patient with id ${identificacion_paciente}`)
+            throw new PatientGetAllError()
+        }
+    }
+
+    public async getPatientById(id: number): Promise<Patient> {
+        try {
+            const patient = await db('pacientes').where({ id_paciente: id }).first()
+            return patient
+        } catch (error) {
+            logger.error('Failed get patient by id in repository', { error })
+            throw new RecordNotFoundError()
         }
     }
 }

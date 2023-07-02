@@ -1,4 +1,4 @@
-import express, { Router } from 'express'
+import { Router } from 'express'
 import doctorRoutes from './components/doctores/routes'
 import citaRoutes from './components/citas/routes'
 import pacienteRoutes from './components/pacientes/routes'
