@@ -96,3 +96,4 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-06-21T03:08:52.326Z-info: message: todos los campos obligatorios existen
 2023-06-21T03:08:52.327Z-info: message: todos los campos obligatorios existen
 2023-06-21T03:08:52.327Z-error: Internal Server Error
+2023-07-02T19:29:43.918Z-info: Server is listening on port 8087
