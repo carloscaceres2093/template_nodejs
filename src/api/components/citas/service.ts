@@ -1,4 +1,4 @@
-import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError, GetAllError } from "../../../config/customErrors"
+import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError, GetAllError, AppoinmentCreateError } from "../../../config/customErrors"
 import logger from "../../../utils/logger"
 import { AppointmentReq, Appointment, AppointmentResDB } from "./model"
 import { AppointmentRepository } from "./repository"
@@ -62,7 +62,7 @@ export class AppointmentServiceImpl implements AppointmentService {
             const appointment: Appointment = mapAppointment(appointmentDb, doctor)
             return appointment
         } catch (error) {
-            throw new DoctorCreationError("Failed to create appointment from service")
+            throw new AppoinmentCreateError()
         }
     }
 

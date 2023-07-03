@@ -1,7 +1,8 @@
 import { Request, Response } from 'express'
 import { AppointmentService } from './service'
 import logger from '../../../utils/logger'
-import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError } from '../../../config/customErrors'
+import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError, AppoinmentCreateError } from '../../../config/customErrors'
+import { createAppointmentSchema, updateAppointmentSchema } from './validations/citas.validations'
 
 
 export interface AppointmentController {
@@ -17,27 +18,38 @@ export class AppointmentControllerImpl implements AppointmentController {
     constructor(appointmentService: AppointmentService) {
         this.appointmentService = appointmentService
     }
-    public async updateAppointment(req: Request, res: Response): Promise<void> {
-        try {
-            const id = parseInt(req.params.id)
-            const appointmentReq = req.body
-            const appointment = await this.appointmentService.updateAppointment(id, appointmentReq)
-            if (appointment) {
-                res.status(201).json(appointment)
-            } else {
-                throw new AppointmentUpdateError()
-            }
-        } catch (error) {
-            logger.error(error)
-            if (error instanceof RecordNotFoundError) {
-                res.status(400).json({ error: error.message })
-            } else if (error instanceof AppointmentUpdateError) {
-                res.status(400).json({ error: error.message })
-            } else {
-                res.status(400).json({ error: "Failed to update appointment" })
-            }
+    public updateAppointment(req: Request, res: Response): void {
+        const id = parseInt(req.params.id)
+        const { error, value } = updateAppointmentSchema.validate(req.body)
+        if (error) {
+            res.status(400).json({ message: error.details[0].message })
+        } else {
+            this.appointmentService.updateAppointment(id, value)
+                .then(
+                    (appointment) => {
+                        res.status(201).json(appointment)
+                    },
+                    (error) => {
+                        logger.error(error)
+                        if (error instanceof RecordNotFoundError) {
+                            res.status(400).json({
+                                error_name: error.name,
+                                message: "Failed Creating appointment"
+                            })
+                        }
+                        if (error instanceof AppointmentUpdateError) {
+                            res.status(400).json({
+                                error_name: error.name,
+                                message: "Failed Creating appointment"
+                            })
+                        } else {
+                            res.status(400).json({
+                                message: "Internal Server Error"
+                            })
+                        }
+                    }
+                )
         }
-
     }
     public async getAllAppointment(req: Request, res: Response): Promise<void> {
         try {
@@ -51,27 +63,30 @@ export class AppointmentControllerImpl implements AppointmentController {
         }
     }
     public createAppointment(req: Request, res: Response): void {
-        const appointmentReq = req.body
-        this.appointmentService.createAppointment(appointmentReq)
-            .then(
-                (appointment) => {
-                    res.status(201).json(appointment)
-                },
-                (error) => {
-                    logger.error(error)
-                    if (error instanceof DoctorCreationError) {
-                        res.status(400).json({
-                            error_name: error.name,
-                            message: "Failed Creating appointment"
-                        })
-                    } else {
-                        res.status(400).json({
-                            message: "Internal Server Error"
-                        })
+        const { error, value } = createAppointmentSchema.validate(req.body)
+        if (error) {
+            res.status(400).json({ message: error.details[0].message })
+        } else {
+            this.appointmentService.createAppointment(value)
+                .then(
+                    (appointment) => {
+                        res.status(201).json(appointment)
+                    },
+                    (error) => {
+                        logger.error(error)
+                        if (error instanceof AppoinmentCreateError) {
+                            res.status(400).json({
+                                error_name: error.name,
+                                message: "Failed Creating appointment"
+                            })
+                        } else {
+                            res.status(400).json({
+                                message: "Internal Server Error"
+                            })
+                        }
                     }
-                }
-            )
-
+                )
+        }
     }
 
     public async getAppointmentById(req: Request, res: Response): Promise<void> {

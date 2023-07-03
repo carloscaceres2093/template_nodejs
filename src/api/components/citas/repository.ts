@@ -1,7 +1,7 @@
 import { db } from "../../../config/database"
 import { Appointment, AppointmentReq, AppointmentResDB } from "./model"
 import logger from '../../../utils/logger'
-import { DoctorCreationError, RecordNotFoundError, GetAllError, AppointmentUpdateError } from "../../../config/customErrors"
+import { DoctorCreationError, RecordNotFoundError, GetAllError, AppointmentUpdateError, AppoinmentCreateError } from "../../../config/customErrors"
 
 export class AppointmentRepository {
 
@@ -20,7 +20,9 @@ export class AppointmentRepository {
             const [createdAppointment] = await db('citas').insert(appointment).returning('*')
             return createdAppointment
         } catch (error) {
-            throw new DoctorCreationError(`Failed to create appointment dubt: ${error}`)
+            console.log(error)
+            logger.error('Failed to create appointment dubt: ', error)
+            throw new AppoinmentCreateError()
         }
     }
 
