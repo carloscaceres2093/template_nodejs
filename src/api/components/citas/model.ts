@@ -6,8 +6,8 @@ export interface Appointment {
     especialidad: string
     doctor: string
     consultorio: number
-    createdAt?: Date
-    updatedAt?: Date
+    created_at?: string
+    updated_at?: string
 }
 
 export interface AppointmentReq {
@@ -15,6 +15,8 @@ export interface AppointmentReq {
     id_doctor: number
     identificacion_paciente: string
     especialidad: string
+    created_at?: string
+    updated_at?: string
 }
 
 export interface AppointmentResDB {

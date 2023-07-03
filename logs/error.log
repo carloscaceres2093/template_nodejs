@@ -146,3 +146,5 @@
 2023-07-03T05:24:06.939Z-error: Failed updated patient in repository
 2023-07-03T05:24:06.940Z-error: Failed to update patient from service
 2023-07-03T05:24:06.940Z-error: Failed to update patient
+2023-07-03T05:40:26.812Z-error: Failed to create appointment dubt:  insert into "citas" ("created_at", "especialidad", "horario", "id_doctor", "identificacion_paciente") values ($1, $2, $3, $4, $5) returning * - insert or update on table "citas" violates foreign key constraint "fk_pacientes"
+2023-07-03T05:40:26.813Z-error: Failed to create appointment

@@ -6,6 +6,7 @@ import { AppoinmentCreateError, DoctorCreationError, DoctorDeleteError, DoctorGe
 export class DoctorRepository {
     public async createDoctor(doctor: DoctorReq): Promise<Doctor> {
         try {
+            doctor.created_at = new Date().toISOString()
             const [createdDoctor] = await db('doctores').insert(doctor).returning('*') // select * from doctores where id_doctor=?
             return createdDoctor
         } catch (error) {
@@ -34,6 +35,7 @@ export class DoctorRepository {
 
     public async updateDoctor(id: number, updates: Partial<DoctorReq>): Promise<void> {
         try {
+            updates.updated_at = new Date().toISOString()
             await db('doctores').where({ id_doctor: id }).update(updates)
         } catch (error) {
             logger.error('Failed updated doctor in repository', { error })

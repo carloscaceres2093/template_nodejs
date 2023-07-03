@@ -7,6 +7,7 @@ export class AppointmentRepository {
 
     public async updateAppointment(id: number, updateAppointment: Partial<AppointmentReq>): Promise<AppointmentResDB> {
         try {
+            updateAppointment.updated_at = new Date().toISOString()
             const [updatedAppointment] = await db('citas').where({ id_cita: id }).update(updateAppointment).returning('*')
             return updatedAppointment
         } catch (error) {
@@ -17,6 +18,7 @@ export class AppointmentRepository {
 
     public async createAppointment(appointment: AppointmentReq): Promise<AppointmentResDB> {
         try {
+            appointment.created_at = new Date().toISOString()
             const [createdAppointment] = await db('citas').insert(appointment).returning('*')
             return createdAppointment
         } catch (error) {

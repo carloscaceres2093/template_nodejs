@@ -7,7 +7,7 @@ export class PatientRepository {
 
     public async updatePatient(id: number, updatePatient: Partial<PatientReq>): Promise<void> {
         try {
-            updatePatient.updated_at = new Date().toUTCString()
+            updatePatient.updated_at = new Date().toISOString()
             await db('pacientes').where({ id_paciente: id }).update(updatePatient)
         } catch (error) {
             console.log(error)
@@ -18,6 +18,7 @@ export class PatientRepository {
 
     public async createPatient(patient: PatientReq): Promise<Patient> {
         try {
+            patient.created_at = new Date().toISOString()
             const [createdPatient] = await db('pacientes').insert(patient).returning('*')
             return createdPatient
         } catch (error) {

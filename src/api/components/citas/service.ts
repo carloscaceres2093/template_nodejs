@@ -90,7 +90,9 @@ function mapAppointment(appointmentDb: AppointmentResDB, doctor: Doctor): Appoin
         consultorio: doctor.consultorio,
         horario: appointmentDb.horario,
         id_cita: appointmentDb.id_cita,
-        id_doctor: doctor.id_doctor
+        id_doctor: doctor.id_doctor,
+        created_at: appointmentDb.created_at,
+        updated_at: appointmentDb.updated_at
     }
     return appointment
 }
