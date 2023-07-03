@@ -47,6 +47,21 @@ class AppoinmentCreateError extends Error {
     }
 }
 
+class PatientCreateError extends Error {
+    constructor() {
+        super("Failed to create patient")
+        this.name = "PatientCreateError"
+    }
+}
+
+class PatientUpdateError extends Error {
+    constructor() {
+        super("Failed to update patient")
+        this.name = "PatientUpdateError"
+    }
+}
+
+
 class RecordNotFoundError extends Error {
     constructor() {
         super("Record has not found yet")
@@ -71,5 +86,7 @@ export {
     PatientGetAllError,
     GetAllError,
     AppointmentUpdateError,
-    AppoinmentCreateError
+    AppoinmentCreateError,
+    PatientCreateError,
+    PatientUpdateError
 }

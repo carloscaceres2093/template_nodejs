@@ -20,7 +20,7 @@ export async function up(knex: Knex): Promise<void> {
             nombre VARCHAR, 
             apellido VARCHAR, 
             identificacion VARCHAR UNIQUE,
-            telefono INT,
+            telefono VARCHAR,
             created_at timestamptz,
             updated_at timestamptz,
             PRIMARY key(id_paciente)

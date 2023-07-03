@@ -1,9 +1,21 @@
 import { db } from "../../../config/database"
 import { Patient, PatientReq, } from "./model"
 import logger from '../../../utils/logger'
-import { DoctorCreationError, PatientGetAllError, RecordNotFoundError } from "../../../config/customErrors"
+import { DoctorCreationError, PatientGetAllError, PatientUpdateError, RecordNotFoundError } from "../../../config/customErrors"
 
 export class PatientRepository {
+
+    public async updatePatient(id: number, updatePatient: Partial<PatientReq>): Promise<void> {
+        try {
+            updatePatient.updated_at = new Date().toUTCString()
+            await db('pacientes').where({ id_paciente: id }).update(updatePatient)
+        } catch (error) {
+            console.log(error)
+            logger.error('Failed updated patient in repository', { error })
+            throw new PatientUpdateError()
+        }
+    }
+
     public async createPatient(patient: PatientReq): Promise<Patient> {
         try {
             const [createdPatient] = await db('pacientes').insert(patient).returning('*')

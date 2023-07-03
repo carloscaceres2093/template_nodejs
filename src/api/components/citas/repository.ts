@@ -1,7 +1,7 @@
 import { db } from "../../../config/database"
 import { Appointment, AppointmentReq, AppointmentResDB } from "./model"
 import logger from '../../../utils/logger'
-import { DoctorCreationError, RecordNotFoundError, GetAllError, AppointmentUpdateError, AppoinmentCreateError } from "../../../config/customErrors"
+import { RecordNotFoundError, GetAllError, AppointmentUpdateError, AppoinmentCreateError } from "../../../config/customErrors"
 
 export class AppointmentRepository {
 

@@ -175,3 +175,85 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-07-03T02:03:26.157Z-info: Server is listening on port 8087
 2023-07-03T02:07:34.630Z-info: Server is listening on port 8087
 2023-07-03T02:09:53.601Z-info: Server is listening on port 8087
+2023-07-03T04:15:27.229Z-info: Server is listening on port 8087
+2023-07-03T04:17:12.152Z-info: Server is listening on port 8087
+2023-07-03T04:18:31.003Z-error: Failed updated appointment in repository
+2023-07-03T04:18:31.003Z-error: Failed to update patient from service
+2023-07-03T04:18:31.004Z-error: Failed to update patient
+2023-07-03T04:18:41.795Z-error: Failed updated appointment in repository
+2023-07-03T04:18:41.796Z-error: Failed to update patient from service
+2023-07-03T04:18:41.796Z-error: Failed to update patient
+2023-07-03T04:18:42.525Z-error: Failed updated appointment in repository
+2023-07-03T04:18:42.526Z-error: Failed to update patient from service
+2023-07-03T04:18:42.526Z-error: Failed to update patient
+2023-07-03T04:18:53.680Z-error: Failed updated appointment in repository
+2023-07-03T04:18:53.680Z-error: Failed to update patient from service
+2023-07-03T04:18:53.681Z-error: Failed to update patient
+2023-07-03T04:18:57.305Z-error: Failed updated appointment in repository
+2023-07-03T04:18:57.306Z-error: Failed to update patient from service
+2023-07-03T04:18:57.306Z-error: Failed to update patient
+2023-07-03T04:22:02.769Z-info: Server is listening on port 8087
+2023-07-03T04:22:18.436Z-error: Failed updated appointment in repository
+2023-07-03T04:22:18.437Z-error: Failed to update patient from service
+2023-07-03T04:22:18.437Z-error: Failed to update patient
+2023-07-03T04:23:41.826Z-info: Server is listening on port 8087
+2023-07-03T04:27:43.116Z-error: Failed updated patient in repository
+2023-07-03T04:27:43.117Z-error: Failed to update patient from service
+2023-07-03T04:27:43.117Z-error: Failed to update patient
+2023-07-03T04:33:30.926Z-error: Failed updated patient in repository
+2023-07-03T04:33:30.927Z-error: Failed to update patient from service
+2023-07-03T04:33:30.927Z-error: Failed to update patient
+2023-07-03T04:40:01.715Z-error: Failed updated patient in repository
+2023-07-03T04:40:01.715Z-error: Failed to update patient from service
+2023-07-03T04:40:01.716Z-error: Failed to update patient
+2023-07-03T04:53:33.628Z-info: Server is listening on port 8087
+2023-07-03T04:53:48.017Z-error: Failed updated patient in repository
+2023-07-03T04:53:48.017Z-error: Failed to update patient from service
+2023-07-03T04:53:48.018Z-error: Failed to update patient
+2023-07-03T04:58:09.818Z-info: Server is listening on port 8087
+2023-07-03T04:58:21.752Z-error: Failed updated patient in repository
+2023-07-03T04:58:21.752Z-error: Failed to update patient from service
+2023-07-03T04:58:21.753Z-error: Failed to update patient
+2023-07-03T05:05:23.438Z-info: Server is listening on port 8087
+2023-07-03T05:05:28.529Z-error: Failed updated patient in repository
+2023-07-03T05:05:28.529Z-error: Failed to update patient from service
+2023-07-03T05:05:28.530Z-error: Failed to update patient
+2023-07-03T05:06:47.631Z-info: Server is listening on port 8087
+2023-07-03T05:06:49.969Z-error: Failed updated patient in repository
+2023-07-03T05:06:49.970Z-error: Failed to update patient from service
+2023-07-03T05:06:49.970Z-error: Failed to update patient
+2023-07-03T05:08:02.965Z-info: Server is listening on port 8087
+2023-07-03T05:08:06.510Z-error: Failed updated patient in repository
+2023-07-03T05:08:06.511Z-error: Failed to update patient from service
+2023-07-03T05:08:06.511Z-error: Failed to update patient
+2023-07-03T05:09:10.034Z-info: Server is listening on port 8087
+2023-07-03T05:09:13.471Z-error: Failed updated patient in repository
+2023-07-03T05:09:13.471Z-error: Failed to update patient from service
+2023-07-03T05:09:13.472Z-error: Failed to update patient
+2023-07-03T05:10:06.603Z-info: Server is listening on port 8087
+2023-07-03T05:10:10.853Z-error: Failed updated patient in repository
+2023-07-03T05:10:10.854Z-error: Failed to update patient from service
+2023-07-03T05:10:10.854Z-error: Failed to update patient
+2023-07-03T05:14:13.556Z-info: Server is listening on port 8087
+2023-07-03T05:14:18.812Z-error: Failed to update patient from service
+2023-07-03T05:14:18.812Z-error: Failed to update patient from service
+2023-07-03T05:14:18.813Z-error: Failed to update patient
+2023-07-03T05:14:48.141Z-info: Server is listening on port 8087
+2023-07-03T05:14:51.363Z-error: Failed to update patient from service
+2023-07-03T05:14:51.363Z-error: Failed to update patient from service
+2023-07-03T05:14:51.364Z-error: Failed to update patient
+2023-07-03T05:18:46.228Z-info: Server is listening on port 8087
+2023-07-03T05:19:22.019Z-info: Server is listening on port 8087
+2023-07-03T05:19:27.977Z-error: Failed updated patient in repository
+2023-07-03T05:19:27.977Z-error: Failed to update patient from service
+2023-07-03T05:19:27.978Z-error: Failed to update patient
+2023-07-03T05:23:19.093Z-info: Server is listening on port 8087
+2023-07-03T05:23:23.642Z-error: Failed updated patient in repository
+2023-07-03T05:23:23.642Z-error: Failed to update patient from service
+2023-07-03T05:23:23.643Z-error: Failed to update patient
+2023-07-03T05:24:01.587Z-info: Server is listening on port 8087
+2023-07-03T05:24:06.939Z-error: Failed updated patient in repository
+2023-07-03T05:24:06.940Z-error: Failed to update patient from service
+2023-07-03T05:24:06.940Z-error: Failed to update patient
+2023-07-03T05:25:34.339Z-info: Server is listening on port 8087
+2023-07-03T05:26:23.963Z-info: Server is listening on port 8087

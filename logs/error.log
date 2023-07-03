@@ -83,3 +83,66 @@
 2023-07-03T01:37:50.308Z-error: Failed to create appointment
 2023-07-03T01:40:28.108Z-error: Failed to create appointment dubt:  insert into "citas" ("especialidad", "horario", "id_doctor", "identificacion_paciente") values ($1, $2, $3, $4) returning * - insert or update on table "citas" violates foreign key constraint "fk_pacientes"
 2023-07-03T01:40:28.109Z-error: Failed to create appointment
+2023-07-03T04:18:31.003Z-error: Failed updated appointment in repository
+2023-07-03T04:18:31.003Z-error: Failed to update patient from service
+2023-07-03T04:18:31.004Z-error: Failed to update patient
+2023-07-03T04:18:41.795Z-error: Failed updated appointment in repository
+2023-07-03T04:18:41.796Z-error: Failed to update patient from service
+2023-07-03T04:18:41.796Z-error: Failed to update patient
+2023-07-03T04:18:42.525Z-error: Failed updated appointment in repository
+2023-07-03T04:18:42.526Z-error: Failed to update patient from service
+2023-07-03T04:18:42.526Z-error: Failed to update patient
+2023-07-03T04:18:53.680Z-error: Failed updated appointment in repository
+2023-07-03T04:18:53.680Z-error: Failed to update patient from service
+2023-07-03T04:18:53.681Z-error: Failed to update patient
+2023-07-03T04:18:57.305Z-error: Failed updated appointment in repository
+2023-07-03T04:18:57.306Z-error: Failed to update patient from service
+2023-07-03T04:18:57.306Z-error: Failed to update patient
+2023-07-03T04:22:18.436Z-error: Failed updated appointment in repository
+2023-07-03T04:22:18.437Z-error: Failed to update patient from service
+2023-07-03T04:22:18.437Z-error: Failed to update patient
+2023-07-03T04:27:43.116Z-error: Failed updated patient in repository
+2023-07-03T04:27:43.117Z-error: Failed to update patient from service
+2023-07-03T04:27:43.117Z-error: Failed to update patient
+2023-07-03T04:33:30.926Z-error: Failed updated patient in repository
+2023-07-03T04:33:30.927Z-error: Failed to update patient from service
+2023-07-03T04:33:30.927Z-error: Failed to update patient
+2023-07-03T04:40:01.715Z-error: Failed updated patient in repository
+2023-07-03T04:40:01.715Z-error: Failed to update patient from service
+2023-07-03T04:40:01.716Z-error: Failed to update patient
+2023-07-03T04:53:48.017Z-error: Failed updated patient in repository
+2023-07-03T04:53:48.017Z-error: Failed to update patient from service
+2023-07-03T04:53:48.018Z-error: Failed to update patient
+2023-07-03T04:58:21.752Z-error: Failed updated patient in repository
+2023-07-03T04:58:21.752Z-error: Failed to update patient from service
+2023-07-03T04:58:21.753Z-error: Failed to update patient
+2023-07-03T05:05:28.529Z-error: Failed updated patient in repository
+2023-07-03T05:05:28.529Z-error: Failed to update patient from service
+2023-07-03T05:05:28.530Z-error: Failed to update patient
+2023-07-03T05:06:49.969Z-error: Failed updated patient in repository
+2023-07-03T05:06:49.970Z-error: Failed to update patient from service
+2023-07-03T05:06:49.970Z-error: Failed to update patient
+2023-07-03T05:08:06.510Z-error: Failed updated patient in repository
+2023-07-03T05:08:06.511Z-error: Failed to update patient from service
+2023-07-03T05:08:06.511Z-error: Failed to update patient
+2023-07-03T05:09:13.471Z-error: Failed updated patient in repository
+2023-07-03T05:09:13.471Z-error: Failed to update patient from service
+2023-07-03T05:09:13.472Z-error: Failed to update patient
+2023-07-03T05:10:10.853Z-error: Failed updated patient in repository
+2023-07-03T05:10:10.854Z-error: Failed to update patient from service
+2023-07-03T05:10:10.854Z-error: Failed to update patient
+2023-07-03T05:14:18.812Z-error: Failed to update patient from service
+2023-07-03T05:14:18.812Z-error: Failed to update patient from service
+2023-07-03T05:14:18.813Z-error: Failed to update patient
+2023-07-03T05:14:51.363Z-error: Failed to update patient from service
+2023-07-03T05:14:51.363Z-error: Failed to update patient from service
+2023-07-03T05:14:51.364Z-error: Failed to update patient
+2023-07-03T05:19:27.977Z-error: Failed updated patient in repository
+2023-07-03T05:19:27.977Z-error: Failed to update patient from service
+2023-07-03T05:19:27.978Z-error: Failed to update patient
+2023-07-03T05:23:23.642Z-error: Failed updated patient in repository
+2023-07-03T05:23:23.642Z-error: Failed to update patient from service
+2023-07-03T05:23:23.643Z-error: Failed to update patient
+2023-07-03T05:24:06.939Z-error: Failed updated patient in repository
+2023-07-03T05:24:06.940Z-error: Failed to update patient from service
+2023-07-03T05:24:06.940Z-error: Failed to update patient

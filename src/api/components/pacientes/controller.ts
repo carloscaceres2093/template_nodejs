@@ -2,13 +2,15 @@ import { Patient, PatientReq } from './model'
 import { Request, Response } from 'express'
 import { PatientService } from './service'
 import logger from '../../../utils/logger'
-import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdateError, RecordNotFoundError } from '../../../config/customErrors'
+import { DoctorCreationError, PatientUpdateError, RecordNotFoundError } from '../../../config/customErrors'
+import { createPatientSchema, updatePatientSchema } from './validations/pacientes.validations'
 
 
 export interface PatientController {
     getAllPatient(req: Request, res: Response): void
     createPatient(req: Request, res: Response): void
     getPatientById(req: Request, res: Response): void
+    updatePatient(req: Request, res: Response): void
 }
 
 export class PatientControllerImpl implements PatientController {
@@ -17,6 +19,42 @@ export class PatientControllerImpl implements PatientController {
     constructor(patientService: PatientService) {
         this.patientService = patientService
     }
+
+    public updatePatient(req: Request, res: Response): void {
+        const id = parseInt(req.params.id)
+        const { error, value } = updatePatientSchema.validate(req.body)
+        if (error) {
+            res.status(400).json({ message: error.details[0].message })
+        } else {
+            this.patientService.updatePatient(id, value)
+                .then(
+                    (patient) => {
+                        res.status(201).json(patient)
+                    },
+                    (error) => {
+                        logger.error(error)
+                        if (error instanceof RecordNotFoundError) {
+                            res.status(400).json({
+                                error_name: error.name,
+                                message: "Failed Creating patient"
+                            })
+                        }
+                        if (error instanceof PatientUpdateError) {
+                            res.status(400).json({
+                                error_name: error.name,
+                                message: "Failed Creating patient"
+                            })
+                        } else {
+                            console.log(error)
+                            res.status(400).json({
+                                message: "Internal Server Error"
+                            })
+                        }
+                    }
+                )
+        }
+    }
+
     public async getAllPatient(req: Request, res: Response): Promise<void> {
         try {
             const patients = await this.patientService.getAllPatients()
