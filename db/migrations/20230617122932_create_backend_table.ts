@@ -31,6 +31,7 @@ export async function up(knex: Knex): Promise<void> {
             horario VARCHAR,
             especialidad VARCHAR,
             doctor VARCHAR,
+            consultorio character varying,
             id_doctor BIGINT,
             identificacion_paciente VARCHAR,
             created_at timestamptz,
