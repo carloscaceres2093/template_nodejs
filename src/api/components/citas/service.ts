@@ -1,4 +1,4 @@
-import { DoctorCreationError, DoctorDeleteError, DoctorUpdateError, RecordNotFoundError, GetAllError } from "../../../config/customErrors"
+import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError, GetAllError } from "../../../config/customErrors"
 import logger from "../../../utils/logger"
 import { AppointmentReq, Appointment, AppointmentResDB } from "./model"
 import { AppointmentRepository } from "./repository"
@@ -9,6 +9,7 @@ export interface AppointmentService {
     getAllAppointments(): Promise<Appointment[]>
     createAppointment(patientReq: AppointmentReq): Promise<Appointment>
     getAppointmentById(id: number): Promise<Appointment>
+    updateAppointment(id: number, updates: Partial<Appointment>): Promise<Appointment>
 }
 
 
@@ -19,6 +20,26 @@ export class AppointmentServiceImpl implements AppointmentService {
     constructor(appointmentRepository: AppointmentRepository, doctorRepository: DoctorRepository) {
         this.appointmentRepository = appointmentRepository
         this.doctorRepository = doctorRepository
+    }
+    public async updateAppointment(id: number, updates: Partial<AppointmentReq>): Promise<Appointment> {
+        try {
+            const existAppointment = await this.appointmentRepository.getAppointmentById(id)
+            if (!existAppointment) {
+                throw new RecordNotFoundError()
+            }
+            const updateAppointment = { ...existAppointment, ...updates }
+            const appointmentUpdatedDb = await this.appointmentRepository.updateAppointment(id, updateAppointment)
+            const doctor = await this.doctorRepository.getDoctorById(appointmentUpdatedDb.id_doctor)
+            if (doctor) {
+                const appointment: Appointment = mapAppointment(appointmentUpdatedDb, doctor)
+                return appointment
+            } else {
+                throw new AppointmentUpdateError()
+            }
+        } catch (error) {
+            logger.error('Failed to update appointment from service')
+            throw new AppointmentUpdateError()
+        }
     }
 
     public async getAllAppointments(): Promise<Appointment[]> {

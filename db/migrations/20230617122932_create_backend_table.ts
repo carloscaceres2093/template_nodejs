@@ -30,6 +30,7 @@ export async function up(knex: Knex): Promise<void> {
             id_cita bigserial,
             horario VARCHAR,
             especialidad VARCHAR,
+            doctor VARCHAR,
             id_doctor BIGINT,
             identificacion_paciente VARCHAR,
             created_at timestamptz,

@@ -1,9 +1,20 @@
 import { db } from "../../../config/database"
 import { Appointment, AppointmentReq, AppointmentResDB } from "./model"
 import logger from '../../../utils/logger'
-import { DoctorCreationError, PatientGetAllError, RecordNotFoundError, GetAllError } from "../../../config/customErrors"
+import { DoctorCreationError, RecordNotFoundError, GetAllError, AppointmentUpdateError } from "../../../config/customErrors"
 
 export class AppointmentRepository {
+
+    public async updateAppointment(id: number, updateAppointment: Partial<AppointmentReq>): Promise<AppointmentResDB> {
+        try {
+            const [updatedAppointment] = await db('citas').where({ id_cita: id }).update(updateAppointment).returning('*')
+            return updatedAppointment
+        } catch (error) {
+            logger.error('Failed updated appointment in repository', { error })
+            throw new AppointmentUpdateError()
+        }
+    }
+
     public async createAppointment(appointment: AppointmentReq): Promise<AppointmentResDB> {
         try {
             const [createdAppointment] = await db('citas').insert(appointment).returning('*')

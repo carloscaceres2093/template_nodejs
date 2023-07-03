@@ -42,3 +42,29 @@
 2023-07-02T20:13:53.563Z-error: Failed getting all appointments from service
 2023-07-02T20:13:57.126Z-error: select * from "citas1" - relation "citas1" does not exist
 2023-07-02T20:13:57.127Z-error: Failed getting all appointments from service
+2023-07-02T22:52:32.505Z-error: Failed updated appointment in repository
+2023-07-02T23:09:55.840Z-error: Failed to get appointment from service
+2023-07-02T23:09:55.840Z-error: Record has not found yet
+2023-07-02T23:10:05.206Z-error: Failed updated appointment in repository
+2023-07-02T23:13:06.404Z-error: Failed updated appointment in repository
+2023-07-02T23:13:40.385Z-error: Failed updated appointment in repository
+2023-07-02T23:14:15.113Z-error: Failed updated appointment in repository
+2023-07-02T23:14:33.676Z-error: Failed updated appointment in repository
+2023-07-02T23:16:09.357Z-error: Failed updated appointment in repository
+2023-07-02T23:20:28.711Z-error: Failed updated appointment in repository
+2023-07-02T23:51:43.589Z-error: Failed updated appointment in repository
+2023-07-03T00:00:01.336Z-error: Failed updated appointment in repository
+2023-07-03T00:03:06.403Z-error: Failed updated appointment in repository
+2023-07-03T00:21:54.615Z-error: Failed updated appointment in repository
+2023-07-03T00:46:15.507Z-error: Failed updated appointment in repository
+2023-07-03T00:46:15.508Z-error: Failed to update appointment from service
+2023-07-03T00:46:15.508Z-error: Failed to update appointment
+2023-07-03T00:46:28.257Z-error: Failed updated appointment in repository
+2023-07-03T00:46:28.258Z-error: Failed to update appointment from service
+2023-07-03T00:46:28.259Z-error: Failed to update appointment
+2023-07-03T00:49:17.876Z-error: Failed updated appointment in repository
+2023-07-03T00:49:17.895Z-error: Failed to update appointment from service
+2023-07-03T00:49:17.896Z-error: Failed to update appointment
+2023-07-03T01:09:26.174Z-error: Failed updated appointment in repository
+2023-07-03T01:09:26.175Z-error: Failed to update appointment from service
+2023-07-03T01:09:26.175Z-error: Failed to update appointment

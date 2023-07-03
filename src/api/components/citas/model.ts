@@ -15,8 +15,6 @@ export interface AppointmentReq {
     id_doctor: number
     identificacion_paciente: string
     especialidad: string
-    doctor: string
-    consultorio: number
 }
 
 export interface AppointmentResDB {

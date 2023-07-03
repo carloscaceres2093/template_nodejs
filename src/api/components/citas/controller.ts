@@ -1,14 +1,14 @@
-import { Appointment, AppointmentReq } from './model'
 import { Request, Response } from 'express'
 import { AppointmentService } from './service'
 import logger from '../../../utils/logger'
-import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdateError, RecordNotFoundError } from '../../../config/customErrors'
+import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError } from '../../../config/customErrors'
 
 
 export interface AppointmentController {
     getAllAppointment(req: Request, res: Response): void
     createAppointment(req: Request, res: Response): void
     getAppointmentById(req: Request, res: Response): void
+    updateAppointment(req: Request, res: Response): void
 }
 
 export class AppointmentControllerImpl implements AppointmentController {
@@ -16,6 +16,28 @@ export class AppointmentControllerImpl implements AppointmentController {
 
     constructor(appointmentService: AppointmentService) {
         this.appointmentService = appointmentService
+    }
+    public async updateAppointment(req: Request, res: Response): Promise<void> {
+        try {
+            const id = parseInt(req.params.id)
+            const appointmentReq = req.body
+            const appointment = await this.appointmentService.updateAppointment(id, appointmentReq)
+            if (appointment) {
+                res.status(201).json(appointment)
+            } else {
+                throw new AppointmentUpdateError()
+            }
+        } catch (error) {
+            logger.error(error)
+            if (error instanceof RecordNotFoundError) {
+                res.status(400).json({ error: error.message })
+            } else if (error instanceof AppointmentUpdateError) {
+                res.status(400).json({ error: error.message })
+            } else {
+                res.status(400).json({ error: "Failed to update appointment" })
+            }
+        }
+
     }
     public async getAllAppointment(req: Request, res: Response): Promise<void> {
         try {

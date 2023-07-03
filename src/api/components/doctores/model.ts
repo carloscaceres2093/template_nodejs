@@ -17,11 +17,3 @@ export interface DoctorReq {
     correo?: string
     createdAt?: Date
 }
-
-export interface DoctorReq {
-    nombre: string
-    apellido: string
-    especialidad: string
-    consultorio: number
-    correo?: string
-}
