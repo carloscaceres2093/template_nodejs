@@ -1,8 +1,10 @@
 import { Request, Response } from 'express'
 import { AppointmentService } from './service'
 import logger from '../../../utils/logger'
-import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError, AppoinmentCreateError } from '../../../config/customErrors'
+import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError, AppoinmentCreateError, AppointmentDeleteError } from '../../../utils/customErrors'
 import { createAppointmentSchema, updateAppointmentSchema } from './validations/citas.validations'
+import { ParamsDictionary } from 'express-serve-static-core'
+import { ParsedQs } from 'qs'
 
 
 export interface AppointmentController {
@@ -10,6 +12,7 @@ export interface AppointmentController {
     createAppointment(req: Request, res: Response): void
     getAppointmentById(req: Request, res: Response): void
     updateAppointment(req: Request, res: Response): void
+    deleteAppointment(req: Request, res: Response): void
 }
 
 export class AppointmentControllerImpl implements AppointmentController {
@@ -108,6 +111,21 @@ export class AppointmentControllerImpl implements AppointmentController {
                 res.status(400).json({ error: error.message })
             } else {
                 res.status(400).json({ error: "Failed to retrieve patient" })
+            }
+        }
+    }
+
+    public async deleteAppointment(req: Request, res: Response): Promise<void> {
+        try {
+            const id = parseInt(req.params.id)
+            await this.appointmentService.deleteAppoinmentById(id)
+            res.status(200).json({ message: `Appointment was deleted successfully` })
+        } catch (error) {
+            logger.error(error)
+            if (error instanceof AppointmentDeleteError) {
+                res.status(400).json({ error: error.message })
+            } else {
+                res.status(400).json({ error: 'Failed to delete appointment' })
             }
         }
     }

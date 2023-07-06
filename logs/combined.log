@@ -263,3 +263,104 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-07-03T05:40:26.812Z-error: Failed to create appointment dubt:  insert into "citas" ("created_at", "especialidad", "horario", "id_doctor", "identificacion_paciente") values ($1, $2, $3, $4, $5) returning * - insert or update on table "citas" violates foreign key constraint "fk_pacientes"
 2023-07-03T05:40:26.813Z-error: Failed to create appointment
 2023-07-03T05:44:57.863Z-info: Server is listening on port 8087
+2023-07-05T18:19:19.470Z-info: Server is listening on port 8087
+2023-07-05T18:21:14.277Z-info: Server is listening on port 8087
+2023-07-05T18:21:23.307Z-error: Failed deleting patient in repository
+2023-07-05T18:21:23.307Z-error: Failed to delete patientPatientDeleteError: Failed to delete patient
+2023-07-05T18:21:23.308Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T18:22:50.910Z-info: Server is listening on port 8087
+2023-07-05T18:22:53.799Z-error: Failed deleting patient in repositoryerror: delete from "pacientes" where "id_paciente" = $1 - update or delete on table "pacientes" violates foreign key constraint "fk_pacientes" on table "citas"
+2023-07-05T18:22:53.800Z-error: Failed to delete patientPatientDeleteError: Failed to delete patient
+2023-07-05T18:22:53.800Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T19:08:56.718Z-info: Server is listening on port 8087
+2023-07-05T19:10:00.977Z-info: Server is listening on port 8087
+2023-07-05T19:11:03.402Z-error: Failed deleting patient in repositoryerror: delete from "pacientes" where "id_paciente" = $1 - update or delete on table "pacientes" violates foreign key constraint "fk_pacientes" on table "citas"
+2023-07-05T22:59:49.922Z-error: Failed to create appointment dubt:  insert into "citas" ("created_at", "especialidad", "horario", "id_doctor", "identificacion_paciente") values ($1, $2, $3, $4, $5) returning * - insert or update on table "citas" violates foreign key constraint "fk_pacientes"
+2023-07-05T22:59:49.926Z-error: Failed to create appointment
+2023-07-05T23:05:53.276Z-info: Server is listening on port 8087
+2023-07-05T23:19:03.661Z-error: Failed to create appointment dubt:  insert into "citas" ("created_at", "especialidad", "horario", "id_doctor", "identificacion_paciente") values ($1, $2, $3, $4, $5) returning * - insert or update on table "citas" violates foreign key constraint "paciente_num_id"
+2023-07-05T23:19:03.662Z-error: Failed to create appointment
+2023-07-05T23:26:47.376Z-error: Failed to create appointment dubt:  insert into "citas" ("created_at", "especialidad", "horario", "id_doctor", "identificacion_paciente") values ($1, $2, $3, $4, $5) returning * - insert or update on table "citas" violates foreign key constraint "doctor_id"
+2023-07-05T23:26:47.376Z-error: Failed to create appointment
+2023-07-05T23:26:59.649Z-error: Failed to create appointment dubt:  insert into "citas" ("created_at", "especialidad", "horario", "id_doctor", "identificacion_paciente") values ($1, $2, $3, $4, $5) returning * - insert or update on table "citas" violates foreign key constraint "doctor_id"
+2023-07-05T23:26:59.649Z-error: Failed to create appointment
+2023-07-05T23:27:03.796Z-error: Failed to create appointment dubt:  insert into "citas" ("created_at", "especialidad", "horario", "id_doctor", "identificacion_paciente") values ($1, $2, $3, $4, $5) returning * - insert or update on table "citas" violates foreign key constraint "doctor_id"
+2023-07-05T23:27:03.797Z-error: Failed to create appointment
+2023-07-05T23:31:03.795Z-info: Server is listening on port 8087
+2023-07-05T23:31:10.882Z-error: Failed to delete appointment from service
+2023-07-05T23:31:10.882Z-error: Failed to delete appointment from service
+2023-07-05T23:31:10.883Z-error: Record has not found yet
+2023-07-05T23:31:17.774Z-error: Failed to delete appointment from service
+2023-07-05T23:31:17.774Z-error: Failed to delete appointment from service
+2023-07-05T23:31:17.775Z-error: Record has not found yet
+2023-07-05T23:31:19.120Z-error: Failed to delete appointment from service
+2023-07-05T23:31:19.120Z-error: Failed to delete appointment from service
+2023-07-05T23:31:19.121Z-error: Record has not found yet
+2023-07-05T23:34:12.878Z-info: Server is listening on port 8087
+2023-07-05T23:35:49.848Z-error: Failed to delete appointment from service
+2023-07-05T23:35:49.848Z-error: Failed to delete appointment
+2023-07-05T23:35:57.899Z-error: Failed to delete appointment from service
+2023-07-05T23:35:57.899Z-error: Failed to delete appointment
+2023-07-05T23:39:43.331Z-error: Failed to delete appointment from service
+2023-07-05T23:39:43.332Z-error: Failed to delete appointment
+2023-07-05T23:39:43.465Z-error: Failed to delete appointment from service
+2023-07-05T23:39:43.466Z-error: Failed to delete appointment
+2023-07-05T23:39:43.637Z-error: Failed to delete appointment from service
+2023-07-05T23:39:43.637Z-error: Failed to delete appointment
+2023-07-05T23:39:43.841Z-error: Failed to delete appointment from service
+2023-07-05T23:39:43.841Z-error: Failed to delete appointment
+2023-07-05T23:41:10.783Z-error: Failed to delete patient
+2023-07-05T23:41:10.784Z-error: Failed to delete patient
+2023-07-05T23:41:10.784Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:41:10.877Z-error: Failed to delete patient
+2023-07-05T23:41:10.878Z-error: Failed to delete patient
+2023-07-05T23:41:10.878Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:41:11.050Z-error: Failed to delete patient
+2023-07-05T23:41:11.050Z-error: Failed to delete patient
+2023-07-05T23:41:11.051Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:41:21.982Z-error: Failed to delete patient
+2023-07-05T23:41:21.982Z-error: Failed to delete patient
+2023-07-05T23:41:21.983Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:41:37.218Z-error: Failed to delete patient
+2023-07-05T23:41:37.218Z-error: Failed to delete patient
+2023-07-05T23:41:37.218Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:41:51.243Z-error: Failed to delete patient
+2023-07-05T23:41:51.243Z-error: Failed to delete patient
+2023-07-05T23:41:51.243Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:41:56.433Z-error: Failed to delete patient
+2023-07-05T23:41:56.433Z-error: Failed to delete patient
+2023-07-05T23:41:56.434Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:41:59.711Z-error: Failed to delete patient
+2023-07-05T23:41:59.711Z-error: Failed to delete patient
+2023-07-05T23:41:59.712Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:42:03.167Z-error: Failed to delete patient
+2023-07-05T23:42:03.168Z-error: Failed to delete patient
+2023-07-05T23:42:03.168Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:42:06.072Z-error: Failed to delete patient
+2023-07-05T23:42:06.072Z-error: Failed to delete patient
+2023-07-05T23:42:06.072Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:42:09.835Z-error: Failed to delete patient
+2023-07-05T23:42:09.835Z-error: Failed to delete patient
+2023-07-05T23:42:09.835Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:42:13.527Z-error: Failed to delete patient
+2023-07-05T23:42:13.527Z-error: Failed to delete patient
+2023-07-05T23:42:13.528Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:42:36.340Z-error: Failed to delete patient
+2023-07-05T23:42:36.340Z-error: Failed to delete patient
+2023-07-05T23:42:36.341Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:42:37.222Z-error: Failed to delete patient
+2023-07-05T23:42:37.222Z-error: Failed to delete patient
+2023-07-05T23:42:37.223Z-error: Failed to delete patient from controllerRecordNotFound: Record has not found yet
+2023-07-05T23:46:51.739Z-info: Server is listening on port 8087
+2023-07-05T23:47:03.061Z-error: Failed to delete patient
+2023-07-05T23:47:03.061Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
+2023-07-05T23:47:10.094Z-error: Failed to delete patient
+2023-07-05T23:47:10.094Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
+2023-07-05T23:47:11.814Z-error: Failed to delete patient
+2023-07-05T23:47:11.814Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
+2023-07-05T23:58:35.166Z-info: Server is listening on port 8087
+2023-07-05T23:58:36.632Z-error: Failed to delete patient
+2023-07-05T23:58:36.632Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
+2023-07-06T00:02:39.341Z-info: Server is listening on port 8087
+2023-07-06T00:03:05.416Z-error: Failed to delete patient
+2023-07-06T00:03:05.417Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient

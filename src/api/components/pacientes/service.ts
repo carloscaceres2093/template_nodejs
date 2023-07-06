@@ -1,4 +1,4 @@
-import { PatientCreateError, PatientUpdateError, RecordNotFoundError } from "../../../config/customErrors"
+import { PatientCreateError, PatientDeleteError, PatientUpdateError, RecordNotFoundError } from "../../../utils/customErrors"
 import logger from "../../../utils/logger"
 import { AppointmentRepository } from "../citas/repository"
 import { PatientReq, Patient } from "./model"
@@ -8,7 +8,8 @@ export interface PatientService {
     getAllPatients(): Promise<Patient[]>
     createPatient(patientReq: PatientReq): Promise<Patient>
     getPatientById(id: number): Promise<Patient>
-    updatePatient(id: number, updates: Partial<PatientReq>): Promise<Patient>
+    updatePatient(id: number, updates: Partial<PatientReq>): Promise<Patient>,
+    deletePatient(id: number): Promise<void>
 }
 
 export class PatientServiceImpl implements PatientService {
@@ -61,5 +62,18 @@ export class PatientServiceImpl implements PatientService {
         }
     }
 
-
+    public async deletePatient(id: number): Promise<void> {
+        try {
+            const patientDB = await this.patientRepository.getPatientById(id)
+            if (!patientDB) {
+                throw new RecordNotFoundError()
+            }
+            const numId = patientDB.identificacion
+            await this.appointmentRepository.deleteAllAppointmentsByPatientNumberId(numId)
+            await this.patientRepository.deletePatient(id)
+        } catch (error) {
+            logger.error('Failed to delete patient')
+            throw new PatientDeleteError()
+        }
+    }
 }

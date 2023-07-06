@@ -2,7 +2,7 @@ import { Patient, PatientReq } from './model'
 import { Request, Response } from 'express'
 import { PatientService } from './service'
 import logger from '../../../utils/logger'
-import { DoctorCreationError, PatientUpdateError, RecordNotFoundError } from '../../../config/customErrors'
+import { DoctorCreationError, PatientUpdateError, RecordNotFoundError } from '../../../utils/customErrors'
 import { createPatientSchema, updatePatientSchema } from './validations/pacientes.validations'
 
 
@@ -11,6 +11,7 @@ export interface PatientController {
     createPatient(req: Request, res: Response): void
     getPatientById(req: Request, res: Response): void
     updatePatient(req: Request, res: Response): void
+    deletePatient(req: Request, res: Response): void
 }
 
 export class PatientControllerImpl implements PatientController {
@@ -106,6 +107,20 @@ export class PatientControllerImpl implements PatientController {
                 res.status(400).json({ error: error.message })
             } else {
                 res.status(400).json({ error: "Failed to retrieve patient" })
+            }
+        }
+    }
+    public async deletePatient(req: Request, res: Response): Promise<void> {
+        try {
+            const id = parseInt(req.params.id)
+            await this.patientService.deletePatient(id)
+            res.status(200).json({ message: `Patient was deleted successfully` })
+        } catch (error) {
+            logger.error('Failed to delete patient from controller' + error)
+            if (error instanceof RecordNotFoundError) {
+                res.status(400).json({ error: error.message })
+            } else {
+                res.status(400).json({ error: "Failed to delete patient" })
             }
         }
     }

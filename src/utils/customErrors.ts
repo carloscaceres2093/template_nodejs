@@ -47,6 +47,13 @@ class AppoinmentCreateError extends Error {
     }
 }
 
+class AppointmentDeleteError extends Error {
+    constructor() {
+        super("Failed to delete appointment")
+        this.name = "AppointmentDeleteError"
+    }
+}
+
 class PatientCreateError extends Error {
     constructor() {
         super("Failed to create patient")
@@ -58,6 +65,13 @@ class PatientUpdateError extends Error {
     constructor() {
         super("Failed to update patient")
         this.name = "PatientUpdateError"
+    }
+}
+
+class PatientDeleteError extends Error {
+    constructor() {
+        super("Failed to delete patient")
+        this.name = "PatientDeleteError"
     }
 }
 
@@ -88,5 +102,7 @@ export {
     AppointmentUpdateError,
     AppoinmentCreateError,
     PatientCreateError,
-    PatientUpdateError
+    PatientUpdateError,
+    PatientDeleteError,
+    AppointmentDeleteError
 }

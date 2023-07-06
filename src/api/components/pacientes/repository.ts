@@ -1,7 +1,7 @@
 import { db } from "../../../config/database"
 import { Patient, PatientReq, } from "./model"
 import logger from '../../../utils/logger'
-import { DoctorCreationError, PatientGetAllError, PatientUpdateError, RecordNotFoundError } from "../../../config/customErrors"
+import { DoctorCreationError, PatientDeleteError, PatientGetAllError, PatientUpdateError, RecordNotFoundError } from "../../../utils/customErrors"
 
 export class PatientRepository {
 
@@ -41,6 +41,15 @@ export class PatientRepository {
         } catch (error) {
             logger.error('Failed get patient by id in repository', { error })
             throw new RecordNotFoundError()
+        }
+    }
+
+    public async deletePatient(id: number): Promise<void> {
+        try {
+            await db('pacientes').where({ id_paciente: id }).del()
+        } catch (error_delete) {
+            logger.error('Failed deleting patient in repository' + error_delete)
+            throw new PatientDeleteError()
         }
     }
 }

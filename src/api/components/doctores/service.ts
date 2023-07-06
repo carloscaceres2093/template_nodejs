@@ -1,4 +1,4 @@
-import { DoctorCreationError, DoctorDeleteError, DoctorUpdateError, RecordNotFoundError } from "../../../config/customErrors"
+import { DoctorCreationError, DoctorDeleteError, DoctorUpdateError, RecordNotFoundError } from "../../../utils/customErrors"
 import logger from "../../../utils/logger"
 import { Doctor, DoctorReq } from "./model"
 import { DoctorRepository } from "./repository"

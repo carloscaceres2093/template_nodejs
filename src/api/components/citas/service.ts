@@ -1,4 +1,4 @@
-import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError, GetAllError, AppoinmentCreateError } from "../../../config/customErrors"
+import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError, GetAllError, AppoinmentCreateError, AppointmentDeleteError } from "../../../utils/customErrors"
 import logger from "../../../utils/logger"
 import { AppointmentReq, Appointment, AppointmentResDB } from "./model"
 import { AppointmentRepository } from "./repository"
@@ -10,6 +10,7 @@ export interface AppointmentService {
     createAppointment(patientReq: AppointmentReq): Promise<Appointment>
     getAppointmentById(id: number): Promise<Appointment>
     updateAppointment(id: number, updates: Partial<Appointment>): Promise<Appointment>
+    deleteAppoinmentById(id: number): Promise<void>
 }
 
 
@@ -75,6 +76,20 @@ export class AppointmentServiceImpl implements AppointmentService {
         } catch (error) {
             logger.error('Failed to get appointment from service')
             throw new RecordNotFoundError()
+        }
+    }
+
+    public async deleteAppoinmentById(id: number): Promise<void> {
+        try {
+            const appointmentDB = await this.appointmentRepository.getAppointmentById(id)
+            if (!appointmentDB) {
+                throw new RecordNotFoundError()
+            }
+            await this.appointmentRepository.deleteAppointmentById(id)
+
+        } catch (error) {
+            logger.error('Failed to delete appointment from service')
+            throw new AppointmentDeleteError()
         }
     }
 
