@@ -58,10 +58,15 @@ export class AppointmentServiceImpl implements AppointmentService {
 
     public async createAppointment(appointmentReq: AppointmentReq): Promise<Appointment> {
         try {
-            const appointmentDb = await this.appointmentRepository.createAppointment(appointmentReq)
-            const doctor = await this.doctorRepository.getDoctorById(appointmentDb.id_doctor)
-            const appointment: Appointment = mapAppointment(appointmentDb, doctor)
-            return appointment
+            const doctor = await this.doctorRepository.getDoctorById(appointmentReq.id_doctor)
+            if (doctor) {
+                const createdAppointmentDb = await this.appointmentRepository.createAppointment(appointmentReq)
+                const appointment: Appointment = mapAppointment(createdAppointmentDb, doctor)
+                return appointment
+            } else {
+                logger.error(`El doctor ${appointmentReq.id_doctor} no existe`)
+                throw new AppoinmentCreateError()
+            }
         } catch (error) {
             throw new AppoinmentCreateError()
         }

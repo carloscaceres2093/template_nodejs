@@ -238,3 +238,18 @@
 2023-07-05T23:58:36.632Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
 2023-07-06T00:03:05.416Z-error: Failed to delete patient
 2023-07-06T00:03:05.417Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
+2023-07-06T00:04:02.634Z-error: Failed to delete patient
+2023-07-06T00:04:02.634Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
+2023-07-06T00:04:03.049Z-error: Failed to delete patient
+2023-07-06T00:04:03.050Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
+2023-07-06T00:04:03.261Z-error: Failed to delete patient
+2023-07-06T00:04:03.261Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
+2023-07-06T00:04:03.553Z-error: Failed to delete patient
+2023-07-06T00:04:03.553Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
+2023-07-06T00:04:03.726Z-error: Failed to delete patient
+2023-07-06T00:04:03.726Z-error: Failed to delete patient from controllerPatientDeleteError: Failed to delete patient
+2023-07-06T00:07:04.510Z-error: Failed to create patient dubt: error: insert into "pacientes" ("apellido", "created_at", "identificacion", "nombre", "telefono") values ($1, $2, $3, $4, $5) returning * - duplicate key value violates unique constraint "pacientes_identificacion_key"
+2023-07-06T00:08:14.503Z-error: Failed to create appointment dubt:  insert into "citas" ("created_at", "especialidad", "horario", "id_doctor", "identificacion_paciente") values ($1, $2, $3, $4, $5) returning * - insert or update on table "citas" violates foreign key constraint "doctor_id"
+2023-07-06T00:08:14.503Z-error: Failed to create appointment
+2023-07-06T02:59:31.111Z-error: El doctor 70 no existe
+2023-07-06T02:59:31.111Z-error: Failed to create appointment
