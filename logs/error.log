@@ -253,3 +253,290 @@
 2023-07-06T00:08:14.503Z-error: Failed to create appointment
 2023-07-06T02:59:31.111Z-error: El doctor 70 no existe
 2023-07-06T02:59:31.111Z-error: Failed to create appointment
+2023-07-06T03:35:57.421Z-error: Internal Server Error
+2023-07-06T03:35:57.434Z-error: Record has not found yet
+2023-07-06T03:35:57.445Z-error: Internal Server Error
+2023-07-06T03:39:22.328Z-error: Record has not found yet
+2023-07-06T03:39:22.336Z-error: Internal Server Error
+2023-07-06T03:39:22.523Z-error: Internal Server Error
+2023-07-06T03:39:58.577Z-error: Record has not found yet
+2023-07-06T03:39:58.585Z-error: Internal Server Error
+2023-07-06T03:39:58.619Z-error: Internal Server Error
+2023-07-06T03:42:30.859Z-error: Internal Server Error
+2023-07-06T03:42:30.874Z-error: Record has not found yet
+2023-07-06T03:42:30.881Z-error: Internal Server Error
+2023-07-06T03:44:08.962Z-error: Internal Server Error
+2023-07-06T03:44:09.170Z-error: Record has not found yet
+2023-07-06T03:44:09.180Z-error: Internal Server Error
+2023-07-06T03:46:39.215Z-error: Internal Server Error
+2023-07-06T03:46:39.361Z-error: Record has not found yet
+2023-07-06T03:46:39.368Z-error: Internal Server Error
+2023-07-06T04:37:16.717Z-error: Internal Server Error
+2023-07-06T04:37:16.743Z-error: Record has not found yet
+2023-07-06T04:37:16.758Z-error: Internal Server Error
+2023-07-06T04:38:19.967Z-error: Internal Server Error
+2023-07-06T04:38:19.982Z-error: Record has not found yet
+2023-07-06T04:38:19.991Z-error: Internal Server Error
+2023-07-06T04:42:04.467Z-error: Internal Server Error
+2023-07-06T04:42:04.657Z-error: Record has not found yet
+2023-07-06T04:42:04.667Z-error: Internal Server Error
+2023-07-06T04:42:43.466Z-error: Internal Server Error
+2023-07-06T04:42:43.561Z-error: Record has not found yet
+2023-07-06T04:42:43.569Z-error: Internal Server Error
+2023-07-06T04:48:44.987Z-error: Internal Server Error
+2023-07-06T04:48:45.278Z-error: Record has not found yet
+2023-07-06T04:48:45.284Z-error: Internal Server Error
+2023-07-06T04:54:45.334Z-error: Internal Server Error
+2023-07-06T04:54:45.524Z-error: Record has not found yet
+2023-07-06T04:54:45.527Z-error: Internal Server Error
+2023-07-06T04:56:58.330Z-error: Internal Server Error
+2023-07-06T04:56:58.642Z-error: Record has not found yet
+2023-07-06T04:56:58.644Z-error: Internal Server Error
+2023-07-06T05:08:47.103Z-error: Internal Server Error
+2023-07-06T05:08:47.108Z-error: Record has not found yet
+2023-07-06T05:08:47.109Z-error: Internal Server Error
+2023-07-06T05:08:47.120Z-error: Internal Server Error
+2023-07-06T05:16:43.711Z-error: Internal Server Error
+2023-07-06T05:28:21.356Z-error: Internal Server Error
+2023-07-06T05:28:21.559Z-error: Record has not found yet
+2023-07-06T05:28:21.562Z-error: Internal Server Error
+2023-07-06T05:29:19.206Z-error: Internal Server Error
+2023-07-06T05:29:19.491Z-error: Record has not found yet
+2023-07-06T05:29:19.494Z-error: Internal Server Error
+2023-07-06T05:30:18.893Z-error: Internal Server Error
+2023-07-06T05:30:18.894Z-error: Record has not found yet
+2023-07-06T05:30:18.899Z-error: Internal Server Error
+2023-07-06T05:30:26.464Z-error: Internal Server Error
+2023-07-06T05:30:26.660Z-error: Record has not found yet
+2023-07-06T05:30:26.666Z-error: Internal Server Error
+2023-07-06T05:37:43.191Z-error: Internal Server Error
+2023-07-06T05:37:43.537Z-error: Record has not found yet
+2023-07-06T05:37:43.540Z-error: Internal Server Error
+2023-07-06T05:38:14.174Z-error: Internal Server Error
+2023-07-06T05:38:14.394Z-error: Record has not found yet
+2023-07-06T05:38:14.397Z-error: Internal Server Error
+2023-07-06T05:39:01.238Z-error: Internal Server Error
+2023-07-06T05:39:01.494Z-error: Record has not found yet
+2023-07-06T05:39:01.498Z-error: Internal Server Error
+2023-07-06T05:40:23.522Z-error: Internal Server Error
+2023-07-06T05:40:23.735Z-error: Record has not found yet
+2023-07-06T05:40:23.737Z-error: Internal Server Error
+2023-07-06T05:45:04.497Z-error: Internal Server Error
+2023-07-06T05:45:04.505Z-error: Record has not found yet
+2023-07-06T05:45:04.510Z-error: Internal Server Error
+2023-07-06T05:45:53.099Z-error: Internal Server Error
+2023-07-06T05:45:53.522Z-error: Record has not found yet
+2023-07-06T05:45:53.525Z-error: Internal Server Error
+2023-07-06T05:46:43.886Z-error: Internal Server Error
+2023-07-06T05:46:44.141Z-error: Record has not found yet
+2023-07-06T05:46:44.144Z-error: Internal Server Error
+2023-07-06T05:47:35.652Z-error: Internal Server Error
+2023-07-06T05:47:35.856Z-error: Record has not found yet
+2023-07-06T05:47:35.859Z-error: Internal Server Error
+2023-07-06T05:48:30.560Z-error: Internal Server Error
+2023-07-06T05:48:30.621Z-error: Record has not found yet
+2023-07-06T05:48:30.625Z-error: Internal Server Error
+2023-07-06T05:51:32.964Z-error: Internal Server Error
+2023-07-06T05:51:33.420Z-error: Record has not found yet
+2023-07-06T05:51:33.425Z-error: Internal Server Error
+2023-07-06T05:54:57.221Z-error: Internal Server Error
+2023-07-06T05:54:57.490Z-error: Record has not found yet
+2023-07-06T05:54:57.494Z-error: Internal Server Error
+2023-07-06T05:55:35.648Z-error: Internal Server Error
+2023-07-06T05:55:35.763Z-error: Record has not found yet
+2023-07-06T05:55:35.767Z-error: Internal Server Error
+2023-07-06T05:55:47.681Z-error: Internal Server Error
+2023-07-06T05:55:47.879Z-error: Record has not found yet
+2023-07-06T05:55:47.882Z-error: Internal Server Error
+2023-07-06T05:57:37.181Z-error: Internal Server Error
+2023-07-06T05:57:37.403Z-error: Record has not found yet
+2023-07-06T05:57:37.406Z-error: Internal Server Error
+2023-07-06T05:58:35.631Z-error: Internal Server Error
+2023-07-06T05:58:35.849Z-error: Record has not found yet
+2023-07-06T05:58:35.852Z-error: Internal Server Error
+2023-07-06T05:59:39.169Z-error: Internal Server Error
+2023-07-06T05:59:39.278Z-error: Record has not found yet
+2023-07-06T05:59:39.282Z-error: Internal Server Error
+2023-07-06T06:01:02.201Z-error: Internal Server Error
+2023-07-06T06:01:02.529Z-error: Record has not found yet
+2023-07-06T06:01:02.532Z-error: Internal Server Error
+2023-07-06T06:01:33.236Z-error: Internal Server Error
+2023-07-06T06:01:33.559Z-error: Record has not found yet
+2023-07-06T06:01:33.562Z-error: Internal Server Error
+2023-07-06T06:02:40.788Z-error: Internal Server Error
+2023-07-06T06:02:40.949Z-error: Record has not found yet
+2023-07-06T06:02:40.953Z-error: Internal Server Error
+2023-07-06T06:03:51.186Z-error: Internal Server Error
+2023-07-06T06:03:51.501Z-error: Record has not found yet
+2023-07-06T06:03:51.504Z-error: Internal Server Error
+2023-07-08T18:45:21.936Z-error: Internal Server Error
+2023-07-08T18:45:21.986Z-error: Record has not found yet
+2023-07-08T18:45:21.989Z-error: Internal Server Error
+2023-07-08T18:50:00.633Z-error: Internal Server Error
+2023-07-08T18:50:00.670Z-error: Record has not found yet
+2023-07-08T18:50:00.674Z-error: Internal Server Error
+2023-07-08T18:51:48.977Z-error: Internal Server Error
+2023-07-08T18:51:49.402Z-error: Record has not found yet
+2023-07-08T18:51:49.406Z-error: Internal Server Error
+2023-07-08T18:52:27.065Z-error: Record has not found yet
+2023-07-08T18:52:27.071Z-error: Internal Server Error
+2023-07-08T18:52:27.154Z-error: Internal Server Error
+2023-07-08T18:52:41.800Z-error: Internal Server Error
+2023-07-08T18:52:42.249Z-error: Record has not found yet
+2023-07-08T18:52:42.252Z-error: Internal Server Error
+2023-07-08T18:53:55.654Z-error: Internal Server Error
+2023-07-08T18:53:55.674Z-error: Record has not found yet
+2023-07-08T18:53:55.677Z-error: Internal Server Error
+2023-07-08T18:59:56.492Z-error: Internal Server Error
+2023-07-08T18:59:56.552Z-error: Record has not found yet
+2023-07-08T18:59:56.555Z-error: Internal Server Error
+2023-07-08T19:01:02.606Z-error: Internal Server Error
+2023-07-08T19:01:02.760Z-error: Record has not found yet
+2023-07-08T19:01:02.767Z-error: Internal Server Error
+2023-07-08T19:01:55.801Z-error: Internal Server Error
+2023-07-08T19:01:55.902Z-error: Record has not found yet
+2023-07-08T19:01:55.909Z-error: Internal Server Error
+2023-07-08T19:02:50.773Z-error: Internal Server Error
+2023-07-08T19:02:51.055Z-error: Record has not found yet
+2023-07-08T19:02:51.058Z-error: Internal Server Error
+2023-07-08T19:03:07.673Z-error: Internal Server Error
+2023-07-08T19:03:07.882Z-error: Record has not found yet
+2023-07-08T19:03:07.885Z-error: Internal Server Error
+2023-07-08T19:03:31.150Z-error: Internal Server Error
+2023-07-08T19:03:31.244Z-error: Record has not found yet
+2023-07-08T19:03:31.247Z-error: Internal Server Error
+2023-07-08T19:06:14.845Z-error: Internal Server Error
+2023-07-08T19:06:14.863Z-error: Record has not found yet
+2023-07-08T19:06:14.866Z-error: Internal Server Error
+2023-07-08T19:10:46.250Z-error: Internal Server Error
+2023-07-08T19:10:46.534Z-error: Record has not found yet
+2023-07-08T19:10:46.537Z-error: Internal Server Error
+2023-07-08T19:12:45.375Z-error: Internal Server Error
+2023-07-08T19:12:45.800Z-error: Record has not found yet
+2023-07-08T19:12:45.803Z-error: Internal Server Error
+2023-07-08T19:13:15.798Z-error: Internal Server Error
+2023-07-08T19:13:16.127Z-error: Record has not found yet
+2023-07-08T19:13:16.130Z-error: Internal Server Error
+2023-07-08T19:14:45.230Z-error: Internal Server Error
+2023-07-08T19:14:45.589Z-error: Record has not found yet
+2023-07-08T19:14:45.592Z-error: Internal Server Error
+2023-07-08T19:15:00.158Z-error: Internal Server Error
+2023-07-08T19:15:00.546Z-error: Record has not found yet
+2023-07-08T19:15:00.549Z-error: Internal Server Error
+2023-07-08T19:16:57.189Z-error: Record has not found yet
+2023-07-08T19:16:57.192Z-error: Internal Server Error
+2023-07-08T19:16:57.226Z-error: Internal Server Error
+2023-07-08T19:42:48.749Z-error: Internal Server Error
+2023-07-08T19:42:48.835Z-error: Record has not found yet
+2023-07-08T19:42:48.838Z-error: Internal Server Error
+2023-07-08T19:43:17.025Z-error: Record has not found yet
+2023-07-08T19:43:17.028Z-error: Internal Server Error
+2023-07-08T19:43:17.108Z-error: Internal Server Error
+2023-07-08T19:43:54.382Z-error: Internal Server Error
+2023-07-08T19:43:54.785Z-error: Record has not found yet
+2023-07-08T19:43:54.791Z-error: Internal Server Error
+2023-07-08T19:45:03.275Z-error: Internal Server Error
+2023-07-08T19:45:03.389Z-error: Record has not found yet
+2023-07-08T19:45:03.392Z-error: Internal Server Error
+2023-07-08T19:45:17.681Z-error: Internal Server Error
+2023-07-08T19:45:17.993Z-error: Record has not found yet
+2023-07-08T19:45:17.996Z-error: Internal Server Error
+2023-07-08T19:47:08.916Z-error: Internal Server Error
+2023-07-08T19:47:09.331Z-error: Record has not found yet
+2023-07-08T19:47:09.335Z-error: Internal Server Error
+2023-07-08T19:48:48.176Z-error: Internal Server Error
+2023-07-08T19:48:48.466Z-error: Internal Server Error
+2023-07-08T19:48:48.470Z-error: Record has not found yet
+2023-07-08T19:48:48.471Z-error: Internal Server Error
+2023-07-08T19:49:49.414Z-error: Internal Server Error
+2023-07-08T19:49:49.419Z-error: Record has not found yet
+2023-07-08T19:49:49.420Z-error: Internal Server Error
+2023-07-08T19:49:49.463Z-error: Internal Server Error
+2023-07-08T19:50:05.984Z-error: Internal Server Error
+2023-07-08T19:50:06.225Z-error: Internal Server Error
+2023-07-08T19:50:06.237Z-error: Record has not found yet
+2023-07-08T19:50:06.238Z-error: Internal Server Error
+2023-07-08T20:01:13.865Z-error: Internal Server Error
+2023-07-08T20:01:14.152Z-error: Internal Server Error
+2023-07-08T20:01:14.165Z-error: Record has not found yet
+2023-07-08T20:01:14.166Z-error: Internal Server Error
+2023-07-08T20:04:07.062Z-error: Internal Server Error
+2023-07-08T20:04:07.400Z-error: Record has not found yet
+2023-07-08T20:04:07.403Z-error: Internal Server Error
+2023-07-08T20:04:31.836Z-error: Internal Server Error
+2023-07-08T20:04:32.171Z-error: Record has not found yet
+2023-07-08T20:04:32.174Z-error: Internal Server Error
+2023-07-08T20:06:08.777Z-error: Internal Server Error
+2023-07-08T20:06:09.044Z-error: Record has not found yet
+2023-07-08T20:06:09.047Z-error: Internal Server Error
+2023-07-08T20:06:46.425Z-error: Internal Server Error
+2023-07-08T20:06:46.553Z-error: Record has not found yet
+2023-07-08T20:06:46.557Z-error: Internal Server Error
+2023-07-08T20:09:29.475Z-error: Internal Server Error
+2023-07-08T20:09:44.794Z-error: Internal Server Error
+2023-07-08T20:09:45.059Z-error: Record has not found yet
+2023-07-08T20:09:45.062Z-error: Internal Server Error
+2023-07-08T20:11:56.374Z-error: Internal Server Error
+2023-07-08T20:11:56.661Z-error: Record has not found yet
+2023-07-08T20:11:56.664Z-error: Internal Server Error
+2023-07-08T20:17:20.066Z-error: Internal Server Error
+2023-07-08T20:17:20.213Z-error: Record has not found yet
+2023-07-08T20:17:20.215Z-error: Internal Server Error
+2023-07-08T20:18:03.064Z-error: Internal Server Error
+2023-07-08T20:38:35.949Z-error: Internal Server Error
+2023-07-08T20:39:17.409Z-error: Internal Server Error
+2023-07-08T20:40:33.162Z-error: Internal Server Error
+2023-07-08T20:40:33.568Z-error: Record has not found yet
+2023-07-08T20:40:33.570Z-error: Internal Server Error
+2023-07-08T20:55:52.710Z-error: Internal Server Error
+2023-07-08T20:55:53.003Z-error: Record has not found yet
+2023-07-08T20:55:53.006Z-error: Internal Server Error
+2023-07-08T21:32:37.867Z-error: Internal Server Error
+2023-07-08T21:32:38.225Z-error: Record has not found yet
+2023-07-08T21:32:38.228Z-error: Internal Server Error
+2023-07-08T21:33:51.452Z-error: Internal Server Error
+2023-07-08T21:33:51.681Z-error: Record has not found yet
+2023-07-08T21:33:51.684Z-error: Internal Server Error
+2023-07-08T21:35:20.601Z-error: Internal Server Error
+2023-07-08T21:35:20.674Z-error: Record has not found yet
+2023-07-08T21:35:20.676Z-error: Internal Server Error
+2023-07-08T21:35:50.517Z-error: Internal Server Error
+2023-07-08T21:35:50.684Z-error: Record has not found yet
+2023-07-08T21:35:50.687Z-error: Internal Server Error
+2023-07-08T21:36:06.292Z-error: Record has not found yet
+2023-07-08T21:36:06.296Z-error: Internal Server Error
+2023-07-08T21:36:06.518Z-error: Internal Server Error
+2023-07-08T21:36:56.921Z-error: Internal Server Error
+2023-07-08T21:36:57.222Z-error: Record has not found yet
+2023-07-08T21:36:57.225Z-error: Internal Server Error
+2023-07-08T21:37:25.527Z-error: Internal Server Error
+2023-07-08T21:37:25.779Z-error: Record has not found yet
+2023-07-08T21:37:25.782Z-error: Internal Server Error
+2023-07-08T21:37:49.037Z-error: Internal Server Error
+2023-07-08T21:37:49.406Z-error: Record has not found yet
+2023-07-08T21:37:49.409Z-error: Internal Server Error
+2023-07-08T21:43:13.810Z-error: Internal Server Error
+2023-07-08T21:43:14.031Z-error: Internal Server Error
+2023-07-08T21:43:14.046Z-error: Record has not found yet
+2023-07-08T21:43:14.047Z-error: Internal Server Error
+2023-07-08T21:44:09.523Z-error: Internal Server Error
+2023-07-08T21:44:09.715Z-error: Internal Server Error
+2023-07-08T21:44:09.728Z-error: Record has not found yet
+2023-07-08T21:44:09.729Z-error: Internal Server Error
+2023-07-08T21:44:21.958Z-error: Internal Server Error
+2023-07-08T21:44:22.288Z-error: Internal Server Error
+2023-07-08T21:44:22.295Z-error: Record has not found yet
+2023-07-08T21:44:22.295Z-error: Internal Server Error
+2023-07-08T21:45:19.475Z-error: Internal Server Error
+2023-07-08T21:45:19.653Z-error: Internal Server Error
+2023-07-08T21:45:19.657Z-error: Record has not found yet
+2023-07-08T21:45:19.658Z-error: Internal Server Error
+2023-07-08T21:46:17.199Z-error: Internal Server Error
+2023-07-08T21:46:17.556Z-error: Internal Server Error
+2023-07-08T21:46:17.576Z-error: Record has not found yet
+2023-07-08T21:46:17.577Z-error: Internal Server Error
+2023-07-08T21:48:31.301Z-error: Internal Server Error
+2023-07-08T21:48:31.537Z-error: Internal Server Error
+2023-07-08T21:48:31.540Z-error: Failed Creating a doctor
+2023-07-08T21:48:31.542Z-error: Record has not found yet
+2023-07-08T21:48:31.546Z-error: Internal Server Error
