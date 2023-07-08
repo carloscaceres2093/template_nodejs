@@ -30,34 +30,30 @@ export class DoctorControllerImpl implements DoctorController {
             res.status(400).json({ message: "Error getting all doctors" })
         }
     }
-    public createDoctor(req: Request, res: Response): void {
+    public async createDoctor(req: Request, res: Response): Promise<void> {
 
         const { error, value } = createDoctorSchema.validate(req.body)
 
         if (error) {
             res.status(400).json({ message: error.details[0].message })
         } else {
-            this.doctorService.createDoctor(value)
-                .then(
-                    (doctor) => {
-                        res.status(201).json(doctor)
-                    },
-                    (error) => {
-                        logger.error(error)
-                        if (error instanceof DoctorCreationError) {
-                            res.status(400).json({
-                                error_name: error.name,
-                                message: "Failed Creating a doctor"
-                            })
-                        } else {
-                            res.status(400).json({
-                                message: "Internal Server Error"
-                            })
-                        }
-                    }
-                )
+            try {
+                const doctor = await this.doctorService.createDoctor(value)
+                res.status(201).json(doctor)
+            } catch (error) {
+                logger.error(error)
+                if (error instanceof DoctorCreationError) {
+                    res.status(400).json({
+                        error_name: error.name,
+                        message: "Failed Creating a doctor"
+                    })
+                } else {
+                    res.status(400).json({
+                        message: "Internal Server Error"
+                    })
+                }
+            }
         }
-
     }
 
     public async getDoctorById(req: Request, res: Response): Promise<void> {
