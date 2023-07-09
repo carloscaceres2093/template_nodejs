@@ -1,4 +1,4 @@
-import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError, GetAllError, AppoinmentCreateError, AppointmentDeleteError } from "../../../utils/customErrors"
+import { DoctorCreationError, AppointmentUpdateError, RecordNotFoundError, GetAllError, AppoinmentCreateError, AppointmentDeleteError, AllAppointmentGetError } from "../../../utils/customErrors"
 import logger from "../../../utils/logger"
 import { AppointmentReq, Appointment, AppointmentResDB } from "./model"
 import { AppointmentRepository } from "./repository"
@@ -29,14 +29,15 @@ export class AppointmentServiceImpl implements AppointmentService {
                 throw new RecordNotFoundError()
             }
             const updateAppointment = { ...existAppointment, ...updates }
-            const appointmentUpdatedDb = await this.appointmentRepository.updateAppointment(id, updateAppointment)
-            const doctor = await this.doctorRepository.getDoctorById(appointmentUpdatedDb.id_doctor)
+            const doctor = await this.doctorRepository.getDoctorById(updateAppointment.id_doctor)
             if (doctor) {
+                const appointmentUpdatedDb = await this.appointmentRepository.updateAppointment(id, updateAppointment)
                 const appointment: Appointment = mapAppointment(appointmentUpdatedDb, doctor)
                 return appointment
             } else {
                 throw new AppointmentUpdateError()
             }
+
         } catch (error) {
             logger.error('Failed to update appointment from service')
             throw new AppointmentUpdateError()
@@ -46,13 +47,11 @@ export class AppointmentServiceImpl implements AppointmentService {
     public async getAllAppointments(): Promise<Appointment[]> {
         try {
 
-            const patients = await this.appointmentRepository.getAllAppointment()
-            console.log("LLEgamos")
-            console.log(patients)
+            const patients = this.appointmentRepository.getAllAppointment()
             return patients
         } catch (error) {
             logger.error(error)
-            throw new GetAllError("Failed getting all appointments from service", "appointment")
+            throw new AllAppointmentGetError()
         }
     }
 

@@ -1,7 +1,7 @@
 import { db } from "../../../config/database"
 import { Appointment, AppointmentReq, AppointmentResDB } from "./model"
 import logger from '../../../utils/logger'
-import { RecordNotFoundError, GetAllError, AppointmentUpdateError, AppoinmentCreateError, AppointmentDeleteError } from "../../../utils/customErrors"
+import { RecordNotFoundError, GetAllError, AppointmentUpdateError, AppoinmentCreateError, AppointmentDeleteError, AllAppointmentGetError } from "../../../utils/customErrors"
 
 export class AppointmentRepository {
 
@@ -30,10 +30,9 @@ export class AppointmentRepository {
 
     public async getAllAppointment(): Promise<Appointment[]> {
         try {
-            return db.select('*').from('citas')
+            return await db.select('*').from('citas')
         } catch (error) {
-
-            throw new GetAllError("Failed getting all appointments from repository", "appointment")
+            throw new AllAppointmentGetError()
         }
     }
 

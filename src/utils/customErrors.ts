@@ -32,7 +32,12 @@ class DoctorDeleteError extends Error {
         this.name = "DoctorDeleteError"
     }
 }
-
+class AllAppointmentGetError extends Error {
+    constructor() {
+        super("Failed to get all appointments")
+        this.name = "AllAppointmentGetError"
+    }
+}
 class AppointmentUpdateError extends Error {
     constructor() {
         super("Failed to update appointment")
@@ -101,6 +106,7 @@ export {
     GetAllError,
     AppointmentUpdateError,
     AppoinmentCreateError,
+    AllAppointmentGetError,
     PatientCreateError,
     PatientUpdateError,
     PatientDeleteError,
