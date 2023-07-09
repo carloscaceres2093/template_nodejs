@@ -3,7 +3,6 @@ import { DoctorController, DoctorControllerImpl } from "../api/components/doctor
 import { DoctorService } from "../api/components/doctores/service"
 import { Doctor, DoctorReq } from "../api/components/doctores/model"
 import Joi from "joi"
-import { Especialidad } from "../utils/model"
 import { createDoctorSchema } from "../api/components/doctores/validations/doctor.validations"
 import { DoctorCreationError } from "../utils/customErrors"
 
@@ -41,7 +40,6 @@ describe('DoctorController', () => {
         doctorController = new DoctorControllerImpl(doctorService)
         mockRes.status = jest.fn().mockReturnThis()
         mockRes.json = jest.fn().mockReturnThis()
-        //createDoctorSchema.validate = jest.fn().mockReturnThis()
         validationResult.value = jest.fn().mockReturnThis()
         validationResult.error = validationError
     })

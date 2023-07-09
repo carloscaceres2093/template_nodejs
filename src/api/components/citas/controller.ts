@@ -21,37 +21,34 @@ export class AppointmentControllerImpl implements AppointmentController {
     constructor(appointmentService: AppointmentService) {
         this.appointmentService = appointmentService
     }
-    public updateAppointment(req: Request, res: Response): void {
+    public async updateAppointment(req: Request, res: Response): Promise<void> {
         const id = parseInt(req.params.id)
         const { error, value } = updateAppointmentSchema.validate(req.body)
         if (error) {
             res.status(400).json({ message: error.details[0].message })
         } else {
-            this.appointmentService.updateAppointment(id, value)
-                .then(
-                    (appointment) => {
-                        res.status(201).json(appointment)
-                    },
-                    (error) => {
-                        logger.error(error)
-                        if (error instanceof RecordNotFoundError) {
-                            res.status(400).json({
-                                error_name: error.name,
-                                message: "Failed Creating appointment"
-                            })
-                        }
-                        if (error instanceof AppointmentUpdateError) {
-                            res.status(400).json({
-                                error_name: error.name,
-                                message: "Failed Creating appointment"
-                            })
-                        } else {
-                            res.status(400).json({
-                                message: "Internal Server Error"
-                            })
-                        }
-                    }
-                )
+            try {
+                const appointment = await this.appointmentService.updateAppointment(id, value)
+                res.status(201).json(appointment)
+            } catch (error) {
+                logger.error(error)
+                if (error instanceof RecordNotFoundError) {
+                    res.status(400).json({
+                        error_name: error.name,
+                        message: "Failed Updating appointment"
+                    })
+                }
+                if (error instanceof AppointmentUpdateError) {
+                    res.status(400).json({
+                        error_name: error.name,
+                        message: "Failed Updating appointment"
+                    })
+                } else {
+                    res.status(400).json({
+                        message: "Internal Server Error"
+                    })
+                }
+            }
         }
     }
     public async getAllAppointment(req: Request, res: Response): Promise<void> {
@@ -65,30 +62,27 @@ export class AppointmentControllerImpl implements AppointmentController {
             res.status(400).json({ message: "Error getting all appointments" })
         }
     }
-    public createAppointment(req: Request, res: Response): void {
+    public async createAppointment(req: Request, res: Response): Promise<void> {
         const { error, value } = createAppointmentSchema.validate(req.body)
         if (error) {
             res.status(400).json({ message: error.details[0].message })
         } else {
-            this.appointmentService.createAppointment(value)
-                .then(
-                    (appointment) => {
-                        res.status(201).json(appointment)
-                    },
-                    (error) => {
-                        logger.error(error)
-                        if (error instanceof AppoinmentCreateError) {
-                            res.status(400).json({
-                                error_name: error.name,
-                                message: "Failed Creating appointment"
-                            })
-                        } else {
-                            res.status(400).json({
-                                message: "Internal Server Error"
-                            })
-                        }
-                    }
-                )
+            try {
+                const appointment = await this.appointmentService.createAppointment(value)
+                res.status(201).json(appointment)
+            } catch (error) {
+                logger.error(error)
+                if (error instanceof AppoinmentCreateError) {
+                    res.status(400).json({
+                        error_name: error.name,
+                        message: "Failed Creating appointment"
+                    })
+                } else {
+                    res.status(400).json({
+                        message: "Internal Server Error"
+                    })
+                }
+            }
         }
     }
 
@@ -110,7 +104,7 @@ export class AppointmentControllerImpl implements AppointmentController {
             if (error instanceof RecordNotFoundError) {
                 res.status(400).json({ error: error.message })
             } else {
-                res.status(400).json({ error: "Failed to retrieve patient" })
+                res.status(400).json({ error: "Failed to retrieve appointment" })
             }
         }
     }
@@ -123,7 +117,10 @@ export class AppointmentControllerImpl implements AppointmentController {
         } catch (error) {
             logger.error(error)
             if (error instanceof AppointmentDeleteError) {
-                res.status(400).json({ error: error.message })
+                res.status(400).json({
+                    error_name: error.name,
+                    message: error.message
+                })
             } else {
                 res.status(400).json({ error: 'Failed to delete appointment' })
             }

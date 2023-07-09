@@ -668,3 +668,491 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-07-08T21:48:31.540Z-error: Failed Creating a doctor
 2023-07-08T21:48:31.542Z-error: Record has not found yet
 2023-07-08T21:48:31.546Z-error: Internal Server Error
+2023-07-08T22:07:50.641Z-error: Internal Server Error
+2023-07-08T22:07:50.647Z-error: Failed Creating a doctor
+2023-07-08T22:07:50.649Z-error: Record has not found yet
+2023-07-08T22:07:50.650Z-error: Internal Server Error
+2023-07-08T22:07:50.847Z-error: Internal Server Error
+2023-07-08T22:13:26.289Z-error: Internal Server Error
+2023-07-08T22:13:26.292Z-error: Failed Creating a doctor
+2023-07-08T22:13:26.294Z-error: Record has not found yet
+2023-07-08T22:13:26.295Z-error: Internal Server Error
+2023-07-08T22:13:26.521Z-error: Internal Server Error
+2023-07-08T22:18:36.289Z-error: Internal Server Error
+2023-07-08T22:18:36.294Z-error: Internal Server Error
+2023-07-08T22:18:36.298Z-error: Failed Creating a doctor
+2023-07-08T22:18:36.301Z-error: Record has not found yet
+2023-07-08T22:18:36.302Z-error: Internal Server Error
+2023-07-08T22:22:57.208Z-error: Internal Server Error
+2023-07-08T22:22:57.213Z-error: Failed Creating a doctor
+2023-07-08T22:22:57.216Z-error: Record has not found yet
+2023-07-08T22:22:57.217Z-error: Internal Server Error
+2023-07-08T22:22:57.602Z-error: Internal Server Error
+2023-07-08T22:22:57.606Z-error: Internal Server Error
+2023-07-08T22:25:00.241Z-error: Internal Server Error
+2023-07-08T22:25:00.247Z-error: Internal Server Error
+2023-07-08T22:25:00.375Z-error: Internal Server Error
+2023-07-08T22:25:00.379Z-error: Failed Creating a doctor
+2023-07-08T22:25:00.380Z-error: Record has not found yet
+2023-07-08T22:25:00.381Z-error: Internal Server Error
+2023-07-08T22:25:08.033Z-error: Internal Server Error
+2023-07-08T22:25:08.036Z-error: Failed Creating a doctor
+2023-07-08T22:25:08.038Z-error: Record has not found yet
+2023-07-08T22:25:08.044Z-error: Internal Server Error
+2023-07-08T22:25:08.554Z-error: Internal Server Error
+2023-07-08T22:25:08.559Z-error: Internal Server Error
+2023-07-08T22:25:44.684Z-error: Internal Server Error
+2023-07-08T22:25:44.687Z-error: Failed Creating a doctor
+2023-07-08T22:25:44.690Z-error: Record has not found yet
+2023-07-08T22:25:44.691Z-error: Internal Server Error
+2023-07-08T22:25:44.988Z-error: Internal Server Error
+2023-07-08T22:28:48.393Z-error: Internal Server Error
+2023-07-08T22:28:48.396Z-error: Failed Creating a doctor
+2023-07-08T22:28:48.398Z-error: Record has not found yet
+2023-07-08T22:28:48.400Z-error: Internal Server Error
+2023-07-08T22:28:48.723Z-error: Internal Server Error
+2023-07-08T22:32:22.744Z-error: Internal Server Error
+2023-07-08T22:32:22.746Z-error: Failed Creating a doctor
+2023-07-08T22:32:22.748Z-error: Record has not found yet
+2023-07-08T22:32:22.750Z-error: Internal Server Error
+2023-07-08T22:32:22.862Z-error: Internal Server Error
+2023-07-08T22:32:45.746Z-error: Internal Server Error
+2023-07-08T22:32:45.749Z-error: Failed Creating a doctor
+2023-07-08T22:32:45.750Z-error: Record has not found yet
+2023-07-08T22:32:45.752Z-error: Internal Server Error
+2023-07-08T22:34:40.772Z-error: Internal Server Error
+2023-07-08T22:34:40.775Z-error: Failed Creating a doctor
+2023-07-08T22:34:40.777Z-error: Record has not found yet
+2023-07-08T22:34:40.778Z-error: Internal Server Error
+2023-07-08T22:45:12.491Z-error: Internal Server Error
+2023-07-08T22:45:12.494Z-error: Failed Creating a doctor
+2023-07-08T22:45:12.496Z-error: Record has not found yet
+2023-07-08T22:45:12.497Z-error: Internal Server Error
+2023-07-08T22:46:59.342Z-error: Internal Server Error
+2023-07-08T22:46:59.345Z-error: Failed Creating a doctor
+2023-07-08T22:46:59.346Z-error: Record has not found yet
+2023-07-08T22:46:59.348Z-error: Internal Server Error
+2023-07-08T22:46:59.810Z-error: Internal Server Error
+2023-07-08T22:49:47.444Z-error: Internal Server Error
+2023-07-08T22:49:47.448Z-error: Failed Creating a doctor
+2023-07-08T22:49:47.449Z-error: Record has not found yet
+2023-07-08T22:49:47.457Z-error: Internal Server Error
+2023-07-08T22:49:47.754Z-error: Internal Server Error
+2023-07-08T22:50:42.163Z-error: Internal Server Error
+2023-07-08T22:50:42.166Z-error: Failed Creating a doctor
+2023-07-08T22:50:42.168Z-error: Record has not found yet
+2023-07-08T22:50:42.170Z-error: Internal Server Error
+2023-07-08T22:50:42.277Z-error: Internal Server Error
+2023-07-08T22:51:09.302Z-error: Internal Server Error
+2023-07-08T22:51:09.305Z-error: Failed Creating a doctor
+2023-07-08T22:51:09.307Z-error: Record has not found yet
+2023-07-08T22:51:09.309Z-error: Internal Server Error
+2023-07-08T22:51:09.540Z-error: Internal Server Error
+2023-07-08T22:51:27.263Z-error: Internal Server Error
+2023-07-08T22:51:27.267Z-error: Failed Creating a doctor
+2023-07-08T22:51:27.269Z-error: Record has not found yet
+2023-07-08T22:51:27.271Z-error: Internal Server Error
+2023-07-08T22:51:27.466Z-error: Internal Server Error
+2023-07-08T22:54:08.996Z-error: Internal Server Error
+2023-07-08T22:54:09.000Z-error: Failed Creating a doctor
+2023-07-08T22:54:09.002Z-error: Record has not found yet
+2023-07-08T22:54:09.004Z-error: Internal Server Error
+2023-07-08T22:54:09.266Z-error: Internal Server Error
+2023-07-08T22:59:40.300Z-error: Internal Server Error
+2023-07-08T22:59:40.702Z-error: Failed Creating a doctor
+2023-07-08T22:59:40.708Z-error: Record has not found yet
+2023-07-08T22:59:40.711Z-error: Internal Server Error
+2023-07-08T22:57:31.508Z-error: Internal Server Error
+2023-07-08T23:01:00.768Z-error: Internal Server Error
+2023-07-08T23:01:01.370Z-error: Failed Creating a doctor
+2023-07-08T23:01:01.375Z-error: Record has not found yet
+2023-07-08T23:01:01.378Z-error: Internal Server Error
+2023-07-08T23:00:55.624Z-error: Internal Server Error
+2023-07-08T23:03:57.818Z-error: Internal Server Error
+2023-07-08T23:03:57.821Z-error: Failed Creating a doctor
+2023-07-08T23:03:57.824Z-error: Record has not found yet
+2023-07-08T23:03:57.826Z-error: Internal Server Error
+2023-07-08T23:03:57.863Z-error: Internal Server Error
+2023-07-08T23:04:12.385Z-error: Internal Server Error
+2023-07-08T23:04:12.388Z-error: Failed Creating a doctor
+2023-07-08T23:04:12.390Z-error: Record has not found yet
+2023-07-08T23:04:12.392Z-error: Internal Server Error
+2023-07-08T23:04:12.741Z-error: Internal Server Error
+2023-07-08T23:04:40.317Z-error: Internal Server Error
+2023-07-08T23:04:40.321Z-error: Failed Creating a doctor
+2023-07-08T23:04:40.323Z-error: Record has not found yet
+2023-07-08T23:04:40.325Z-error: Internal Server Error
+2023-07-08T23:04:40.541Z-error: Internal Server Error
+2023-07-08T23:06:06.243Z-error: Internal Server Error
+2023-07-08T23:06:06.247Z-error: Failed Creating a doctor
+2023-07-08T23:06:06.248Z-error: Record has not found yet
+2023-07-08T23:06:06.250Z-error: Internal Server Error
+2023-07-08T23:06:06.445Z-error: Internal Server Error
+2023-07-08T23:07:06.086Z-error: Internal Server Error
+2023-07-08T23:07:06.089Z-error: Failed Creating a doctor
+2023-07-08T23:07:06.092Z-error: Record has not found yet
+2023-07-08T23:07:06.100Z-error: Internal Server Error
+2023-07-08T23:08:28.338Z-error: Internal Server Error
+2023-07-08T23:08:28.344Z-error: Failed Creating a doctor
+2023-07-08T23:08:28.349Z-error: Record has not found yet
+2023-07-08T23:08:28.352Z-error: Internal Server Error
+2023-07-08T23:09:30.991Z-error: Internal Server Error
+2023-07-08T23:09:30.994Z-error: Failed Creating a doctor
+2023-07-08T23:09:30.996Z-error: Record has not found yet
+2023-07-08T23:09:30.998Z-error: Internal Server Error
+2023-07-08T23:09:57.888Z-error: Internal Server Error
+2023-07-08T23:09:57.895Z-error: Failed Creating a doctor
+2023-07-08T23:09:57.904Z-error: Record has not found yet
+2023-07-08T23:09:57.911Z-error: Internal Server Error
+2023-07-08T23:13:15.449Z-error: Internal Server Error
+2023-07-08T23:13:15.452Z-error: Failed Creating a doctor
+2023-07-08T23:13:15.454Z-error: Record has not found yet
+2023-07-08T23:13:15.456Z-error: Internal Server Error
+2023-07-08T23:14:14.296Z-error: Internal Server Error
+2023-07-08T23:14:14.300Z-error: Failed Creating a doctor
+2023-07-08T23:14:14.302Z-error: Record has not found yet
+2023-07-08T23:14:14.304Z-error: Internal Server Error
+2023-07-08T23:15:35.962Z-error: Internal Server Error
+2023-07-08T23:15:35.969Z-error: Failed Creating a doctor
+2023-07-08T23:15:35.973Z-error: Record has not found yet
+2023-07-08T23:15:35.976Z-error: Internal Server Error
+2023-07-08T23:18:48.034Z-error: Internal Server Error
+2023-07-08T23:18:48.038Z-error: Failed Creating a doctor
+2023-07-08T23:18:48.040Z-error: Record has not found yet
+2023-07-08T23:18:48.042Z-error: Internal Server Error
+2023-07-08T23:18:48.031Z-error: Internal Server Error
+2023-07-08T23:18:48.038Z-error: Failed to update appointment
+2023-07-08T23:20:00.514Z-error: Internal Server Error
+2023-07-08T23:20:00.516Z-error: Failed Creating a doctor
+2023-07-08T23:20:00.518Z-error: Record has not found yet
+2023-07-08T23:20:00.520Z-error: Internal Server Error
+2023-07-08T23:20:00.639Z-error: Internal Server Error
+2023-07-08T23:20:00.645Z-error: Failed to update appointment
+2023-07-08T23:21:20.647Z-error: Internal Server Error
+2023-07-08T23:21:20.650Z-error: Failed Creating a doctor
+2023-07-08T23:21:20.652Z-error: Record has not found yet
+2023-07-08T23:21:20.653Z-error: Internal Server Error
+2023-07-08T23:21:20.889Z-error: Internal Server Error
+2023-07-08T23:21:20.893Z-error: Failed to update appointment
+2023-07-08T23:23:52.821Z-error: Internal Server Error
+2023-07-08T23:23:52.824Z-error: Failed Creating a doctor
+2023-07-08T23:23:52.826Z-error: Record has not found yet
+2023-07-08T23:23:52.828Z-error: Internal Server Error
+2023-07-08T23:23:53.020Z-error: Internal Server Error
+2023-07-08T23:23:53.024Z-error: Failed to update appointment
+2023-07-08T23:34:39.432Z-error: Internal Server Error
+2023-07-08T23:34:39.435Z-error: Failed Creating a doctor
+2023-07-08T23:34:39.437Z-error: Record has not found yet
+2023-07-08T23:34:39.439Z-error: Internal Server Error
+2023-07-08T23:34:39.565Z-error: Internal Server Error
+2023-07-08T23:34:39.570Z-error: Failed to update appointment
+2023-07-08T23:34:51.969Z-error: Internal Server Error
+2023-07-08T23:34:51.972Z-error: Failed Creating a doctor
+2023-07-08T23:34:51.974Z-error: Record has not found yet
+2023-07-08T23:34:51.975Z-error: Internal Server Error
+2023-07-08T23:34:52.026Z-error: Internal Server Error
+2023-07-08T23:34:52.030Z-error: Failed to update appointment
+2023-07-08T23:35:08.093Z-error: Internal Server Error
+2023-07-08T23:35:08.102Z-error: Failed Creating a doctor
+2023-07-08T23:35:08.104Z-error: Record has not found yet
+2023-07-08T23:35:08.107Z-error: Internal Server Error
+2023-07-08T23:35:08.293Z-error: Internal Server Error
+2023-07-08T23:35:08.298Z-error: Failed to update appointment
+2023-07-08T23:35:21.518Z-error: Internal Server Error
+2023-07-08T23:35:21.522Z-error: Failed to update appointment
+2023-07-08T23:35:21.531Z-error: Internal Server Error
+2023-07-08T23:35:21.535Z-error: Failed Creating a doctor
+2023-07-08T23:35:21.537Z-error: Record has not found yet
+2023-07-08T23:35:21.538Z-error: Internal Server Error
+2023-07-08T23:35:39.161Z-error: Internal Server Error
+2023-07-08T23:35:39.166Z-error: Failed Creating a doctor
+2023-07-08T23:35:39.168Z-error: Record has not found yet
+2023-07-08T23:35:39.170Z-error: Internal Server Error
+2023-07-08T23:35:39.281Z-error: Internal Server Error
+2023-07-08T23:35:39.286Z-error: Failed to update appointment
+2023-07-08T23:35:45.589Z-error: Internal Server Error
+2023-07-08T23:35:45.593Z-error: Failed Creating a doctor
+2023-07-08T23:35:45.603Z-error: Record has not found yet
+2023-07-08T23:35:45.606Z-error: Internal Server Error
+2023-07-08T23:35:45.915Z-error: Internal Server Error
+2023-07-08T23:35:45.919Z-error: Failed to update appointment
+2023-07-08T23:49:15.386Z-error: Internal Server Error
+2023-07-08T23:49:15.389Z-error: Failed Creating a doctor
+2023-07-08T23:49:15.390Z-error: Record has not found yet
+2023-07-08T23:49:15.392Z-error: Internal Server Error
+2023-07-08T23:49:15.593Z-error: Internal Server Error
+2023-07-08T23:49:15.598Z-error: Failed to update appointment
+2023-07-08T23:49:29.227Z-error: Internal Server Error
+2023-07-08T23:49:29.231Z-error: Failed Creating a doctor
+2023-07-08T23:49:29.234Z-error: Record has not found yet
+2023-07-08T23:49:29.235Z-error: Internal Server Error
+2023-07-08T23:49:29.468Z-error: Internal Server Error
+2023-07-08T23:49:29.475Z-error: Failed to update appointment
+2023-07-08T23:49:45.273Z-error: Internal Server Error
+2023-07-08T23:49:45.276Z-error: Failed Creating a doctor
+2023-07-08T23:49:45.278Z-error: Record has not found yet
+2023-07-08T23:49:45.279Z-error: Internal Server Error
+2023-07-08T23:49:45.351Z-error: Internal Server Error
+2023-07-08T23:49:45.355Z-error: Failed to update appointment
+2023-07-08T23:51:22.145Z-error: Internal Server Error
+2023-07-08T23:51:22.148Z-error: Failed Creating a doctor
+2023-07-08T23:51:22.150Z-error: Record has not found yet
+2023-07-08T23:51:22.152Z-error: Internal Server Error
+2023-07-08T23:51:22.559Z-error: Internal Server Error
+2023-07-08T23:51:22.564Z-error: Failed to update appointment
+2023-07-08T23:51:22.570Z-error: Internal Server Error
+2023-07-09T00:00:09.076Z-error: Internal Server Error
+2023-07-09T00:00:09.079Z-error: Failed Creating a doctor
+2023-07-09T00:00:09.081Z-error: Record has not found yet
+2023-07-09T00:00:09.082Z-error: Internal Server Error
+2023-07-09T00:00:09.282Z-error: Internal Server Error
+2023-07-09T00:00:09.286Z-error: Failed to update appointment
+2023-07-09T00:00:09.290Z-error: Internal Server Error
+2023-07-09T00:00:28.896Z-error: Internal Server Error
+2023-07-09T00:00:28.899Z-error: Failed Creating a doctor
+2023-07-09T00:00:28.901Z-error: Record has not found yet
+2023-07-09T00:00:28.903Z-error: Internal Server Error
+2023-07-09T00:00:29.185Z-error: Internal Server Error
+2023-07-09T00:00:29.189Z-error: Failed to update appointment
+2023-07-09T00:00:29.193Z-error: Internal Server Error
+2023-07-09T00:00:46.276Z-error: Internal Server Error
+2023-07-09T00:00:46.279Z-error: Failed Creating a doctor
+2023-07-09T00:00:46.281Z-error: Record has not found yet
+2023-07-09T00:00:46.284Z-error: Internal Server Error
+2023-07-09T00:00:46.417Z-error: Internal Server Error
+2023-07-09T00:00:46.421Z-error: Failed to update appointment
+2023-07-09T00:00:46.425Z-error: Internal Server Error
+2023-07-09T00:03:11.225Z-error: Internal Server Error
+2023-07-09T00:03:11.228Z-error: Failed Creating a doctor
+2023-07-09T00:03:11.230Z-error: Record has not found yet
+2023-07-09T00:03:11.233Z-error: Internal Server Error
+2023-07-09T00:03:11.551Z-error: Internal Server Error
+2023-07-09T00:03:11.556Z-error: Failed to update appointment
+2023-07-09T00:03:11.559Z-error: Internal Server Error
+2023-07-09T00:03:11.561Z-error: Record has not found yet
+2023-07-09T00:04:59.992Z-error: Internal Server Error
+2023-07-09T00:04:59.996Z-error: Failed Creating a doctor
+2023-07-09T00:04:59.998Z-error: Record has not found yet
+2023-07-09T00:04:59.999Z-error: Internal Server Error
+2023-07-09T00:05:00.374Z-error: Internal Server Error
+2023-07-09T00:05:00.379Z-error: Failed to update appointment
+2023-07-09T00:05:00.388Z-error: Internal Server Error
+2023-07-09T00:05:00.391Z-error: Record has not found yet
+2023-07-09T00:05:00.392Z-error: Internal Server Error
+2023-07-09T00:05:18.504Z-error: Internal Server Error
+2023-07-09T00:05:18.508Z-error: Failed Creating a doctor
+2023-07-09T00:05:18.511Z-error: Record has not found yet
+2023-07-09T00:05:18.513Z-error: Internal Server Error
+2023-07-09T00:05:18.820Z-error: Internal Server Error
+2023-07-09T00:05:18.824Z-error: Failed to update appointment
+2023-07-09T00:05:18.828Z-error: Internal Server Error
+2023-07-09T00:05:18.830Z-error: Record has not found yet
+2023-07-09T00:05:18.832Z-error: Internal Server Error
+2023-07-09T00:07:45.196Z-error: Internal Server Error
+2023-07-09T00:07:45.199Z-error: Failed Creating a doctor
+2023-07-09T00:07:45.201Z-error: Record has not found yet
+2023-07-09T00:07:45.204Z-error: Internal Server Error
+2023-07-09T00:07:45.482Z-error: Internal Server Error
+2023-07-09T00:07:45.487Z-error: Failed to update appointment
+2023-07-09T00:07:45.490Z-error: Internal Server Error
+2023-07-09T00:07:45.491Z-error: Record has not found yet
+2023-07-09T00:07:45.492Z-error: Internal Server Error
+2023-07-09T00:07:45.495Z-error: NaN
+2023-07-09T00:08:05.830Z-error: Internal Server Error
+2023-07-09T00:08:05.835Z-error: Failed to update appointment
+2023-07-09T00:08:05.839Z-error: Internal Server Error
+2023-07-09T00:08:05.842Z-error: Record has not found yet
+2023-07-09T00:08:05.843Z-error: Internal Server Error
+2023-07-09T00:08:05.844Z-error: NaN
+2023-07-09T00:08:05.962Z-error: Internal Server Error
+2023-07-09T00:08:05.965Z-error: Failed Creating a doctor
+2023-07-09T00:08:05.967Z-error: Record has not found yet
+2023-07-09T00:08:05.968Z-error: Internal Server Error
+2023-07-09T00:08:29.775Z-error: Internal Server Error
+2023-07-09T00:08:29.780Z-error: Failed to update appointment
+2023-07-09T00:08:29.784Z-error: Internal Server Error
+2023-07-09T00:08:29.786Z-error: Record has not found yet
+2023-07-09T00:08:29.787Z-error: Internal Server Error
+2023-07-09T00:08:29.791Z-error: NaN
+2023-07-09T00:08:29.846Z-error: Internal Server Error
+2023-07-09T00:08:29.849Z-error: Failed Creating a doctor
+2023-07-09T00:08:29.851Z-error: Record has not found yet
+2023-07-09T00:08:29.853Z-error: Internal Server Error
+2023-07-09T00:09:33.285Z-error: Internal Server Error
+2023-07-09T00:09:33.288Z-error: Failed Creating a doctor
+2023-07-09T00:09:33.290Z-error: Record has not found yet
+2023-07-09T00:09:33.291Z-error: Internal Server Error
+2023-07-09T00:09:33.777Z-error: Internal Server Error
+2023-07-09T00:09:33.781Z-error: Failed to update appointment
+2023-07-09T00:09:33.785Z-error: Internal Server Error
+2023-07-09T00:09:33.786Z-error: Record has not found yet
+2023-07-09T00:09:33.787Z-error: Internal Server Error
+2023-07-09T00:09:33.789Z-error: NaN
+2023-07-09T00:10:19.784Z-error: Internal Server Error
+2023-07-09T00:10:19.789Z-error: Failed to update appointment
+2023-07-09T00:10:19.793Z-error: Internal Server Error
+2023-07-09T00:10:19.796Z-error: Record has not found yet
+2023-07-09T00:10:19.798Z-error: Internal Server Error
+2023-07-09T00:10:19.799Z-error: NaN
+2023-07-09T00:10:19.812Z-error: Internal Server Error
+2023-07-09T00:10:19.815Z-error: Failed Creating a doctor
+2023-07-09T00:10:19.817Z-error: Record has not found yet
+2023-07-09T00:10:19.818Z-error: Internal Server Error
+2023-07-09T00:12:44.955Z-error: Internal Server Error
+2023-07-09T00:12:44.960Z-error: Failed to update appointment
+2023-07-09T00:12:44.964Z-error: Internal Server Error
+2023-07-09T00:12:44.966Z-error: Record has not found yet
+2023-07-09T00:12:44.967Z-error: Internal Server Error
+2023-07-09T00:12:44.969Z-error: NaN
+2023-07-09T00:12:44.965Z-error: Internal Server Error
+2023-07-09T00:12:44.969Z-error: Failed Creating a doctor
+2023-07-09T00:12:44.971Z-error: Record has not found yet
+2023-07-09T00:12:44.972Z-error: Internal Server Error
+2023-07-09T00:16:54.205Z-error: Internal Server Error
+2023-07-09T00:16:54.210Z-error: Failed Creating a doctor
+2023-07-09T00:16:54.212Z-error: Record has not found yet
+2023-07-09T00:16:54.214Z-error: Internal Server Error
+2023-07-09T00:16:54.673Z-error: Internal Server Error
+2023-07-09T00:16:54.677Z-error: Failed to update appointment
+2023-07-09T00:16:54.680Z-error: Internal Server Error
+2023-07-09T00:16:54.682Z-error: Record has not found yet
+2023-07-09T00:16:54.683Z-error: Internal Server Error
+2023-07-09T00:16:54.685Z-error: NaN
+2023-07-09T00:16:54.686Z-error: Record has not found yet
+2023-07-09T00:17:40.474Z-error: Internal Server Error
+2023-07-09T00:17:40.477Z-error: Failed Creating a doctor
+2023-07-09T00:17:40.479Z-error: Record has not found yet
+2023-07-09T00:17:40.481Z-error: Internal Server Error
+2023-07-09T00:17:40.774Z-error: Internal Server Error
+2023-07-09T00:17:40.779Z-error: Failed to update appointment
+2023-07-09T00:17:40.783Z-error: Internal Server Error
+2023-07-09T00:17:40.786Z-error: Record has not found yet
+2023-07-09T00:17:40.787Z-error: Internal Server Error
+2023-07-09T00:17:40.788Z-error: NaN
+2023-07-09T00:18:05.803Z-error: Internal Server Error
+2023-07-09T00:18:05.807Z-error: Failed Creating a doctor
+2023-07-09T00:18:05.809Z-error: Record has not found yet
+2023-07-09T00:18:05.811Z-error: Internal Server Error
+2023-07-09T00:18:06.064Z-error: Internal Server Error
+2023-07-09T00:18:06.069Z-error: Failed to update appointment
+2023-07-09T00:18:06.073Z-error: Internal Server Error
+2023-07-09T00:18:06.075Z-error: Record has not found yet
+2023-07-09T00:18:06.076Z-error: Internal Server Error
+2023-07-09T00:18:06.077Z-error: NaN
+2023-07-09T00:23:15.058Z-error: Internal Server Error
+2023-07-09T00:23:15.061Z-error: Failed Creating a doctor
+2023-07-09T00:23:15.063Z-error: Record has not found yet
+2023-07-09T00:23:15.065Z-error: Internal Server Error
+2023-07-09T00:23:15.186Z-error: Internal Server Error
+2023-07-09T00:23:15.194Z-error: Failed to update appointment
+2023-07-09T00:23:15.198Z-error: Internal Server Error
+2023-07-09T00:23:15.200Z-error: Record has not found yet
+2023-07-09T00:23:15.201Z-error: Internal Server Error
+2023-07-09T00:23:15.202Z-error: NaN
+2023-07-09T00:23:42.563Z-error: Internal Server Error
+2023-07-09T00:23:42.566Z-error: Failed Creating a doctor
+2023-07-09T00:23:42.568Z-error: Record has not found yet
+2023-07-09T00:23:42.570Z-error: Internal Server Error
+2023-07-09T00:23:42.706Z-error: Internal Server Error
+2023-07-09T00:23:42.712Z-error: Failed to update appointment
+2023-07-09T00:23:42.715Z-error: Internal Server Error
+2023-07-09T00:23:42.717Z-error: Record has not found yet
+2023-07-09T00:23:42.719Z-error: Internal Server Error
+2023-07-09T00:23:42.720Z-error: NaN
+2023-07-09T00:23:42.721Z-error: Internal Server Error
+2023-07-09T00:26:34.533Z-error: Internal Server Error
+2023-07-09T00:26:34.536Z-error: Failed Creating a doctor
+2023-07-09T00:26:34.537Z-error: Record has not found yet
+2023-07-09T00:26:34.539Z-error: Internal Server Error
+2023-07-09T00:26:34.723Z-error: Internal Server Error
+2023-07-09T00:26:34.728Z-error: Failed to update appointment
+2023-07-09T00:26:34.735Z-error: Internal Server Error
+2023-07-09T00:26:34.737Z-error: Record has not found yet
+2023-07-09T00:26:34.739Z-error: Internal Server Error
+2023-07-09T00:26:34.740Z-error: NaN
+2023-07-09T00:26:34.741Z-error: Internal Server Error
+2023-07-09T00:26:34.743Z-error: Failed to delete appointment
+2023-07-09T00:27:32.375Z-error: Internal Server Error
+2023-07-09T00:27:32.380Z-error: Failed Creating a doctor
+2023-07-09T00:27:32.381Z-error: Record has not found yet
+2023-07-09T00:27:32.388Z-error: Internal Server Error
+2023-07-09T00:27:32.713Z-error: Internal Server Error
+2023-07-09T00:27:32.717Z-error: Failed to update appointment
+2023-07-09T00:27:32.721Z-error: Internal Server Error
+2023-07-09T00:27:32.725Z-error: Record has not found yet
+2023-07-09T00:27:32.726Z-error: Internal Server Error
+2023-07-09T00:27:32.727Z-error: NaN
+2023-07-09T00:27:32.729Z-error: Internal Server Error
+2023-07-09T00:27:32.730Z-error: Failed to delete appointment
+2023-07-09T00:29:26.642Z-error: Internal Server Error
+2023-07-09T00:29:26.645Z-error: Failed Creating a doctor
+2023-07-09T00:29:26.648Z-error: Record has not found yet
+2023-07-09T00:29:26.649Z-error: Internal Server Error
+2023-07-09T00:29:26.865Z-error: Internal Server Error
+2023-07-09T00:29:26.869Z-error: Failed to update appointment
+2023-07-09T00:29:26.876Z-error: Internal Server Error
+2023-07-09T00:29:26.879Z-error: Record has not found yet
+2023-07-09T00:29:26.880Z-error: Internal Server Error
+2023-07-09T00:29:26.882Z-error: NaN
+2023-07-09T00:29:26.883Z-error: Internal Server Error
+2023-07-09T00:29:26.884Z-error: Failed to delete appointment
+2023-07-09T00:30:49.802Z-error: Internal Server Error
+2023-07-09T00:30:49.805Z-error: Failed Creating a doctor
+2023-07-09T00:30:49.807Z-error: Record has not found yet
+2023-07-09T00:30:49.808Z-error: Internal Server Error
+2023-07-09T00:30:49.764Z-error: Internal Server Error
+2023-07-09T00:30:49.770Z-error: Failed to update appointment
+2023-07-09T00:30:49.773Z-error: Internal Server Error
+2023-07-09T00:30:49.776Z-error: Record has not found yet
+2023-07-09T00:30:49.777Z-error: Internal Server Error
+2023-07-09T00:30:49.778Z-error: NaN
+2023-07-09T00:30:49.780Z-error: Internal Server Error
+2023-07-09T00:30:49.781Z-error: Failed to delete appointment
+2023-07-09T00:31:51.528Z-error: Internal Server Error
+2023-07-09T00:31:51.532Z-error: Failed Creating a doctor
+2023-07-09T00:31:51.534Z-error: Record has not found yet
+2023-07-09T00:31:51.536Z-error: Internal Server Error
+2023-07-09T00:31:51.796Z-error: Internal Server Error
+2023-07-09T00:31:51.802Z-error: Failed to update appointment
+2023-07-09T00:31:51.806Z-error: Internal Server Error
+2023-07-09T00:31:51.808Z-error: Record has not found yet
+2023-07-09T00:31:51.810Z-error: Internal Server Error
+2023-07-09T00:31:51.811Z-error: NaN
+2023-07-09T00:31:51.812Z-error: Internal Server Error
+2023-07-09T00:31:51.813Z-error: Failed to delete appointment
+2023-07-09T00:36:12.957Z-error: Internal Server Error
+2023-07-09T00:36:12.960Z-error: Failed Creating a doctor
+2023-07-09T00:36:12.962Z-error: Record has not found yet
+2023-07-09T00:36:12.963Z-error: Internal Server Error
+2023-07-09T00:36:13.233Z-error: Internal Server Error
+2023-07-09T00:36:13.238Z-error: Failed to update appointment
+2023-07-09T00:36:13.242Z-error: Internal Server Error
+2023-07-09T00:36:13.245Z-error: Record has not found yet
+2023-07-09T00:36:13.247Z-error: Internal Server Error
+2023-07-09T00:36:13.248Z-error: NaN
+2023-07-09T00:36:13.249Z-error: Internal Server Error
+2023-07-09T00:36:13.250Z-error: Failed to delete appointment
+2023-07-09T00:38:38.598Z-error: Internal Server Error
+2023-07-09T00:38:38.601Z-error: Failed Creating a doctor
+2023-07-09T00:38:38.603Z-error: Record has not found yet
+2023-07-09T00:38:38.604Z-error: Internal Server Error
+2023-07-09T00:38:38.922Z-error: Internal Server Error
+2023-07-09T00:38:38.927Z-error: Failed to update appointment
+2023-07-09T00:38:38.931Z-error: Internal Server Error
+2023-07-09T00:38:38.933Z-error: Record has not found yet
+2023-07-09T00:38:38.934Z-error: Internal Server Error
+2023-07-09T00:38:38.935Z-error: NaN
+2023-07-09T00:38:38.936Z-error: Internal Server Error
+2023-07-09T00:38:38.937Z-error: Failed to delete appointment
+2023-07-09T00:39:18.886Z-error: Internal Server Error
+2023-07-09T00:39:18.890Z-error: Failed Creating a doctor
+2023-07-09T00:39:18.892Z-error: Record has not found yet
+2023-07-09T00:39:18.894Z-error: Internal Server Error
+2023-07-09T00:39:19.263Z-error: Internal Server Error
+2023-07-09T00:39:19.268Z-error: Failed to update appointment
+2023-07-09T00:39:19.272Z-error: Internal Server Error
+2023-07-09T00:39:19.274Z-error: Record has not found yet
+2023-07-09T00:39:19.276Z-error: Internal Server Error
+2023-07-09T00:39:19.277Z-error: NaN
+2023-07-09T00:39:19.280Z-error: Internal Server Error
+2023-07-09T00:39:19.281Z-error: Failed to delete appointment
