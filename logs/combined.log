@@ -211,3 +211,6 @@ undefined [undefined] info: Accept,*/*,User-Agent,node-fetch/1.0 (+https://githu
 2023-06-24T02:40:42.052Z-info: Server is listening on port 8087
 2023-06-24T02:40:46.437Z-error: Failed to create doctor dubt: error: database "gestion_citas1" does not exist
 2023-06-24T02:40:59.263Z-info: Server is listening on port 8087
+2023-06-24T23:54:36.083Z-info: Server is listening on port 8087
+2023-06-25T01:00:45.621Z-info: Server is listening on port 8087
+2023-06-27T00:46:21.863Z-info: Server is listening on port 8087

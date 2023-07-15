@@ -100,7 +100,7 @@ Tiene serivicios generales que pueden ser usados por los componentes o caulquier
 
 Tareas 16/06/2023
 
-* Validar que los campos del request sean los del modelo DoctorReq, y si no vienen completos decir cual falta, y sin vienen de más, no tomarlos
+* Validar que los campos del request sean los del modelo DoctorReq, y si no vienen completos decir cual falta, y si vienen de más, no tomarlos
 * Hacer que el created_at y el updated_at se asignen de forma automática cuando se inserta un dato.
 * Completar los create y select de citas y pacientes
 
