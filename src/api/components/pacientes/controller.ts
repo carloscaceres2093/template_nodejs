@@ -2,7 +2,7 @@ import { Patient } from './model'
 import { Request, Response } from 'express'
 import { PatientService } from './service'
 import logger from '../../../utils/logger'
-import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdateError, RecordNotFoundError } from '../../../config/customErrors'
+import {CreationError, DeleteError, GetAllError, UpdateError, RecordNotFoundError } from '../../../utils/customErrors'
 
 
 export interface PatientController {
@@ -35,7 +35,7 @@ export class PatientControllerImpl implements PatientController {
             },
             (error) =>{
                 logger.error(error)
-                if (error instanceof DoctorCreationError){
+                if (error instanceof CreationError){
                     res.status(400).json({
                         error_name: error.name,
                         message: "Failed Creating a patient"

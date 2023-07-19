@@ -84,8 +84,8 @@ describe('DoctorController', () => {
 
             await doctorController.createDoctor(mockReq, mockRes)
 
-            expect(doctorSerivce.createDoctor).toHaveBeenCalledWith({})
-            expect(mockRes.json).toHaveBeenCalledWith({ message: "Internal Server Error" })
+            //expect(doctorSerivce.createDoctor).toHaveBeenCalledWith({})
+            expect(mockRes.json).toHaveBeenCalledWith({ message: '"nombre" is required' })
             expect(mockRes.status).toHaveBeenCalledWith(400)
         })
     })

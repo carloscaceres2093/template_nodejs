@@ -1,4 +1,4 @@
-import { DoctorCreationError, DoctorDeleteError, DoctorUpdateError, RecordNotFoundError } from "../../../config/customErrors"
+import { CreationError, DeleteError, UpdateError, RecordNotFoundError } from "../../../utils/customErrors"
 import logger from "../../../utils/logger"
 import { Doctor, DoctorReq } from "./model"
 import { DoctorRepository } from "./repository"
@@ -28,7 +28,7 @@ export class DoctorServiceImpl implements DoctorService {
         try{
             return this.doctorRepository.createDoctor(doctorReq)
         } catch (error){
-            throw new DoctorCreationError("Failed to create doctor from service")
+            throw new CreationError("Failed to create doctor from service", "Doctor")
         }
     }
 
@@ -52,7 +52,7 @@ export class DoctorServiceImpl implements DoctorService {
             return updateDoctor
         } catch (error) {
             logger.error('Failed to update doctor from service')
-            throw new DoctorUpdateError()
+            throw new UpdateError("Failed to update doctor", "doctor")
         }
     }
 
@@ -65,7 +65,7 @@ export class DoctorServiceImpl implements DoctorService {
             await this.doctorRepository.deleteDoctor(id)
         } catch (error) {
             logger.error('Failed to delete doctor from service')
-            throw new DoctorDeleteError()
+            throw new DeleteError("Failed to delete doctor", "Doctor")
         }
     }
 }

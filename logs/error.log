@@ -104,3 +104,25 @@
 2023-06-24T02:30:50.112Z-error: database "gestion_citas1" does not exist
 2023-06-24T02:30:50.112Z-error: Failed getting all appointments from service aca
 2023-06-24T02:40:46.437Z-error: Failed to create doctor dubt: error: database "gestion_citas1" does not exist
+2023-07-15T23:27:02.461Z-error: connect ECONNREFUSED ::1:5433
+2023-07-15T23:27:02.462Z-error: Failed getting all appointments from service
+2023-07-19T02:49:15.231Z-error: Internal Server Error
+2023-07-19T02:49:15.271Z-error: Record has not found yet
+2023-07-19T02:49:15.274Z-error: Internal Server Error
+2023-07-19T02:49:15.790Z-error: Record has not found yet
+2023-07-19T02:49:15.835Z-error: Internal Server Error
+2023-07-19T02:54:56.508Z-error: Internal Server Error
+2023-07-19T02:54:56.566Z-error: Record has not found yet
+2023-07-19T02:54:56.569Z-error: Internal Server Error
+2023-07-19T02:54:59.496Z-error: Record has not found yet
+2023-07-19T02:54:59.511Z-error: Internal Server Error
+2023-07-19T02:59:21.862Z-error: Internal Server Error
+2023-07-19T02:59:22.042Z-error: Record has not found yet
+2023-07-19T02:59:22.044Z-error: Internal Server Error
+2023-07-19T02:59:23.044Z-error: Record has not found yet
+2023-07-19T02:59:23.050Z-error: Internal Server Error
+2023-07-19T03:05:30.905Z-error: Internal Server Error
+2023-07-19T03:05:30.994Z-error: Record has not found yet
+2023-07-19T03:05:30.996Z-error: Internal Server Error
+2023-07-19T03:05:31.955Z-error: Record has not found yet
+2023-07-19T03:05:31.960Z-error: Internal Server Error
