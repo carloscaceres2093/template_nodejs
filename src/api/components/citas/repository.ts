@@ -1,7 +1,7 @@
 import { db } from "../../../config/database"
 import { Appointment, AppointmentReq, AppointmentResDB } from "./model"
 import logger from '../../../utils/logger'
-import { DoctorCreationError,  PatientGetAllError,  RecordNotFoundError, GetAllError} from "../../../config/customErrors"
+import { DoctorCreationError,  PatientGetAllError,  RecordNotFoundError, GetAllError, AppointmentUpdateError, AppointmentDeleteError} from "../../../utils/customErrors"
 
 export class AppointmentRepository {
     public async createAppointment(appointment: AppointmentReq): Promise<AppointmentResDB> {
@@ -29,6 +29,24 @@ export class AppointmentRepository {
         } catch (error){
             logger.error( 'Failed get appointment by id in repository', {error})
             throw new RecordNotFoundError()
+        }
+    }
+
+    public async updateAppointment(id: number, updates: Partial<AppointmentReq>): Promise<void> {
+        try{
+            await db('appointment').where({ id_cita: id }).update(updates)
+        } catch (error){
+            logger.error( 'Failed updated appointment in repository', {error})
+            throw new AppointmentUpdateError()
+        }
+    }
+
+    public async deleteAppointment(id: number): Promise<void> {
+        try{
+            await db('appointment').where({ id_cita: id }).del()
+        } catch (error){
+            logger.error( 'Failed deleting doctor in repository', {error})
+            throw new AppointmentDeleteError()
         }
     }
 }

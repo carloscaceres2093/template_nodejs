@@ -4,7 +4,7 @@ import routes from './api/routes'
 import { errorHandlerMiddleware } from './middleware/errorHandler'
 
 const app = express()
-const port = 8087
+const port = 8090
 
 
 // Crea un middleware para convertir 

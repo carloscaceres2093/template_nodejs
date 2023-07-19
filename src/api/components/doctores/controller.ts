@@ -2,7 +2,7 @@ import { Doctor } from './model'
 import { Request, Response } from 'express'
 import { DoctorService } from './service'
 import logger from '../../../utils/logger'
-import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdateError, RecordNotFoundError } from '../../../config/customErrors'
+import { CreationError, DeleteError, GetAllError, UpdateError, RecordNotFoundError } from '../../../utils/customErrors'
 import { createDoctorSchema } from './validations/doctor.validations'
 
 
@@ -32,7 +32,6 @@ export class DoctorControllerImpl implements DoctorController {
     public  createDoctor (req: Request, res: Response): void {
     
         const {error, value } = createDoctorSchema.validate(req.body)
-
         if (error){
             res.status(400).json({message: error.details[0].message})
         } else{
@@ -43,7 +42,7 @@ export class DoctorControllerImpl implements DoctorController {
                 },
                 (error) =>{
                     logger.error(error)
-                    if (error instanceof DoctorCreationError){
+                    if (error instanceof CreationError){
                         res.status(400).json({
                             error_name: error.name,
                             message: "Failed Creating a doctor"
@@ -86,13 +85,13 @@ export class DoctorControllerImpl implements DoctorController {
             if (doctor) {
                 res.status(200).json(doctor)
             } else {
-                throw new DoctorUpdateError()
+                throw new UpdateError("CreationError", "")
             }
         } catch (error) {
             logger.error(error)
             if (error instanceof RecordNotFoundError){
                 res.status(400).json({error: error.message})
-            } else  if (error instanceof DoctorUpdateError){
+            } else  if (error instanceof UpdateError){
                 res.status(400).json({error: error.message})
             } else {
                 res.status(400).json({error: "Failed to update doctor"})
@@ -108,7 +107,7 @@ export class DoctorControllerImpl implements DoctorController {
             res.status(200).json({message: `Doctor was deleted successfully`})
         } catch (error) {
             logger.error(error)
-            if (error instanceof DoctorDeleteError){
+            if (error instanceof DeleteError){
                 res.status(400).json({error: error.message})
             } else {
                 res.status(400).json({error: "Failed to delete doctor"})
