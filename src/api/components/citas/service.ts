@@ -1,4 +1,4 @@
-import { DoctorCreationError, DoctorDeleteError, DoctorUpdateError, RecordNotFoundError, GetAllError } from "../../../config/customErrors"
+import { CustomError } from "../../../utils/customErrors"
 import logger from "../../../utils/logger"
 import { AppointmentReq, Appointment, AppointmentResDB } from "./model"
 import { AppointmentRepository } from "./repository"
@@ -9,6 +9,8 @@ export interface AppointmentService {
     getAllAppointments(): Promise<Appointment[]>
     createAppointment(patientReq: AppointmentReq): Promise<Appointment>
     getAppointmentById(id: number): Promise<Appointment>
+    updateAppointment(id: number, updates:Partial<AppointmentReq>): Promise<AppointmentReq>
+    deleteAppointment(id: number): Promise<void>
 }
 
 
@@ -22,26 +24,23 @@ export class AppointmentServiceImpl implements AppointmentService {
     }
 
     public async getAllAppointments(): Promise<Appointment[]> {
-        try{
-            
-            const patients = await  this.appointmentRepository.getAllAppointment()
-            console.log("LLEgamos")
-            console.log(patients)
+        try{        
+            const patients = await this.appointmentRepository.getAllAppointments()
             return patients
         } catch (error){
             logger.error(error)
-            throw new GetAllError("Failed getting all appointments from service", "appointment")
+            throw new CustomError ( 'GetAllError', "Failed getting all appointments from service", "citas")
         }
     }
     
-    public  async createAppointment(appointmentReq: AppointmentReq): Promise<Appointment> {
+    public async createAppointment(appointmentReq: AppointmentReq): Promise<Appointment> {
         try{
             const appointmentDb = await this.appointmentRepository.createAppointment(appointmentReq) 
             const doctor = await this.doctorRepository.getDoctorById(appointmentDb.id_doctor)
             const appointment: Appointment = mapAppointment(appointmentDb, doctor)
             return appointment
         } catch (error){
-            throw new DoctorCreationError("Failed to create appointment from service")
+            throw new CustomError ( 'CreationError',"Failed to create appointment from service", 'citas')
         }
     }
 
@@ -53,13 +52,40 @@ export class AppointmentServiceImpl implements AppointmentService {
             return appointment
         } catch (error) {
             logger.error('Failed to get appointment from service')
-            throw new RecordNotFoundError()
+            throw new CustomError ( 'RecordNotFoundError', 'Record has not found yet', 'citas')
         }
     }
 
-   
-}
+    // Tarea: Terminar el crud de citas y pacientes -- Upadte Appoinment, Delete Appoinment --
 
+    public async updateAppointment(id: number, updates: Partial<AppointmentReq>): Promise<AppointmentReq> {
+        try {
+            const existAppointment =  await this.appointmentRepository.getAppointmentById(id)
+            if (!existAppointment) {
+                throw new CustomError ( 'RecordNotFoundError', 'Record has not found yet', 'citas' )
+            }
+            const updateAppointment = {...existAppointment, ...updates}
+            this.appointmentRepository.updateAppointment(id, updateAppointment)
+            return updateAppointment
+        } catch (error) {
+            logger.error( 'Failed to update appointment from service' )
+            throw new CustomError ( 'UpdateError', 'Failed to update appointment from service', 'citas' )
+        }
+    }
+
+    public async deleteAppointment(id: number): Promise<void> {
+        try {
+            const existAppointment =  await this.appointmentRepository.getAppointmentById(id)
+            if (!existAppointment) {
+                throw new CustomError ( 'RecordNotFoundError', 'Record has not found yet', 'citas' )
+            }
+            await this.appointmentRepository.deleteAppointment(id)
+        } catch (error) {
+            logger.error('Failed to delete Appointment from service')
+            throw new CustomError ('DeleteError','Failed to delete Appointment from service', 'citas')
+        }
+    }
+}
 
 function mapAppointment(appointmentDb: AppointmentResDB, doctor: Doctor): Appointment {
     const appointment: Appointment = {

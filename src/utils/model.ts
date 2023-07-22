@@ -1,5 +1,5 @@
 enum Especialidad {
-    General = 'Medicina general',
+    General = 'Medicina General',
     Cardiologia  = 'Cardiología',
     Interna = 'Medicina interna',
     Dermatologia = 'Dermatología',
@@ -9,4 +9,4 @@ enum Especialidad {
     Radiologia = 'Radiología'
 }
 
-export { Especialidad}
+export { Especialidad }
