@@ -1,7 +1,7 @@
 import { db } from "../../../config/database"
 import { Doctor, DoctorReq } from "./model"
 import logger from '../../../utils/logger'
-import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdateError, RecordNotFoundError } from "../../../config/customErrors"
+import { CustomError } from "../../../utils/customErrors"
 
 export class DoctorRepository {
     public async createDoctor(doctor: DoctorReq): Promise<Doctor> {
@@ -9,7 +9,7 @@ export class DoctorRepository {
             const [createdDoctor] =  await db('doctores').insert(doctor).returning('*') // select * from doctores where id_doctor=?
             return createdDoctor
         } catch (error) {
-            throw new DoctorCreationError(`Failed to create doctor dubt: ${error}`)
+            throw new CustomError ( 'CreationError','Failed to create doctor in repository', 'doctores')
         }
     }
 
@@ -17,7 +17,7 @@ export class DoctorRepository {
         try {
             return  db.select('*').from('doctores')
         } catch (error) {
-            throw new DoctorGetAllError()
+            throw new CustomError( 'GetAllError', 'Failed getting all doctors in repository', 'doctores' )
         }
     }
 
@@ -27,16 +27,16 @@ export class DoctorRepository {
             return doctor
         } catch (error){
             logger.error( 'Failed get doctor by id in repository', {error})
-            throw new RecordNotFoundError()
+            throw new CustomError ('RecordNotFoundError','Record has not found yet', 'doctores')
         }
     }
 
     public async updateDoctor(id: number, updates: Partial<DoctorReq>): Promise<void> {
         try{
-            await db('doctores').where({ id_doctor: id }).update(updates)
+            await db('doctores').where({ id_doctor: id }).update(updates);      
         } catch (error){
             logger.error( 'Failed updated doctor in repository', {error})
-            throw new DoctorUpdateError()
+            throw new CustomError ('UpdateError', 'Failed updated doctor in repository', 'doctores')
         }
     }
 
@@ -45,7 +45,7 @@ export class DoctorRepository {
             await db('doctores').where({ id_doctor: id }).del()
         } catch (error){
             logger.error( 'Failed deleting doctor in repository', {error})
-            throw new DoctorDeleteError()
+            throw new CustomError ( 'DeleteError', 'Failed deleting doctor in repository', 'doctores')
         }
     }
 }

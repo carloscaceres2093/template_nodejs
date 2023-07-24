@@ -23,7 +23,7 @@ Donde un componente tiene como objetivo representar un proceso importante dentro
 
 * **model.js(ts)** representa los modelos de la base de datos para el componente, donde se tiene la estructura de datos a usar por componente y es usado normalmente por el repositorio
 
-* **repository.js(ts)** es un interpretador para la base datos y es lo que normalmente se importa como modolo para realizar los procesos de inserción, actualización, selección y borrado de datos sobre la base de datos, es aquí donde el ORM interactua.
+* **repository.js(ts)** es un interpretador para la base datos y es lo que normalmente se importa como modulo para realizar los procesos de inserción, actualización, selección y borrado de datos sobre la base de datos, es aquí donde el ORM interactua.
 
 * **routes.js(ts)** la redirección de los endpoints del componente, que el que asigna los metodos del controlador.
 
@@ -100,9 +100,9 @@ Tiene serivicios generales que pueden ser usados por los componentes o caulquier
 
 Tareas 16/06/2023
 
-* Validar que los campos del request sean los del modelo DoctorReq, y si no vienen completos decir cual falta, y sin vienen de más, no tomarlos
+* Validar que los campos del request sean los del modelo DoctorReq, y si no vienen completos decir cual falta, y sin vienen de más, no tomarlos   :)
 * Hacer que el created_at y el updated_at se asignen de forma automática cuando se inserta un dato.
-* Completar los create y select de citas y pacientes
+* Completar los create y select de citas y pacientes  :)
 
 
 ## Test unitarios
@@ -125,9 +125,9 @@ Tareas 20/06/2023
 
 Tarea Entregar taller 6
 
-* Cambiar los errores específicos por errores genéricos que se puedan adecuar.
-* Validación que la respuesta del doctor en creación de cita en el serivice sea diferente de null, si no retornar que el doctor no exisite, es decir, si el doctor no existe en la creación de la cita
-    decir que el doctor no fue encontrado.
-* Cambiar el customErrors de config a utils
+* Cambiar los errores específicos por errores genéricos que se puedan adecuar. :)
+* Validación que la respuesta del doctor en creación de cita en el serivice sea diferente de null, si no retornar que el doctor no exisite, es decir, si el doctor no existe en la creación de la cita 
+    decir que el doctor no fue encontrado.                  :)
+* Cambiar el customErrors de config a utils                 :)
 * Completar por lo menos los test de citas o pacientes
-* Terminar el crud de citas y pacientes
+* Terminar el crud de citas y pacientes                     :)

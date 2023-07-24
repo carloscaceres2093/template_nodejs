@@ -2,7 +2,7 @@ import { Doctor } from './model'
 import { Request, Response } from 'express'
 import { DoctorService } from './service'
 import logger from '../../../utils/logger'
-import { DoctorCreationError, DoctorDeleteError, DoctorGetAllError, DoctorUpdateError, RecordNotFoundError } from '../../../config/customErrors'
+import { CustomError } from '../../../utils/customErrors'
 import { createDoctorSchema } from './validations/doctor.validations'
 
 
@@ -29,21 +29,23 @@ export class DoctorControllerImpl implements DoctorController {
             res.status(400).json({message: "Error getting all doctors"})
         }
     }
-    public  createDoctor (req: Request, res: Response): void {
+
+    public createDoctor (req: Request, res: Response): void {
     
-        const {error, value } = createDoctorSchema.validate(req.body)
+        const { error, value } = createDoctorSchema.validate(req.body)
 
         if (error){
             res.status(400).json({message: error.details[0].message})
-        } else{
+        } else {
             this.doctorService.createDoctor(value)
             .then(
-                (doctor) =>{
+                (doctor) => {
                     res.status(201).json(doctor)
+                    
                 },
-                (error) =>{
+                (error) => {
                     logger.error(error)
-                    if (error instanceof DoctorCreationError){
+                    if (error instanceof CustomError){
                         res.status(400).json({
                             error_name: error.name,
                             message: "Failed Creating a doctor"
@@ -56,7 +58,6 @@ export class DoctorControllerImpl implements DoctorController {
                 }
             )
         }
-
     }
 
     public async getDoctorById (req: Request, res: Response): Promise<void> {
@@ -66,11 +67,11 @@ export class DoctorControllerImpl implements DoctorController {
             if (doctor) {
                 res.status(200).json(doctor)
             } else {
-                throw new RecordNotFoundError()
+                throw new CustomError ('RecordNotFoundError', 'Record has not found yet', 'doctores') 
             }
         } catch (error) {
             logger.error(error)
-            if (error instanceof RecordNotFoundError){
+            if (error instanceof CustomError){
                 res.status(400).json({error: error.message})
             } else {
                 res.status(400).json({error: "Failed to retrieve doctor"})
@@ -86,13 +87,11 @@ export class DoctorControllerImpl implements DoctorController {
             if (doctor) {
                 res.status(200).json(doctor)
             } else {
-                throw new DoctorUpdateError()
+                throw new CustomError ('UpdateError', 'Failed updating doctor in controller', 'doctores')
             }
         } catch (error) {
             logger.error(error)
-            if (error instanceof RecordNotFoundError){
-                res.status(400).json({error: error.message})
-            } else  if (error instanceof DoctorUpdateError){
+            if (error instanceof CustomError){
                 res.status(400).json({error: error.message})
             } else {
                 res.status(400).json({error: "Failed to update doctor"})
@@ -102,13 +101,12 @@ export class DoctorControllerImpl implements DoctorController {
 
     public async deleteDoctor (req: Request, res: Response): Promise<void> {
         try{
-            const id = parseInt(req.params.id)
-            await this.doctorService.deleteDoctor(id)
-            
+            const id = parseInt(req.params.id_doctor )
+            await this.doctorService.deleteDoctor(id)       
             res.status(200).json({message: `Doctor was deleted successfully`})
         } catch (error) {
             logger.error(error)
-            if (error instanceof DoctorDeleteError){
+            if (error instanceof CustomError){
                 res.status(400).json({error: error.message})
             } else {
                 res.status(400).json({error: "Failed to delete doctor"})

@@ -1,4 +1,4 @@
-import { DoctorCreationError, DoctorDeleteError, DoctorUpdateError, RecordNotFoundError } from "../../../config/customErrors"
+import { CustomError } from "../../../utils/customErrors"
 import logger from "../../../utils/logger"
 import { Doctor, DoctorReq } from "./model"
 import { DoctorRepository } from "./repository"
@@ -24,11 +24,11 @@ export class DoctorServiceImpl implements DoctorService {
         return doctors
     }
     
-    public   createDoctor(doctorReq: DoctorReq): Promise<Doctor> {
+    public createDoctor(doctorReq: DoctorReq): Promise<Doctor> {
         try{
             return this.doctorRepository.createDoctor(doctorReq)
         } catch (error){
-            throw new DoctorCreationError("Failed to create doctor from service")
+            throw new CustomError ('CreationError', "Failed to create doctor in service", "doctores")
         }
     }
 
@@ -37,22 +37,22 @@ export class DoctorServiceImpl implements DoctorService {
             return this.doctorRepository.getDoctorById(id)
         } catch (error) {
             logger.error('Failed to get doctor from service')
-            throw new RecordNotFoundError()
+            throw new CustomError ('RecordNotFoundError', 'Record has not found yet', 'doctores')
         }
     }
 
-    public  async updateDoctor(id: number, updates: Partial<DoctorReq>): Promise<Doctor> {
+    public async updateDoctor(id: number, updates: Partial<DoctorReq>): Promise<Doctor> {
         try {
             const existDoctor =  await this.doctorRepository.getDoctorById(id)
             if (!existDoctor) {
-                throw new RecordNotFoundError()
-            }
+                throw new CustomError ( 'RecordNotFoundError', 'Record has not found yet', 'doctores' )
+            } else {
             const updateDoctor = {...existDoctor, ...updates}
             this.doctorRepository.updateDoctor(id, updateDoctor)
-            return updateDoctor
+            return updateDoctor }
         } catch (error) {
-            logger.error('Failed to update doctor from service')
-            throw new DoctorUpdateError()
+            logger.error( 'Failed to update doctor from service' )
+            throw new CustomError ( 'UpdateError', 'Failed to update doctor from service', 'doctores' )
         }
     }
 
@@ -60,12 +60,12 @@ export class DoctorServiceImpl implements DoctorService {
         try {
             const existDoctor =  await this.doctorRepository.getDoctorById(id)
             if (!existDoctor) {
-                throw new RecordNotFoundError()
+                throw new CustomError ( 'RecordNotFoundError', 'Record has not found yet', 'doctores' )
             }
             await this.doctorRepository.deleteDoctor(id)
         } catch (error) {
             logger.error('Failed to delete doctor from service')
-            throw new DoctorDeleteError()
+            throw new CustomError ( 'DeleteError', 'Failed to delete doctor from service', 'doctores' )
         }
     }
 }
