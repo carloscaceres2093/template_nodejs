@@ -107,7 +107,7 @@ describe("DoctorController", () => {
 
       await doctorController.createDoctor(mockReq, mockRes);
 
-      //expect(doctorService.createDoctor).toHaveBeenCalledWith({});
+      // expect(doctorService.createDoctor).toHaveBeenCalledWith({});
       expect(mockRes.json).toHaveBeenCalledWith({ message: '"nombre" is required' });
       expect(mockRes.status).toHaveBeenCalledWith(400);
     });

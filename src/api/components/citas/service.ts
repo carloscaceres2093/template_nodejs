@@ -49,8 +49,9 @@ export class AppointmentServiceImpl implements AppointmentService {
             const appointmentDb =  await this.appointmentRepository.getAppointmentById(id)
             const doctor = await this.doctorRepository.getDoctorById(appointmentDb.id_doctor)
             const appointment: Appointment = mapAppointment(appointmentDb, doctor)
-            return appointment
-        } catch (error) {
+            return appointment;
+            }
+        catch (error) {
             logger.error('Failed to get appointment from service')
             throw new CustomError ( 'RecordNotFoundError', 'Record has not found yet', 'citas')
         }
@@ -87,7 +88,7 @@ export class AppointmentServiceImpl implements AppointmentService {
     }
 }
 
-function mapAppointment(appointmentDb: AppointmentResDB, doctor: Doctor): Appointment {
+export function mapAppointment(appointmentDb: AppointmentResDB, doctor: Doctor): Appointment {
     const appointment: Appointment = {
         identificacion_paciente: appointmentDb.identificacion_paciente, 
         especialidad:appointmentDb.especialidad,

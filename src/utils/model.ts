@@ -1,9 +1,9 @@
 enum Especialidad {
     General = 'Medicina General',
     Cardiologia  = 'Cardiología',
-    Interna = 'Medicina interna',
+    Interna = 'Medicina Interna',
     Dermatologia = 'Dermatología',
-    Rehabilitacion ='Rehabilitación física',
+    Rehabilitacion ='Rehabilitación Física',
     Psicologia = 'Psicología',
     Odontologia = 'Odontología',
     Radiologia = 'Radiología'

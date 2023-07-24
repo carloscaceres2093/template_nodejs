@@ -46,10 +46,10 @@ export class DoctorServiceImpl implements DoctorService {
             const existDoctor =  await this.doctorRepository.getDoctorById(id)
             if (!existDoctor) {
                 throw new CustomError ( 'RecordNotFoundError', 'Record has not found yet', 'doctores' )
-            }
+            } else {
             const updateDoctor = {...existDoctor, ...updates}
             this.doctorRepository.updateDoctor(id, updateDoctor)
-            return updateDoctor
+            return updateDoctor }
         } catch (error) {
             logger.error( 'Failed to update doctor from service' )
             throw new CustomError ( 'UpdateError', 'Failed to update doctor from service', 'doctores' )
